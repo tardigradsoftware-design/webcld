@@ -32,7 +32,7 @@ import { ServiceVisual } from '@/components/sections/ServiceVisual'
 import { Photo } from '@/components/common/Photo'
 import { servicePhoto } from '@/lib/photos'
 import { LucideIcon } from '@/components/common/LucideIcon'
-import { PHOTOS } from '@/lib/photos'
+import { screen } from '@/lib/photos'
 
 interface PageProps {
   params: { slug: string }
@@ -250,8 +250,8 @@ export default function ServicePage({ params }: PageProps) {
                 </ul>
               </div>
               <Photo
-                src={PHOTOS['saas'].src}
-                alt={PHOTOS['saas'].alt}
+                src={screen('is-takip-sistemi', 'Proje süreç takibi: sprint panosu ve görev durumları ekranı').src}
+                alt={screen('is-takip-sistemi', 'Proje süreç takibi: sprint panosu ve görev durumları ekranı').alt}
                 caption="Sprint panosu: görevler, metrikler ve canlı izleme"
                 className="aspect-[16/10] rounded-xl border border-white/10"
                 sizes="(max-width: 1024px) 100vw, 35vw"

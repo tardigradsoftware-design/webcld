@@ -7,7 +7,7 @@ import { CONTACT, SITE } from '@/lib/constants'
 import { staticMetadata } from '@/lib/seo'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Photo } from '@/components/common/Photo'
-import { PHOTOS } from '@/lib/photos'
+import { screen } from '@/lib/photos'
 import { PageHero } from '@/components/sections/PageHero'
 import { ContactSection } from '@/components/sections/ContactSection'
 
@@ -277,8 +277,8 @@ export default function KvkkPage() {
             </div>
 
             <Photo
-              src={PHOTOS['altyapi'].src}
-              alt={PHOTOS['altyapi'].alt}
+              src={screen('hosting-yedekleme', 'Yedekleme, erişim kaydı ve altyapı durum ekranı').src}
+              alt={screen('hosting-yedekleme', 'Yedekleme, erişim kaydı ve altyapı durum ekranı').alt}
               caption="Verileriniz şifreli ve izole altyapımızda işlenir"
               className="mt-4 aspect-[16/10] rounded-2xl border border-brand-navy-100 shadow-card"
               sizes="(max-width: 1024px) 100vw, 25vw"

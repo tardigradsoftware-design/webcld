@@ -46,7 +46,7 @@ import { ContactSection } from '@/components/sections/ContactSection'
 import { SectionHeading } from '@/components/sections/SectionHeading'
 import { LucideIcon } from '@/components/common/LucideIcon'
 import { Photo } from '@/components/common/Photo'
-import { CATEGORY_PHOTO, PHOTOS, type PhotoKey } from '@/lib/photos'
+import { CATEGORY_SCREEN, screen } from '@/lib/photos'
 
 export const metadata = buildMetadata({
   title: `${SITE.name} — Kurumsal Web Sitesi, Yazılım, SEO ve Dijital Dönüşüm`,
@@ -72,7 +72,18 @@ export const metadata = buildMetadata({
 const counts = getCategoryCounts()
 
 /** Vaka çalışması kartlarının fotoğrafları */
-const REFERENCE_PHOTOS: PhotoKey[] = ['crm', 'stok', 'api']
+const MOSAIC_SCREENS = [
+  screen('crm', 'CRM satış hunisi ve fırsat yönetimi ekranı'),
+  screen('stok-yonetimi', 'Depo, stok ve tedarikçi otomasyonu ekranı'),
+  screen('ai-chatbot', 'Yapay zekâ destekli satış asistanı sohbet ekranı'),
+  screen('api-entegrasyonu', 'Ödeme, kargo, e-posta ve CRM entegrasyon logları ekranı'),
+]
+
+const REFERENCE_SCREENS = [
+  screen('stok-yonetimi', 'Stok, sipariş ve tedarikçi takip ekranı'),
+  screen('crm', 'CRM satış hunisi ve lead takip ekranı'),
+  screen('teknik-seo', 'Teknik SEO denetimi ve görünürlük rapor ekranı'),
+]
 
 export default function HomePage() {
   const recentPosts = getRecentPosts(3)
@@ -111,29 +122,29 @@ export default function HomePage() {
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Photo
-            src={PHOTOS['crm'].src}
-            alt={PHOTOS['crm'].alt}
+            src={MOSAIC_SCREENS[0].src}
+            alt={MOSAIC_SCREENS[0].alt}
             caption="Müşteri ilişkileri ve satış hunisi yönetimi"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['stok'].src}
-            alt={PHOTOS['stok'].alt}
+            src={MOSAIC_SCREENS[1].src}
+            alt={MOSAIC_SCREENS[1].alt}
             caption="Depo, stok ve tedarikçi otomasyonu"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['chatbot'].src}
-            alt={PHOTOS['chatbot'].alt}
+            src={MOSAIC_SCREENS[2].src}
+            alt={MOSAIC_SCREENS[2].alt}
             caption="Yapay zekâ destekli sohbet ve içerik araçları"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['api'].src}
-            alt={PHOTOS['api'].alt}
+            src={MOSAIC_SCREENS[3].src}
+            alt={MOSAIC_SCREENS[3].alt}
             caption="Ödeme, kargo, e-posta ve CRM entegrasyonları"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -165,8 +176,8 @@ export default function HomePage() {
                 className="card-light group flex flex-col p-6"
               >
                 <Photo
-                  src={PHOTOS[CATEGORY_PHOTO[category.key]].src}
-                  alt={PHOTOS[CATEGORY_PHOTO[category.key]].alt}
+                  src={screen(CATEGORY_SCREEN[category.key], `${category.label} örnek ürün ekranı`).src}
+                  alt={screen(CATEGORY_SCREEN[category.key], `${category.label} örnek ürün ekranı`).alt}
                   className="-m-6 mb-5 h-32 rounded-t-xl"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   imgClassName="transition-transform duration-700 group-hover:scale-105"
@@ -303,8 +314,8 @@ export default function HomePage() {
                 </Link>
               </div>
               <Photo
-                src={PHOTOS['saas'].src}
-                alt={PHOTOS['saas'].alt}
+                src={screen('dashboard-sistemi', 'Yönetim özeti: kapsam, takvim ve başarı metrikleri panosu').src}
+                alt={screen('dashboard-sistemi', 'Yönetim özeti: kapsam, takvim ve başarı metrikleri panosu').alt}
                 caption="Ön analiz çıktısı: kapsam, takvim ve başarı metrikleri panosu"
                 className="mt-4 aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -462,8 +473,8 @@ export default function HomePage() {
             ].map((item, itemIndex) => (
               <div key={item.title} className="card-light p-6">
                 <Photo
-                  src={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'yazilim'].src}
-                  alt={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'yazilim'].alt}
+                  src={(REFERENCE_SCREENS[itemIndex] ?? REFERENCE_SCREENS[0]).src}
+                  alt={(REFERENCE_SCREENS[itemIndex] ?? REFERENCE_SCREENS[0]).alt}
                   className="-m-6 mb-5 h-32 rounded-t-xl"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />

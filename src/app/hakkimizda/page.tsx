@@ -19,7 +19,7 @@ import { TransformationStory } from '@/components/sections/TransformationStory'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { LucideIcon } from '@/components/common/LucideIcon'
 import { Photo } from '@/components/common/Photo'
-import { PHOTOS } from '@/lib/photos'
+import { screen } from '@/lib/photos'
 
 export const metadata: Metadata = staticMetadata({
   title: 'Hakkımızda',
@@ -145,8 +145,8 @@ export default function AboutPage() {
 
           <aside className="space-y-4">
             <Photo
-              src={PHOTOS['saas'].src}
-              alt={PHOTOS['saas'].alt}
+              src={screen('dashboard-sistemi', 'Ekip üretim panosu: sprint ve teslim metrikleri ekranı').src}
+              alt={screen('dashboard-sistemi', 'Ekip üretim panosu: sprint ve teslim metrikleri ekranı').alt}
               caption="Ölçülebilir ürün yönetimi: panolar ve metrikler"
               className="aspect-[16/10] rounded-2xl border border-brand-navy-100 shadow-card"
               sizes="(max-width: 1024px) 100vw, 35vw"

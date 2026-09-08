@@ -11,7 +11,7 @@ import type { FAQ } from '@/types'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { PageHero } from '@/components/sections/PageHero'
 import { Photo } from '@/components/common/Photo'
-import { PHOTOS } from '@/lib/photos'
+import { screen } from '@/lib/photos'
 import { SectionHeading } from '@/components/sections/SectionHeading'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { FAQ as FaqSection } from '@/components/sections/FAQ'
@@ -146,8 +146,8 @@ export default function ProcessPage() {
         ]}
         aside={
           <Photo
-            src={PHOTOS['yazilim'].src}
-            alt={PHOTOS['yazilim'].alt}
+            src={screen('is-takip-sistemi', 'Süreç takibi: aşama panosu ve görev akışı ekranı').src}
+            alt={screen('is-takip-sistemi', 'Süreç takibi: aşama panosu ve görev akışı ekranı').alt}
             caption="Sürüm gecelerinden: kod incelemesi"
             className="aspect-[16/10] rounded-2xl border border-white/10"
             sizes="(max-width: 1024px) 100vw, 45vw"
