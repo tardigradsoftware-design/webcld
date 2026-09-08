@@ -1,0 +1,5 @@
+Contact: mailto:info@tardigradsoftware.com
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: tr, en
+Canonical: https://tardigradsoftware.com/.well-known/security.txt
+Policy: https://tardigradsoftware.com/kvkk/

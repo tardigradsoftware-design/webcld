@@ -1,0 +1,37 @@
+{
+  "name": "Tardigrad Software — Kurumsal Web, Yazılım, SEO ve Dijital Dönüşüm",
+  "short_name": "Tardigrad",
+  "description": "Türkiye geneli kurumsal web sitesi, özel yazılım, SaaS, SEO ve dijital dönüşüm hizmetleri.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#08112B",
+  "theme_color": "#08112B",
+  "lang": "tr",
+  "categories": [
+    "business",
+    "technology",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
