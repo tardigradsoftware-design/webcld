@@ -146,8 +146,8 @@ export default function ProcessPage() {
         ]}
         aside={
           <Photo
-            src={PHOTOS['kod-editor'].src}
-            alt={PHOTOS['kod-editor'].alt}
+            src={PHOTOS['yazilim'].src}
+            alt={PHOTOS['yazilim'].alt}
             caption="Sürüm gecelerinden: kod incelemesi"
             className="aspect-[16/10] rounded-2xl border border-white/10"
             sizes="(max-width: 1024px) 100vw, 45vw"

@@ -1,20 +1,20 @@
 // src/lib/photos.ts
 /**
- * Site genelinde kullanılan fotoğraf envanteri ve eşlemeleri.
- * Kural: görseller insan yüzü/insan figürü ve şehir dış mekânı içermez;
- * ekranlardaki tüm yazılar okunaksızdır (bulanıklaştırılmıştır).
+ * Site genelinde kullanılan profesyonel hizmet görseli envanteri.
+ * Her görsel, sektörümüze (yazılım / dijital ürün geliştirme) özel
+ * üretilmiş kurumsal seriden oluşur: insansız, yazısız, marka paletinde.
  */
 import type { BlogPost, Service, ServiceCategory } from '@/types'
 
 export type PhotoKey =
-  | 'tasarim-masa'
-  | 'kod-editor'
-  | 'eticaret-ui'
-  | 'seo-analiz'
-  | 'robot-kol'
-  | 'ai-soyut'
-  | 'saas-pano'
-  | 'sunucu-odasi'
+  | 'web'
+  | 'eticaret'
+  | 'yazilim'
+  | 'saas'
+  | 'seo'
+  | 'otomasyon'
+  | 'altyapi'
+  | 'ai'
 
 export interface PhotoAsset {
   src: string
@@ -22,71 +22,71 @@ export interface PhotoAsset {
 }
 
 export const PHOTOS: Record<PhotoKey, PhotoAsset> = {
-  'tasarim-masa': {
-    src: '/images/photos/tasarim-masa.jpg',
-    alt: 'Wireframe çizimleri, renk paleti kartları ve arayüz tasarımı çalışma masası',
+  web: {
+    src: '/images/photos/web.jpg',
+    alt: 'Web tasarımı ve arayüz geliştirme: izometrik tarayıcı pencereleri ve wireframe yerleşimler',
   },
-  'kod-editor': {
-    src: '/images/photos/kod-editor.jpg',
-    alt: 'Karanlık temalı kod editörü açık geniş monitör ve mekanik klavye',
+  eticaret: {
+    src: '/images/photos/eticaret.jpg',
+    alt: 'E-ticaret çözümleri: ürün kartları, sepet ve ödeme akışları, kargo bandı',
   },
-  'eticaret-ui': {
-    src: '/images/photos/eticaret-ui.jpg',
-    alt: 'Kapra e-ticaret sipariş yönetimi paneli ekran görüntüsü: sipariş kuyruğu ve stok uyarıları',
+  yazilim: {
+    src: '/images/photos/yazilim.jpg',
+    alt: 'Özel yazılım geliştirme: kod editörü, sürüm dalları ve modül katmanları',
   },
-  'seo-analiz': {
-    src: '/images/photos/seo-analiz.jpg',
-    alt: 'RankRadar teknik SEO rapor ekranı görüntüsü: sağlık puanı, tıklama eğilimi ve anahtar kelimeler',
+  saas: {
+    src: '/images/photos/saas.jpg',
+    alt: 'SaaS platformları: abonelik katmanları, gösterge panelleri ve kullanım grafikleri',
   },
-  'robot-kol': {
-    src: '/images/photos/robot-kol.jpg',
-    alt: 'Otomasyon hattında kaynak yapan endüstriyel robot kol — proje saha kurulumu',
+  seo: {
+    src: '/images/photos/seo.jpg',
+    alt: 'SEO ve büyüme: yükselen grafik, analiz merceği ve arama sonucu katmanları',
   },
-  'ai-soyut': {
-    src: '/images/photos/ai-soyut.jpg',
-    alt: 'Mavi ışıklı GPU hızlandırıcı kartları ve sinir ağı ışık izleri',
+  otomasyon: {
+    src: '/images/photos/otomasyon.jpg',
+    alt: 'Dijital otomasyon: iş akışı düğümleri, dişliler ve robotik kol ile üretim bandı',
   },
-  'saas-pano': {
-    src: '/images/photos/saas-pano.jpg',
-    alt: 'BulutPanel SaaS yönetim paneli ekran görüntüsü: gelir grafiği, plan dağılımı ve son işlemler',
+  altyapi: {
+    src: '/images/photos/altyapi.jpg',
+    alt: 'Bulut altyapı ve güvenlik: sunucu kabinleri, bulut bağlantısı ve güvenlik kalkanı',
   },
-  'sunucu-odasi': {
-    src: '/images/photos/sunucu-odasi.jpg',
-    alt: 'Mavi durum ışıklarıyla dolu, insansız veri merkezi koridoru',
+  ai: {
+    src: '/images/photos/ai.jpg',
+    alt: 'Yapay zekâ çözümleri: sinir ağı çekirdeği ve veri akışı halkaları',
   },
 }
 
-/** Hizmet kategorisi → fotoğraf */
+/** Hizmet kategorisi → görsel */
 export const CATEGORY_PHOTO: Record<ServiceCategory, PhotoKey> = {
-  web: 'tasarim-masa',
-  yazilim: 'kod-editor',
-  saas: 'saas-pano',
-  seo: 'seo-analiz',
-  otomasyon: 'robot-kol',
-  altyapi: 'sunucu-odasi',
-  ai: 'ai-soyut',
+  web: 'web',
+  yazilim: 'yazilim',
+  saas: 'saas',
+  seo: 'seo',
+  otomasyon: 'otomasyon',
+  altyapi: 'altyapi',
+  ai: 'ai',
 }
 
-/** Slug bazında özel fotoğraf eşlemeleri */
+/** Slug bazında özel görsel eşlemeleri */
 export const SERVICE_PHOTO_OVERRIDE: Partial<Record<string, PhotoKey>> = {
-  'e-ticaret-sitesi': 'eticaret-ui',
-  'urun-tanitim-sitesi': 'eticaret-ui',
-  'stok-yonetimi': 'eticaret-ui',
-  'urun-tedarikci-yonetimi': 'eticaret-ui',
-  'odeme-whatsapp-crm-entegrasyonu': 'eticaret-ui',
-  'api-entegrasyonu': 'kod-editor',
+  'e-ticaret-sitesi': 'eticaret',
+  'urun-tanitim-sitesi': 'eticaret',
+  'stok-yonetimi': 'eticaret',
+  'urun-tedarikci-yonetimi': 'eticaret',
+  'odeme-whatsapp-crm-entegrasyonu': 'eticaret',
+  'api-entegrasyonu': 'yazilim',
 }
 
-/** Blog kategorisi → fotoğraf */
+/** Blog kategorisi → görsel */
 export const BLOG_CATEGORY_PHOTO: Record<string, PhotoKey> = {
-  'Web Siteleri': 'tasarim-masa',
-  'E-Ticaret': 'eticaret-ui',
-  SEO: 'seo-analiz',
-  'Yazılım': 'kod-editor',
-  SaaS: 'saas-pano',
-  'Altyapı': 'sunucu-odasi',
-  'Yapay Zekâ': 'ai-soyut',
-  'Dijital Dönüşüm': 'robot-kol',
+  'Web Siteleri': 'web',
+  'E-Ticaret': 'eticaret',
+  SEO: 'seo',
+  'Yazılım': 'yazilim',
+  SaaS: 'saas',
+  'Altyapı': 'altyapi',
+  'Yapay Zekâ': 'ai',
+  'Dijital Dönüşüm': 'otomasyon',
 }
 
 export function servicePhoto(service: Service): PhotoAsset {
@@ -95,6 +95,6 @@ export function servicePhoto(service: Service): PhotoAsset {
 }
 
 export function blogPhoto(post: BlogPost): PhotoAsset {
-  const key = BLOG_CATEGORY_PHOTO[post.category] ?? 'kod-editor'
+  const key = BLOG_CATEGORY_PHOTO[post.category] ?? 'yazilim'
   return PHOTOS[key]
 }

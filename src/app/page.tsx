@@ -72,7 +72,7 @@ export const metadata = buildMetadata({
 const counts = getCategoryCounts()
 
 /** Vaka çalışması kartlarının fotoğrafları */
-const REFERENCE_PHOTOS: PhotoKey[] = ['eticaret-ui', 'seo-analiz', 'kod-editor']
+const REFERENCE_PHOTOS: PhotoKey[] = ['eticaret', 'seo', 'yazilim']
 
 export default function HomePage() {
   const recentPosts = getRecentPosts(3)
@@ -104,37 +104,37 @@ export default function HomePage() {
       <Stats />
 
       {/* Fotoğraf mozaigi — sahadan kareler */}
-      <section aria-label="Tardigrad Software proje ekranları ve saha kareleri" className="section-light py-10 lg:py-12">
+      <section aria-label="Tardigrad Software hizmet alanları" className="section-light py-10 lg:py-12">
         <div className="container">
           <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-navy-500">
-            Projelerimizden ve sahadan
+            Hizmet alanlarımız
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Photo
-            src={PHOTOS['saas-pano'].src}
-            alt={PHOTOS['saas-pano'].alt}
-            caption="Projelerimizden: BulutPanel abonelik yönetimi"
+            src={PHOTOS['eticaret'].src}
+            alt={PHOTOS['eticaret'].alt}
+            caption="E-ticaret: ödeme, stok ve kargo akışları"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['eticaret-ui'].src}
-            alt={PHOTOS['eticaret-ui'].alt}
-            caption="Projelerimizden: Kapra mağaza sipariş ekranı"
+            src={PHOTOS['saas'].src}
+            alt={PHOTOS['saas'].alt}
+            caption="Abonelik tabanlı SaaS platformları"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['seo-analiz'].src}
-            alt={PHOTOS['seo-analiz'].alt}
-            caption="Projelerimizden: RankRadar SEO raporlama"
+            src={PHOTOS['ai'].src}
+            alt={PHOTOS['ai'].alt}
+            caption="Yapay zekâ destekli ürün özellikleri"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['robot-kol'].src}
-            alt={PHOTOS['robot-kol'].alt}
-            caption="Saha kurulumu: üretim hattı otomasyonu"
+            src={PHOTOS['altyapi'].src}
+            alt={PHOTOS['altyapi'].alt}
+            caption="Bulut altyapı, güvenlik ve izleme"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
@@ -303,8 +303,8 @@ export default function HomePage() {
                 </Link>
               </div>
               <Photo
-                src={PHOTOS['saas-pano'].src}
-                alt={PHOTOS['saas-pano'].alt}
+                src={PHOTOS['saas'].src}
+                alt={PHOTOS['saas'].alt}
                 caption="Ön analiz çıktısı: kapsam, takvim ve başarı metrikleri panosu"
                 className="mt-4 aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -462,8 +462,8 @@ export default function HomePage() {
             ].map((item, itemIndex) => (
               <div key={item.title} className="card-light p-6">
                 <Photo
-                  src={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'saas-pano'].src}
-                  alt={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'saas-pano'].alt}
+                  src={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'yazilim'].src}
+                  alt={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'yazilim'].alt}
                   className="-m-6 mb-5 h-32 rounded-t-xl"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />

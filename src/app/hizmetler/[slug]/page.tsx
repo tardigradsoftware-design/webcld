@@ -250,8 +250,8 @@ export default function ServicePage({ params }: PageProps) {
                 </ul>
               </div>
               <Photo
-                src={PHOTOS['saas-pano'].src}
-                alt={PHOTOS['saas-pano'].alt}
+                src={PHOTOS['saas'].src}
+                alt={PHOTOS['saas'].alt}
                 caption="Sprint panosu: görevler, metrikler ve canlı izleme"
                 className="aspect-[16/10] rounded-xl border border-white/10"
                 sizes="(max-width: 1024px) 100vw, 35vw"

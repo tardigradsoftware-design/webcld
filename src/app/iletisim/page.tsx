@@ -81,8 +81,8 @@ export default function ContactPage() {
         ]}
         aside={
           <Photo
-            src={PHOTOS['seo-analiz'].src}
-            alt={PHOTOS['seo-analiz'].alt}
+            src={PHOTOS['seo'].src}
+            alt={PHOTOS['seo'].alt}
             caption="Ücretsiz ön analiz: mevcut durum raporunuz"
             className="aspect-[16/10] rounded-2xl border border-white/10"
             sizes="(max-width: 1024px) 100vw, 45vw"

@@ -277,8 +277,8 @@ export default function KvkkPage() {
             </div>
 
             <Photo
-              src={PHOTOS['sunucu-odasi'].src}
-              alt={PHOTOS['sunucu-odasi'].alt}
+              src={PHOTOS['altyapi'].src}
+              alt={PHOTOS['altyapi'].alt}
               caption="Verileriniz şifreli ve izole altyapımızda işlenir"
               className="mt-4 aspect-[16/10] rounded-2xl border border-brand-navy-100 shadow-card"
               sizes="(max-width: 1024px) 100vw, 25vw"

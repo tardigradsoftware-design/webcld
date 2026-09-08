@@ -145,9 +145,9 @@ export default function AboutPage() {
 
           <aside className="space-y-4">
             <Photo
-              src={PHOTOS['saas-pano'].src}
-              alt={PHOTOS['saas-pano'].alt}
-              caption="Ürün yönetim panomuzdan bir kare"
+              src={PHOTOS['saas'].src}
+              alt={PHOTOS['saas'].alt}
+              caption="Ölçülebilir ürün yönetimi: panolar ve metrikler"
               className="aspect-[16/10] rounded-2xl border border-brand-navy-100 shadow-card"
               sizes="(max-width: 1024px) 100vw, 35vw"
             />
