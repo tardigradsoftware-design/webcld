@@ -29,7 +29,10 @@ import { CityLinks } from '@/components/sections/CityLinks'
 import { BlogCard } from '@/components/sections/BlogCard'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { ServiceVisual } from '@/components/sections/ServiceVisual'
+import { Photo } from '@/components/common/Photo'
+import { servicePhoto } from '@/lib/photos'
 import { LucideIcon } from '@/components/common/LucideIcon'
+import { PHOTOS } from '@/lib/photos'
 
 interface PageProps {
   params: { slug: string }
@@ -133,7 +136,16 @@ export default function ServicePage({ params }: PageProps) {
             </ul>
           </div>
 
-          <ServiceVisual service={service} compact />
+          <div className="space-y-4">
+            <Photo
+              src={servicePhoto(service).src}
+              alt={servicePhoto(service).alt}
+              caption={`${service.title} — proje yaklaşımımızdan bir kare`}
+              className="aspect-[4/3] rounded-2xl border border-brand-navy-100 shadow-card"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+            <ServiceVisual service={service} compact />
+          </div>
         </div>
       </section>
 
@@ -237,6 +249,13 @@ export default function ServicePage({ params }: PageProps) {
                   <li>• Yayın öncesi test ve geri bildirim</li>
                 </ul>
               </div>
+              <Photo
+                src={PHOTOS['saas-pano'].src}
+                alt={PHOTOS['saas-pano'].alt}
+                caption="Sprint panosu: görevler, metrikler ve canlı izleme"
+                className="aspect-[16/10] rounded-xl border border-white/10"
+                sizes="(max-width: 1024px) 100vw, 35vw"
+              />
               <Link
                 href="/surec/"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200"

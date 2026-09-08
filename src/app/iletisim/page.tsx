@@ -12,6 +12,8 @@ import { telLink } from '@/lib/utils'
 import type { FAQ } from '@/types'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { PageHero } from '@/components/sections/PageHero'
+import { Photo } from '@/components/common/Photo'
+import { PHOTOS } from '@/lib/photos'
 import { SectionHeading } from '@/components/sections/SectionHeading'
 import { ContactForm } from '@/components/forms/ContactForm'
 import { FAQ as FaqSection } from '@/components/sections/FAQ'
@@ -77,6 +79,15 @@ export default function ContactPage() {
           { label: 'Çalışma saatleri', value: 'Pzt–Cum 09:00–18:30' },
           { label: 'Kapsama', value: '81 il' },
         ]}
+        aside={
+          <Photo
+            src={PHOTOS['seo-analiz'].src}
+            alt={PHOTOS['seo-analiz'].alt}
+            caption="Ücretsiz ön analiz: mevcut durum raporunuz"
+            className="aspect-[16/10] rounded-2xl border border-white/10"
+            sizes="(max-width: 1024px) 100vw, 45vw"
+          />
+        }
         showCta={false}
       />
 

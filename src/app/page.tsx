@@ -45,6 +45,8 @@ import { BlogCard } from '@/components/sections/BlogCard'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { SectionHeading } from '@/components/sections/SectionHeading'
 import { LucideIcon } from '@/components/common/LucideIcon'
+import { Photo } from '@/components/common/Photo'
+import { CATEGORY_PHOTO, PHOTOS, type PhotoKey } from '@/lib/photos'
 
 export const metadata = buildMetadata({
   title: `${SITE.name} — Kurumsal Web Sitesi, Yazılım, SEO ve Dijital Dönüşüm`,
@@ -68,6 +70,9 @@ export const metadata = buildMetadata({
 })
 
 const counts = getCategoryCounts()
+
+/** Vaka çalışması kartlarının fotoğrafları */
+const REFERENCE_PHOTOS: PhotoKey[] = ['eticaret-ui', 'seo-analiz', 'kod-editor']
 
 export default function HomePage() {
   const recentPosts = getRecentPosts(3)
@@ -98,6 +103,40 @@ export default function HomePage() {
       {/* 2 — Güven / rakamlar */}
       <Stats />
 
+      {/* Fotoğraf mozaigi — sahadan kareler */}
+      <section aria-label="Tardigrad Software çalışma alanlarından kareler" className="section-light py-10 lg:py-12">
+        <div className="container grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Photo
+            src={PHOTOS['kod-editor'].src}
+            alt={PHOTOS['kod-editor'].alt}
+            caption="Gece kod incelemesi ve sürüm hazırlığı"
+            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+          <Photo
+            src={PHOTOS['tasarim-masa'].src}
+            alt={PHOTOS['tasarim-masa'].alt}
+            caption="Wireframe ve arayüz tasarımı aşaması"
+            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+          <Photo
+            src={PHOTOS['robot-kol'].src}
+            alt={PHOTOS['robot-kol'].alt}
+            caption="Üretim hattında robotik otomasyon"
+            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+          <Photo
+            src={PHOTOS['ai-soyut'].src}
+            alt={PHOTOS['ai-soyut'].alt}
+            caption="Yüksek başarımlı hesaplama ve yapay zekâ donanımı"
+            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+        </div>
+      </section>
+
       {/* 3 — Hizmet kategorileri */}
       <section className="section-soft py-16 lg:py-24" aria-labelledby="kategoriler-baslik">
         <div className="container">
@@ -120,6 +159,13 @@ export default function HomePage() {
                 href={`/hizmetler/?kategori=${category.key}`}
                 className="card-light group flex flex-col p-6"
               >
+                <Photo
+                  src={PHOTOS[CATEGORY_PHOTO[category.key]].src}
+                  alt={PHOTOS[CATEGORY_PHOTO[category.key]].alt}
+                  className="-m-6 mb-5 h-32 rounded-t-xl"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  imgClassName="transition-transform duration-700 group-hover:scale-105"
+                />
                 <div className="flex items-start justify-between gap-3">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-navy-900 text-white transition-transform duration-300 group-hover:scale-105">
                     <LucideIcon name={category.icon} fallback="Sparkles" className="h-6 w-6" aria-hidden />
@@ -251,6 +297,13 @@ export default function HomePage() {
                   <ArrowUpRight className="h-4 w-4" aria-hidden />
                 </Link>
               </div>
+              <Photo
+                src={PHOTOS['saas-pano'].src}
+                alt={PHOTOS['saas-pano'].alt}
+                caption="Ön analiz çıktısı: kapsam, takvim ve başarı metrikleri panosu"
+                className="mt-4 aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
             <ProcessSteps steps={COMPANY_PROCESS.map((step) => ({ ...step }))} variant="light" />
           </div>
@@ -401,8 +454,14 @@ export default function HomePage() {
                 text: 'Teknik SEO, yapısal veri ve hizmet sayfası mimarisi ile organik trafik ve form talepleri yükseldi.',
                 tag: 'Web + Teknik SEO',
               },
-            ].map((item) => (
+            ].map((item, itemIndex) => (
               <div key={item.title} className="card-light p-6">
+                <Photo
+                  src={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'ofis-ekip'].src}
+                  alt={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'ofis-ekip'].alt}
+                  className="-m-6 mb-5 h-32 rounded-t-xl"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-navy-50 px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wide text-brand-navy-700">
                   <Clock className="h-3 w-3" aria-hidden />
                   {item.tag}

@@ -1,4 +1,5 @@
 // src/app/blog/page.tsx
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, Layers } from 'lucide-react'
 
@@ -13,6 +14,7 @@ import { BlogCard } from '@/components/sections/BlogCard'
 import { SectionHeading } from '@/components/sections/SectionHeading'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { cn } from '@/lib/utils'
+import { blogPhoto } from '@/lib/photos'
 
 interface PageProps {
   searchParams?: { kategori?: string }
@@ -97,18 +99,24 @@ export default function BlogIndexPage({ searchParams }: PageProps) {
           {featuredPost ? (
             <article className="mt-9 overflow-hidden rounded-2xl border border-brand-navy-100 bg-white shadow-card">
               <div className="grid gap-0 lg:grid-cols-[1fr_1fr]">
-                <div className="relative min-h-[220px] overflow-hidden bg-brand-navy-950">
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-[radial-gradient(600px_280px_at_20%_10%,rgba(6,182,212,0.28),transparent_60%),radial-gradient(500px_260px_at_85%_70%,rgba(37,99,235,0.32),transparent_62%)]"
+                <div className="relative min-h-[240px] overflow-hidden">
+                  <Image
+                    src={blogPhoto(featuredPost).src}
+                    alt={blogPhoto(featuredPost).alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
-                  <div aria-hidden className="absolute inset-0 bg-grid-navy opacity-40" />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-brand-navy-950/90 via-brand-navy-950/25 to-transparent"
+                    aria-hidden
+                  />
                   <div className="relative flex h-full flex-col justify-end p-7 text-white">
-                    <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.07] px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-cyan-100">
+                    <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.12] px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-cyan-100 backdrop-blur-sm">
                       <Layers className="h-3 w-3" aria-hidden />
                       Öne çıkan
                     </span>
-                    <p className="mt-4 text-sm leading-relaxed text-white/65">
+                    <p className="mt-4 text-sm leading-relaxed text-white/85">
                       {featuredPost.excerpt}
                     </p>
                   </div>

@@ -11,6 +11,8 @@ import { getCityBySlug } from '@/lib/cities'
 import { blogMetadata } from '@/lib/seo'
 import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schemas'
 import { formatDate } from '@/lib/utils'
+import { blogPhoto } from '@/lib/photos'
+import { Photo } from '@/components/common/Photo'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { MarkdownContent, type AutoLink } from '@/components/blog/MarkdownContent'
 import { BlogCard } from '@/components/sections/BlogCard'
@@ -151,6 +153,16 @@ export default function BlogPostPage({ params }: PageProps) {
           </ul>
         </div>
       </header>
+
+      {/* Kategori görseli bandı */}
+      <Photo
+        src={blogPhoto(post).src}
+        alt={blogPhoto(post).alt}
+        caption={post.category}
+        className="h-56 w-full lg:h-72"
+        priority
+        sizes="100vw"
+      />
 
       {/* Yazı gövdesi */}
       <div className="section-light py-12 lg:py-16">

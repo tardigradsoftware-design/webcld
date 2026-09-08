@@ -1,7 +1,9 @@
 // src/components/sections/BlogCard.tsx
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowUpRight, CalendarDays, Clock } from 'lucide-react'
 import type { BlogPost } from '@/types'
+import { blogPhoto } from '@/lib/photos'
 import { formatDate } from '@/lib/utils'
 import { cn } from '@/lib/utils'
 
@@ -13,6 +15,7 @@ interface BlogCardProps {
 
 export function BlogCard({ post, variant = 'light', className }: BlogCardProps) {
   const dark = variant === 'dark'
+  const photo = blogPhoto(post)
   return (
     <Link
       href={`/blog/${post.slug}/`}
@@ -24,19 +27,20 @@ export function BlogCard({ post, variant = 'light', className }: BlogCardProps) 
         className,
       )}
     >
-      <div
-        className={cn(
-          'relative flex h-36 items-center justify-center overflow-hidden',
-          dark ? 'bg-brand-navy-900' : 'bg-brand-navy-50',
-        )}
-      >
-        <div className="absolute inset-0 bg-grid-navy opacity-40" aria-hidden />
+      <div className="relative h-40 overflow-hidden">
+        <Image
+          src={photo.src}
+          alt={photo.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          loading="lazy"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+        />
         <span
-          className={cn(
-            'relative font-mono text-xs uppercase tracking-[0.2em]',
-            dark ? 'text-cyan-300/70' : 'text-brand-navy-500',
-          )}
-        >
+          className="absolute inset-0 bg-gradient-to-t from-brand-navy-950/75 via-brand-navy-950/10 to-transparent"
+          aria-hidden
+        />
+        <span className="absolute bottom-2.5 left-4 rounded-full bg-brand-navy-950/70 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] text-cyan-100 backdrop-blur-sm">
           {post.category}
         </span>
       </div>

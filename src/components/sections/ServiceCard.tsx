@@ -1,8 +1,10 @@
 // src/components/sections/ServiceCard.tsx
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import type { Service } from '@/types'
 import { CATEGORY_MAP } from '@/lib/constants'
+import { servicePhoto } from '@/lib/photos'
 import { cn } from '@/lib/utils'
 import { LucideIcon } from '@/components/common/LucideIcon'
 
@@ -26,6 +28,7 @@ export function ServiceCard({
   const href = citySlug ? `/hizmet/${service.slug}/${citySlug}/` : `/hizmetler/${service.slug}/`
   const category = CATEGORY_MAP[service.category]
   const dark = variant === 'dark'
+  const photo = servicePhoto(service)
 
   return (
     <Link
@@ -46,10 +49,36 @@ export function ServiceCard({
         aria-hidden
       />
 
-      <div className="flex items-start justify-between gap-3">
+      {/* Kategori fotoğrafı — kart görsel kimliği */}
+      <span
+        className={cn(
+          'pointer-events-none absolute inset-x-0 top-0 -mt-5 block h-24',
+          dark ? 'border-b border-white/10' : 'border-b border-brand-navy-100/70',
+        )}
+        aria-hidden
+      >
+        <Image
+          src={photo.src}
+          alt=""
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          loading="lazy"
+          className="object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.06]"
+        />
         <span
           className={cn(
-            'inline-flex h-11 w-11 items-center justify-center rounded-lg border transition-colors',
+            'absolute inset-0',
+            dark
+              ? 'bg-gradient-to-b from-brand-navy-950/35 via-brand-navy-950/55 to-brand-navy-950/92'
+              : 'bg-gradient-to-b from-white/10 via-white/55 to-white',
+          )}
+        />
+      </span>
+
+      <div className="relative mt-16 flex items-start justify-between gap-3">
+        <span
+          className={cn(
+            'inline-flex h-11 w-11 items-center justify-center rounded-lg border shadow-sm transition-colors',
             dark
               ? 'border-cyan-400/25 bg-cyan-400/10 text-cyan-300'
               : 'border-brand-navy-100 bg-brand-navy-50 text-brand-navy-600 group-hover:border-brand-cyan/40 group-hover:text-brand-navy-800',

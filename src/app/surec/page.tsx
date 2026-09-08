@@ -10,6 +10,8 @@ import { faqSchema } from '@/lib/schemas'
 import type { FAQ } from '@/types'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { PageHero } from '@/components/sections/PageHero'
+import { Photo } from '@/components/common/Photo'
+import { PHOTOS } from '@/lib/photos'
 import { SectionHeading } from '@/components/sections/SectionHeading'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { FAQ as FaqSection } from '@/components/sections/FAQ'
@@ -142,6 +144,15 @@ export default function ProcessPage() {
           { label: 'Demo', value: 'Her sprint' },
           { label: 'Garanti', value: '30 gün' },
         ]}
+        aside={
+          <Photo
+            src={PHOTOS['kod-editor'].src}
+            alt={PHOTOS['kod-editor'].alt}
+            caption="Sürüm gecelerinden: kod incelemesi"
+            className="aspect-[16/10] rounded-2xl border border-white/10"
+            sizes="(max-width: 1024px) 100vw, 45vw"
+          />
+        }
       />
 
       {/* Süreç zaman çizelgesi */}

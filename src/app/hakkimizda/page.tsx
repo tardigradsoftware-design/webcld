@@ -18,6 +18,8 @@ import { TechStack } from '@/components/sections/TechStack'
 import { TransformationStory } from '@/components/sections/TransformationStory'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { LucideIcon } from '@/components/common/LucideIcon'
+import { Photo } from '@/components/common/Photo'
+import { PHOTOS } from '@/lib/photos'
 
 export const metadata: Metadata = staticMetadata({
   title: 'Hakkımızda',
@@ -142,6 +144,13 @@ export default function AboutPage() {
           </div>
 
           <aside className="space-y-4">
+            <Photo
+              src={PHOTOS['saas-pano'].src}
+              alt={PHOTOS['saas-pano'].alt}
+              caption="Ürün yönetim panomuzdan bir kare"
+              className="aspect-[16/10] rounded-2xl border border-brand-navy-100 shadow-card"
+              sizes="(max-width: 1024px) 100vw, 35vw"
+            />
             <div className="rounded-2xl border border-brand-navy-100 bg-brand-paper-soft p-6">
               <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-navy-400">
                 <MapPin className="h-4 w-4" aria-hidden />
