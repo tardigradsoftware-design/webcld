@@ -104,36 +104,41 @@ export default function HomePage() {
       <Stats />
 
       {/* Fotoğraf mozaigi — sahadan kareler */}
-      <section aria-label="Tardigrad Software çalışma alanlarından kareler" className="section-light py-10 lg:py-12">
-        <div className="container grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <section aria-label="Tardigrad Software proje ekranları ve saha kareleri" className="section-light py-10 lg:py-12">
+        <div className="container">
+          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-navy-500">
+            Projelerimizden ve sahadan
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Photo
-            src={PHOTOS['kod-editor'].src}
-            alt={PHOTOS['kod-editor'].alt}
-            caption="Gece kod incelemesi ve sürüm hazırlığı"
+            src={PHOTOS['saas-pano'].src}
+            alt={PHOTOS['saas-pano'].alt}
+            caption="Projelerimizden: BulutPanel abonelik yönetimi"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['tasarim-masa'].src}
-            alt={PHOTOS['tasarim-masa'].alt}
-            caption="Wireframe ve arayüz tasarımı aşaması"
+            src={PHOTOS['eticaret-ui'].src}
+            alt={PHOTOS['eticaret-ui'].alt}
+            caption="Projelerimizden: Kapra mağaza sipariş ekranı"
+            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+          <Photo
+            src={PHOTOS['seo-analiz'].src}
+            alt={PHOTOS['seo-analiz'].alt}
+            caption="Projelerimizden: RankRadar SEO raporlama"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
             src={PHOTOS['robot-kol'].src}
             alt={PHOTOS['robot-kol'].alt}
-            caption="Üretim hattında robotik otomasyon"
+            caption="Saha kurulumu: üretim hattı otomasyonu"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
-          <Photo
-            src={PHOTOS['sunucu-odasi'].src}
-            alt={PHOTOS['sunucu-odasi'].alt}
-            caption="Veri merkezi: yedekleme, izleme ve güvenlik altyapımız"
-            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
+          </div>
         </div>
       </section>
 

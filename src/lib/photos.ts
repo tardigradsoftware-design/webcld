@@ -32,15 +32,15 @@ export const PHOTOS: Record<PhotoKey, PhotoAsset> = {
   },
   'eticaret-ui': {
     src: '/images/photos/eticaret-ui.jpg',
-    alt: 'Laptop ve telefonda çevrim içi mağaza arayüzü, yanında kargo kolisi',
+    alt: 'Kapra e-ticaret sipariş yönetimi paneli ekran görüntüsü: sipariş kuyruğu ve stok uyarıları',
   },
   'seo-analiz': {
     src: '/images/photos/seo-analiz.jpg',
-    alt: 'Yükselen grafikler ve halka chartlar içeren analiz panosu ekranı',
+    alt: 'RankRadar teknik SEO rapor ekranı görüntüsü: sağlık puanı, tıklama eğilimi ve anahtar kelimeler',
   },
   'robot-kol': {
     src: '/images/photos/robot-kol.jpg',
-    alt: 'Otomasyon hattında kaynak yapan endüstriyel robot kol',
+    alt: 'Otomasyon hattında kaynak yapan endüstriyel robot kol — proje saha kurulumu',
   },
   'ai-soyut': {
     src: '/images/photos/ai-soyut.jpg',
@@ -48,7 +48,7 @@ export const PHOTOS: Record<PhotoKey, PhotoAsset> = {
   },
   'saas-pano': {
     src: '/images/photos/saas-pano.jpg',
-    alt: 'Kanban sütunları ve dünya haritası widgetı olan SaaS yönetim panosu',
+    alt: 'BulutPanel SaaS yönetim paneli ekran görüntüsü: gelir grafiği, plan dağılımı ve son işlemler',
   },
   'sunucu-odasi': {
     src: '/images/photos/sunucu-odasi.jpg',
