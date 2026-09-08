@@ -14,6 +14,7 @@ export type PhotoKey =
   | 'robot-kol'
   | 'ai-soyut'
   | 'saas-pano'
+  | 'sunucu-odasi'
 
 export interface PhotoAsset {
   src: string
@@ -49,6 +50,10 @@ export const PHOTOS: Record<PhotoKey, PhotoAsset> = {
     src: '/images/photos/saas-pano.jpg',
     alt: 'Kanban sütunları ve dünya haritası widgetı olan SaaS yönetim panosu',
   },
+  'sunucu-odasi': {
+    src: '/images/photos/sunucu-odasi.jpg',
+    alt: 'Mavi durum ışıklarıyla dolu, insansız veri merkezi koridoru',
+  },
 }
 
 /** Hizmet kategorisi → fotoğraf */
@@ -58,7 +63,7 @@ export const CATEGORY_PHOTO: Record<ServiceCategory, PhotoKey> = {
   saas: 'saas-pano',
   seo: 'seo-analiz',
   otomasyon: 'robot-kol',
-  altyapi: 'ai-soyut',
+  altyapi: 'sunucu-odasi',
   ai: 'ai-soyut',
 }
 
@@ -79,7 +84,7 @@ export const BLOG_CATEGORY_PHOTO: Record<string, PhotoKey> = {
   SEO: 'seo-analiz',
   'Yazılım': 'kod-editor',
   SaaS: 'saas-pano',
-  'Altyapı': 'ai-soyut',
+  'Altyapı': 'sunucu-odasi',
   'Yapay Zekâ': 'ai-soyut',
   'Dijital Dönüşüm': 'robot-kol',
 }

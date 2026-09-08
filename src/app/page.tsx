@@ -128,9 +128,9 @@ export default function HomePage() {
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['ai-soyut'].src}
-            alt={PHOTOS['ai-soyut'].alt}
-            caption="Yüksek başarımlı hesaplama ve yapay zekâ donanımı"
+            src={PHOTOS['sunucu-odasi'].src}
+            alt={PHOTOS['sunucu-odasi'].alt}
+            caption="Veri merkezi: yedekleme, izleme ve güvenlik altyapımız"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
@@ -457,8 +457,8 @@ export default function HomePage() {
             ].map((item, itemIndex) => (
               <div key={item.title} className="card-light p-6">
                 <Photo
-                  src={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'ofis-ekip'].src}
-                  alt={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'ofis-ekip'].alt}
+                  src={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'saas-pano'].src}
+                  alt={PHOTOS[REFERENCE_PHOTOS[itemIndex] ?? 'saas-pano'].alt}
                   className="-m-6 mb-5 h-32 rounded-t-xl"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
