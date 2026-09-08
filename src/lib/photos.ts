@@ -15,6 +15,16 @@ export type PhotoKey =
   | 'otomasyon'
   | 'altyapi'
   | 'ai'
+  | 'kurumsal-web'
+  | 'crm'
+  | 'panel'
+  | 'stok'
+  | 'belge'
+  | 'is-takip'
+  | 'chatbot'
+  | 'abonelik'
+  | 'api'
+  | 'mvp'
 
 export interface PhotoAsset {
   src: string
@@ -54,6 +64,46 @@ export const PHOTOS: Record<PhotoKey, PhotoAsset> = {
     src: '/images/photos/ai.jpg',
     alt: 'Yapay zekâ çözümleri: sinir ağı çekirdeği ve veri akışı halkaları',
   },
+  'kurumsal-web': {
+    src: '/images/photos/kurumsal-web.jpg',
+    alt: 'Kurumsal web sitesi: tarayıcı içinde soyut ana sayfa yerleşimi ve güven rozetleri',
+  },
+  crm: {
+    src: '/images/photos/crm.jpg',
+    alt: 'CRM ve satış hunisi: müşteri kartları, iletişim kanalları ve dönüşüm akışı',
+  },
+  panel: {
+    src: '/images/photos/panel.jpg',
+    alt: 'Yönetim paneli: rol ve yetki kartları, ayar dişlileri, anahtar ve kalkan ikonları',
+  },
+  stok: {
+    src: '/images/photos/stok.jpg',
+    alt: 'Stok yönetimi: depo rafları, barkod tarama ışını ve koli bandı',
+  },
+  belge: {
+    src: '/images/photos/belge.jpg',
+    alt: 'Form, teklif ve rezervasyon sistemleri: belge yığını, onay damgası, takvim ve fiyat etiketi',
+  },
+  'is-takip': {
+    src: '/images/photos/is-takip.jpg',
+    alt: 'İş takip sistemi: kanban panosu, ilerleme halkası ve süre ölçer',
+  },
+  chatbot: {
+    src: '/images/photos/chatbot.jpg',
+    alt: 'Yapay zekâ sohbet botu: konuşma balonları, bot çekirdeği ve içerik sayfası',
+  },
+  abonelik: {
+    src: '/images/photos/abonelik.jpg',
+    alt: 'Abonelik tabanlı yazılım: plan katmanları, tekrarlayan ödeme halkası ve kart',
+  },
+  api: {
+    src: '/images/photos/api.jpg',
+    alt: 'API entegrasyonları: merkez hub ve ödeme, sohbet, kargo, rapor, e-posta modülleri',
+  },
+  mvp: {
+    src: '/images/photos/mvp.jpg',
+    alt: 'MVP ve startup ürünü: modül bloklarından kalkan roket ve büyüme grafiği',
+  },
 }
 
 /** Hizmet kategorisi → görsel */
@@ -68,13 +118,51 @@ export const CATEGORY_PHOTO: Record<ServiceCategory, PhotoKey> = {
 }
 
 /** Slug bazında özel görsel eşlemeleri */
+/** 43 hizmetin her biri için birebir görsel eşlemesi */
 export const SERVICE_PHOTO_OVERRIDE: Partial<Record<string, PhotoKey>> = {
+  'kurumsal-web-sitesi': 'kurumsal-web',
+  'firma-web-sitesi': 'kurumsal-web',
+  'landing-page': 'web',
+  'portfoy-sitesi': 'web',
+  'web-sitesi-yenileme': 'web',
   'e-ticaret-sitesi': 'eticaret',
   'urun-tanitim-sitesi': 'eticaret',
-  'stok-yonetimi': 'eticaret',
-  'urun-tedarikci-yonetimi': 'eticaret',
-  'odeme-whatsapp-crm-entegrasyonu': 'eticaret',
-  'api-entegrasyonu': 'yazilim',
+  'rezervasyon-basvuru-sistemi': 'belge',
+  'crm': 'crm',
+  'musteri-yonetim-sistemi': 'crm',
+  'teklif-hazirlama-sistemi': 'belge',
+  'proforma-siparis-yonetimi': 'belge',
+  'form-basvuru-sistemi': 'belge',
+  'stok-yonetimi': 'stok',
+  'urun-tedarikci-yonetimi': 'stok',
+  'personel-kullanici-yonetimi': 'panel',
+  'yonetim-paneli': 'panel',
+  'musteri-paneli': 'panel',
+  'raporlama-sistemi': 'panel',
+  'dashboard-sistemi': 'panel',
+  'is-takip-sistemi': 'is-takip',
+  'saas-platformu': 'saas',
+  'abonelik-tabanli-yazilim': 'abonelik',
+  'multi-tenant-uygulama': 'abonelik',
+  'mvp-startup-urunu': 'mvp',
+  'teknik-seo': 'seo',
+  'lokal-seo': 'seo',
+  'seo-uyumlu-sayfa-mimarisi': 'seo',
+  'schema-org-structured-data': 'seo',
+  'google-search-console-kurulumu': 'seo',
+  'seo-danismanligi': 'seo',
+  'dijital-otomasyon': 'otomasyon',
+  'dijital-donusum': 'otomasyon',
+  'domain-dns-yonetimi': 'altyapi',
+  'hosting-yedekleme': 'altyapi',
+  'cloudflare-cdn': 'altyapi',
+  'vercel-deployment': 'altyapi',
+  'supabase-postgresql': 'altyapi',
+  'kurumsal-email': 'altyapi',
+  'api-entegrasyonu': 'api',
+  'odeme-whatsapp-crm-entegrasyonu': 'api',
+  'ai-chatbot': 'chatbot',
+  'ai-icerik-araclar': 'chatbot',
 }
 
 /** Blog kategorisi → görsel */

@@ -72,7 +72,7 @@ export const metadata = buildMetadata({
 const counts = getCategoryCounts()
 
 /** Vaka çalışması kartlarının fotoğrafları */
-const REFERENCE_PHOTOS: PhotoKey[] = ['eticaret', 'seo', 'yazilim']
+const REFERENCE_PHOTOS: PhotoKey[] = ['crm', 'stok', 'api']
 
 export default function HomePage() {
   const recentPosts = getRecentPosts(3)
@@ -111,30 +111,30 @@ export default function HomePage() {
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Photo
-            src={PHOTOS['eticaret'].src}
-            alt={PHOTOS['eticaret'].alt}
-            caption="E-ticaret: ödeme, stok ve kargo akışları"
+            src={PHOTOS['crm'].src}
+            alt={PHOTOS['crm'].alt}
+            caption="Müşteri ilişkileri ve satış hunisi yönetimi"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['saas'].src}
-            alt={PHOTOS['saas'].alt}
-            caption="Abonelik tabanlı SaaS platformları"
+            src={PHOTOS['stok'].src}
+            alt={PHOTOS['stok'].alt}
+            caption="Depo, stok ve tedarikçi otomasyonu"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['ai'].src}
-            alt={PHOTOS['ai'].alt}
-            caption="Yapay zekâ destekli ürün özellikleri"
+            src={PHOTOS['chatbot'].src}
+            alt={PHOTOS['chatbot'].alt}
+            caption="Yapay zekâ destekli sohbet ve içerik araçları"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
           <Photo
-            src={PHOTOS['altyapi'].src}
-            alt={PHOTOS['altyapi'].alt}
-            caption="Bulut altyapı, güvenlik ve izleme"
+            src={PHOTOS['api'].src}
+            alt={PHOTOS['api'].alt}
+            caption="Ödeme, kargo, e-posta ve CRM entegrasyonları"
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
