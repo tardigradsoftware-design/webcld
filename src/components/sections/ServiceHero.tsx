@@ -49,9 +49,6 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
                   {cityName} · Lokal Hizmet
                 </span>
               ) : null}
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[11px] text-white/55">
-                Hizmet #{String(service.id).padStart(2, '0')} / 43
-              </span>
             </div>
 
             <h1 className="mt-5 text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-tight">

@@ -453,7 +453,6 @@ export function TransformationStory() {
                             </span>
                             <div>
                               <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-300/80">
-                                Adım {String(index + 1).padStart(2, '0')} / 0{STAGE_COUNT} ·{' '}
                                 {stage.subtitle}
                               </div>
                               <h3 className="text-xl font-semibold text-white md:text-2xl">
@@ -508,7 +507,7 @@ export function TransformationStory() {
                                       : 'text-white/35',
                                 )}
                               >
-                                {String(index + 1).padStart(2, '0')}. {stage.title}
+                                {stage.title}
                               </span>
                             </li>
                           ))}
@@ -669,9 +668,6 @@ function ReducedVersion() {
                   <LucideIcon name={stage.icon} fallback="Sparkles" className="h-5 w-5" />
                 </span>
                 <div>
-                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-blue-300/80">
-                    Adım {String(index + 1).padStart(2, '0')}
-                  </div>
                   <h3 className="text-lg font-semibold text-white">{stage.title}</h3>
                 </div>
               </div>

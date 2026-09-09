@@ -222,12 +222,7 @@ export default function AboutPage() {
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-navy-900 text-white">
                   <value.icon className="h-5 w-5" aria-hidden />
                 </span>
-                <h3 className="mt-4 text-base font-semibold text-brand-ink">
-                  <span className="mr-2 font-mono text-xs text-brand-navy-300">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  {value.title}
-                </h3>
+                <h3 className="mt-4 text-base font-semibold text-brand-ink">{value.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/80">{value.text}</p>
               </div>
             ))}

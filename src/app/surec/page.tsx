@@ -200,9 +200,6 @@ export default function ProcessPage() {
                       <tr key={step.step} className="transition-colors hover:bg-brand-paper-soft">
                         <th scope="row" className="px-5 py-4 align-top font-semibold text-brand-ink">
                           <span className="flex items-center gap-2.5">
-                            <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-navy-50 font-mono text-[12px] font-bold text-brand-navy-700">
-                              {String(step.step).padStart(2, '0')}
-                            </span>
                             {step.title}
                           </span>
                         </th>

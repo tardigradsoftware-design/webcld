@@ -63,7 +63,6 @@ export function Pricing() {
     <section className="section-soft relative overflow-hidden py-20 lg:py-28" aria-labelledby="paketler-baslik">
       <div className="container">
         <SectionHeading
-          index="09"
           id="paketler-baslik"
           align="center"
           eyebrow="Paketler"

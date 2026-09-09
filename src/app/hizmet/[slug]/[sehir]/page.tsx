@@ -302,9 +302,6 @@ export default function LocalServicePage({ params }: PageProps) {
                 </span>
                 <div>
                   <h3 className="text-base font-semibold text-brand-ink">
-                    <span className="mr-2 font-mono text-xs text-brand-navy-400">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
                     {item.title}
                   </h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/80">{item.description}</p>

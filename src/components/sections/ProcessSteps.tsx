@@ -35,18 +35,12 @@ export function ProcessSteps({ steps, variant = 'light', layout = 'timeline', cl
             <div className="flex items-center gap-3">
               <span
                 className={cn(
-                  'inline-flex h-10 w-10 items-center justify-center rounded-lg font-mono text-sm font-bold',
+                  'inline-flex h-10 w-10 items-center justify-center rounded-lg',
                   dark ? 'bg-blue-400/10 text-blue-300' : 'bg-brand-navy-900 text-white',
                 )}
               >
-                {String(step.step).padStart(2, '0')}
+                <LucideIcon name={step.icon} fallback="Sparkles" className="h-5 w-5" aria-hidden />
               </span>
-              <LucideIcon
-                name={step.icon}
-                fallback="Sparkles"
-                className={cn('h-5 w-5', dark ? 'text-white/45' : 'text-brand-navy-400')}
-                aria-hidden
-              />
             </div>
             <h3 className={cn('mt-4 text-base font-semibold', dark ? 'text-white' : 'text-brand-ink')}>
               {step.title}
@@ -80,13 +74,13 @@ export function ProcessSteps({ steps, variant = 'light', layout = 'timeline', cl
         >
           <span
             className={cn(
-              'relative z-10 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-mono text-sm font-bold shadow-card',
+              'relative z-10 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl shadow-card',
               dark
                 ? 'border border-blue-400/30 bg-brand-navy-900 text-blue-300'
                 : 'border border-brand-navy-100 bg-white text-brand-navy-700',
             )}
           >
-            {String(step.step).padStart(2, '0')}
+            <LucideIcon name={step.icon} fallback="Sparkles" className="h-5 w-5" aria-hidden />
           </span>
           <div className="flex-1 pt-1">
             <div className="flex flex-wrap items-center gap-2.5">

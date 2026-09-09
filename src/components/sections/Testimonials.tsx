@@ -37,7 +37,6 @@ export function Testimonials() {
     <section className="section-light relative overflow-hidden py-20 lg:py-28" aria-labelledby="yorumlar-baslik">
       <div className="container">
         <SectionHeading
-          index="08"
           id="yorumlar-baslik"
           eyebrow="Müşteri yorumları"
           title="Birlikte çalıştığımız ekipler ne diyor?"

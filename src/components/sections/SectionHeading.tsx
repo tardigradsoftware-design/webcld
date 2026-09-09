@@ -12,8 +12,6 @@ interface SectionHeadingProps {
   /** 'light' = beyaz zemin, 'dark' = lacivert zemin */
   variant?: 'light' | 'dark'
   align?: 'left' | 'center'
-  /** Editoryal bölüm numarası (örn. '01') */
-  index?: string
   className?: string
   as?: 'h2' | 'h3'
   id?: string
@@ -25,7 +23,6 @@ export function SectionHeading({
   description,
   variant = 'light',
   align = 'left',
-  index,
   className,
   as: Tag = 'h2',
   id,
@@ -38,14 +35,6 @@ export function SectionHeading({
         className,
       )}
     >
-      {index ? (
-        <div className={cn('mb-4 flex items-center gap-4', align === 'center' && 'justify-center')}>
-          <span className={cn('font-mono text-[11px] font-semibold tracking-[0.26em]', variant === 'light' ? 'text-brand-navy-400' : 'text-white/40')}>
-            {index}
-          </span>
-          <span className={cn('h-px w-16', variant === 'light' ? 'bg-brand-navy-200' : 'bg-white/20')} aria-hidden />
-        </div>
-      ) : null}
       {eyebrow ? (
         <motion.span
           initial={{ opacity: 0, y: 10 }}
