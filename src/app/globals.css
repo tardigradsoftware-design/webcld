@@ -56,7 +56,9 @@
   h2,
   h3,
   h4 {
-    @apply font-semibold tracking-tight text-brand-ink;
+    /* Renk bilinçli olarak globale yazılmaz: koyu zeminli bölümler beyaz,
+       açık zeminler gövde rengini miras alır (kontrast güvencesi). */
+    @apply font-semibold tracking-tight;
     text-wrap: balance;
   }
 
