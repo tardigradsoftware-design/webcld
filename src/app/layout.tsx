@@ -4,6 +4,9 @@ import type { Metadata, Viewport } from 'next'
 // kullanıcı tarayıcısı dış isteğe çıkmaz (KVKK + Core Web Vitals açısından avantaj).
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/react'
+import { MotionConfig } from 'framer-motion'
+import { ScrollProgress } from '@/components/common/ScrollProgress'
+import { PageTransition } from '@/components/common/PageTransition'
 
 import './globals.css'
 import { CONTACT, SITE, SITE_URL } from '@/lib/constants'
@@ -135,6 +138,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="tr" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="flex min-h-screen flex-col bg-white font-sans">
+        <MotionConfig reducedMotion="user">
+        <ScrollProgress />
         <JsonLd data={[organizationSchema(), websiteSchema()]} id="ld-organization" />
 
         <a
@@ -147,13 +152,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
 
         <main id="icerik" className="flex-1">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
 
         <Footer />
         <FloatingActions />
         <CookieConsent />
         <Analytics />
+        </MotionConfig>
       </body>
     </html>
   )

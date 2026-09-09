@@ -47,6 +47,8 @@ import { SectionHeading } from '@/components/sections/SectionHeading'
 import { LucideIcon } from '@/components/common/LucideIcon'
 import { Photo } from '@/components/common/Photo'
 import { CATEGORY_SCREEN, screen } from '@/lib/photos'
+import { Reveal } from '@/components/common/Reveal'
+import { TechMarquee } from '@/components/sections/TechMarquee'
 
 export const metadata = buildMetadata({
   title: `${SITE.name} — Kurumsal Web Sitesi, Yazılım, SEO ve Dijital Dönüşüm`,
@@ -114,6 +116,9 @@ export default function HomePage() {
       {/* 2 — Güven / rakamlar */}
       <Stats />
 
+      {/* 2.5 — Teknoloji şeridi */}
+      <TechMarquee />
+
       {/* Fotoğraf mozaigi — sahadan kareler */}
       <section aria-label="Tardigrad Software hizmet alanları" className="section-light py-10 lg:py-12">
         <div className="container">
@@ -121,6 +126,7 @@ export default function HomePage() {
             Hizmet alanlarımız
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal delay={Number(0) * 0.08} className="h-full">
           <Photo
             src={MOSAIC_SCREENS[0].src}
             alt={MOSAIC_SCREENS[0].alt}
@@ -128,6 +134,8 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Reveal>
+          <Reveal delay={Number(1) * 0.08} className="h-full">
           <Photo
             src={MOSAIC_SCREENS[1].src}
             alt={MOSAIC_SCREENS[1].alt}
@@ -135,6 +143,8 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Reveal>
+          <Reveal delay={Number(2) * 0.08} className="h-full">
           <Photo
             src={MOSAIC_SCREENS[2].src}
             alt={MOSAIC_SCREENS[2].alt}
@@ -142,6 +152,8 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Reveal>
+          <Reveal delay={Number(3) * 0.08} className="h-full">
           <Photo
             src={MOSAIC_SCREENS[3].src}
             alt={MOSAIC_SCREENS[3].alt}
@@ -149,6 +161,7 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Reveal>
           </div>
         </div>
       </section>
@@ -170,8 +183,8 @@ export default function HomePage() {
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {SERVICE_CATEGORIES.map((category, index) => (
+              <Reveal key={category.key} delay={index * 0.07} className="h-full">
               <Link
-                key={category.key}
                 href={`/hizmetler/?kategori=${category.key}`}
                 className="card-light group flex flex-col p-6"
               >
@@ -205,6 +218,7 @@ export default function HomePage() {
                 </span>
                 <span className="sr-only">Kategori sırası: {index + 1}</span>
               </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -471,7 +485,8 @@ export default function HomePage() {
                 tag: 'Web + Teknik SEO',
               },
             ].map((item, itemIndex) => (
-              <div key={item.title} className="card-light p-6">
+              <Reveal key={item.title} delay={itemIndex * 0.09} className="h-full">
+              <div className="card-light h-full p-6">
                 <Photo
                   src={(REFERENCE_SCREENS[itemIndex] ?? REFERENCE_SCREENS[0]).src}
                   alt={(REFERENCE_SCREENS[itemIndex] ?? REFERENCE_SCREENS[0]).alt}
@@ -488,6 +503,7 @@ export default function HomePage() {
                   Detaylı vaka çalışması yakında yayımlanacak.
                 </p>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -1,5 +1,8 @@
 // src/components/sections/ServiceCard.tsx
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import type { Service } from '@/types'
@@ -31,6 +34,13 @@ export function ServiceCard({
   const photo = servicePhoto(service)
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 26 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+      className="h-full"
+    >
     <Link
       href={href}
       className={cn(
@@ -134,6 +144,7 @@ export function ServiceCard({
         </span>
       </div>
     </Link>
+    </motion.div>
   )
 }
 

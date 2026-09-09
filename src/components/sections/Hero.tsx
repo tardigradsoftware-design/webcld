@@ -2,8 +2,9 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Check, PlayCircle, ShieldCheck } from 'lucide-react'
+import Image from 'next/image'
 
 import { CTA, CONTACT, SITE_STATS } from '@/lib/constants'
 import { trackCtaClick } from '@/lib/gtag'
@@ -26,25 +27,28 @@ const item = {
 }
 
 export function Hero() {
+  const { scrollY } = useScroll()
+  const floatA = useTransform(scrollY, [0, 700], [0, -64])
+  const floatB = useTransform(scrollY, [0, 700], [0, 42])
   return (
     <section className="relative overflow-hidden bg-brand-navy-950 text-white">
       {/* Arka plan: grid + ışık lekeleri + ağ deseni */}
       <div className="pointer-events-none absolute inset-0 bg-grid-navy opacity-60" aria-hidden />
       <div
-        className="pointer-events-none absolute -left-40 -top-40 h-[560px] w-[560px] rounded-full bg-blue-600/25 blur-[140px]"
+        className="animate-aurora-a pointer-events-none absolute -left-40 -top-40 h-[560px] w-[560px] rounded-full bg-blue-600/25 blur-[140px]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-32 top-10 h-[520px] w-[520px] rounded-full bg-blue-500/20 blur-[140px]"
+        className="animate-aurora-b pointer-events-none absolute -right-32 top-10 h-[520px] w-[520px] rounded-full bg-blue-500/20 blur-[140px]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute bottom-0 left-1/2 h-[380px] w-[900px] -translate-x-1/2 rounded-full bg-sky-500/10 blur-[130px]"
+        className="animate-aurora-c pointer-events-none absolute bottom-0 left-1/2 h-[380px] w-[900px] -translate-x-1/2 rounded-full bg-sky-500/10 blur-[130px]"
         aria-hidden
       />
       <NetworkBackdrop />
 
-      <div className="container relative py-20 lg:py-28">
+      <div className="container relative py-20 lg:grid lg:grid-cols-[minmax(0,1fr)_430px] lg:items-center lg:gap-12 lg:py-28">
         <motion.div variants={container} initial="hidden" animate="show" className="max-w-4xl">
           <motion.div variants={item}>
             <span className="eyebrow-light">
@@ -133,6 +137,63 @@ export function Hero() {
             <span className="font-mono">{CONTACT.email}</span>
           </motion.div>
         </motion.div>
+
+        {/* Sağ kolon: yüzen ürün ekranları (parallax + float) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="relative hidden min-h-[540px] lg:block"
+          aria-hidden
+        >
+          <motion.div style={{ y: floatA }} className="absolute right-0 top-2 w-[400px]">
+            <div className="animate-float" style={{ '--tilt': '-4deg' } as React.CSSProperties}>
+              <div className="overflow-hidden rounded-2xl border border-white/15 shadow-2xl shadow-blue-950/60 ring-1 ring-white/10">
+                <Image
+                  src="/images/screens/dashboard-sistemi.jpg"
+                  alt=""
+                  width={1600}
+                  height={1000}
+                  className="w-full"
+                  priority
+                />
+              </div>
+            </div>
+          </motion.div>
+          <motion.div style={{ y: floatB }} className="absolute -left-4 bottom-6 w-[330px]">
+            <div className="animate-float-slow" style={{ '--tilt': '3deg' } as React.CSSProperties}>
+              <div className="overflow-hidden rounded-2xl border border-white/15 shadow-2xl shadow-blue-950/60 ring-1 ring-white/10">
+                <Image
+                  src="/images/screens/ai-chatbot.jpg"
+                  alt=""
+                  width={1600}
+                  height={1000}
+                  className="w-full"
+                />
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            style={{ y: floatB }}
+            className="absolute left-10 top-40 rounded-xl border border-white/15 bg-white/[0.07] px-4 py-3 backdrop-blur-md"
+          >
+            <div className="font-mono text-lg font-bold text-blue-300">%99,9</div>
+            <div className="text-[11px] font-semibold uppercase tracking-wide text-white/60">
+              çalışma süresi
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Kaydırma işareti */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-32 flex justify-center" aria-hidden>
+        <div className="flex h-9 w-6 items-start justify-center rounded-full border border-white/25 p-1.5">
+          <motion.span
+            animate={{ y: [0, 10, 0], opacity: [1, 0.25, 1] }}
+            transition={{ duration: 1.9, repeat: Infinity, ease: 'easeInOut' }}
+            className="h-2 w-1 rounded-full bg-blue-300"
+          />
+        </div>
       </div>
 
       <div

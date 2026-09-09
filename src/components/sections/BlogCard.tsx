@@ -1,5 +1,8 @@
 // src/components/sections/BlogCard.tsx
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ArrowUpRight, CalendarDays, Clock } from 'lucide-react'
 import type { BlogPost } from '@/types'
@@ -17,6 +20,13 @@ export function BlogCard({ post, variant = 'light', className }: BlogCardProps) 
   const dark = variant === 'dark'
   const photo = blogPhoto(post)
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 26 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+      className="h-full"
+    >
     <Link
       href={`/blog/${post.slug}/`}
       className={cn(
@@ -90,6 +100,7 @@ export function BlogCard({ post, variant = 'light', className }: BlogCardProps) 
         </span>
       </div>
     </Link>
+    </motion.div>
   )
 }
 

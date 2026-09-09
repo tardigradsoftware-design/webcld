@@ -219,3 +219,61 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Ambiyans hareketi: aurora, float, marquee, CTA parlama              */
+/* ------------------------------------------------------------------ */
+@keyframes aurora-a {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(70px, 46px, 0) scale(1.18); }
+}
+@keyframes aurora-b {
+  0% { transform: translate3d(0, 0, 0) scale(1.12); }
+  100% { transform: translate3d(-80px, 34px, 0) scale(0.94); }
+}
+@keyframes aurora-c {
+  0% { transform: translate(-50%, 0) scale(1); }
+  100% { transform: translate(-42%, -34px) scale(1.14); }
+}
+.animate-aurora-a { animation: aurora-a 14s ease-in-out infinite alternate; }
+.animate-aurora-b { animation: aurora-b 17s ease-in-out infinite alternate; }
+.animate-aurora-c { animation: aurora-c 20s ease-in-out infinite alternate; }
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
+  50% { transform: translateY(-14px) rotate(var(--tilt, 0deg)); }
+}
+.animate-float { animation: float-y 7s ease-in-out infinite; }
+.animate-float-slow { animation: float-y 9.5s ease-in-out infinite; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee-scroll 32s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* CTA butonlarında ışık süpürme (shine) */
+.bg-cta-gradient { position: relative; overflow: hidden; isolation: isolate; }
+.bg-cta-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.3) 50%, transparent 58%);
+  transform: translateX(-130%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+.bg-cta-gradient:hover::after,
+.bg-cta-gradient:focus-visible::after { transform: translateX(130%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora-a,
+  .animate-aurora-b,
+  .animate-aurora-c,
+  .animate-float,
+  .animate-float-slow,
+  .marquee-track { animation: none; }
+  .bg-cta-gradient::after { display: none; }
+}
