@@ -59,7 +59,7 @@ export default function HizmetlerPage({ searchParams }: PageProps) {
             className={cn(
               'rounded-full border px-4 py-2 text-[13px] font-semibold transition',
               !isValidCategory
-                ? 'border-cyan-400/60 bg-cyan-400/15 text-white'
+                ? 'border-blue-400/60 bg-blue-400/15 text-white'
                 : 'border-white/12 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
             )}
           >
@@ -72,7 +72,7 @@ export default function HizmetlerPage({ searchParams }: PageProps) {
               className={cn(
                 'rounded-full border px-4 py-2 text-[13px] font-semibold transition',
                 categoryParam === category.key
-                  ? 'border-cyan-400/60 bg-cyan-400/15 text-white'
+                  ? 'border-blue-400/60 bg-blue-400/15 text-white'
                   : 'border-white/12 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
               )}
             >
@@ -125,7 +125,7 @@ export default function HizmetlerPage({ searchParams }: PageProps) {
                     </div>
                     <Link
                       href={`/hizmetler/?kategori=${category.key}`}
-                      className="inline-flex items-center gap-1 rounded-lg border border-brand-navy-200 px-3 py-1.5 text-xs font-semibold text-brand-navy-700 transition hover:border-brand-cyan hover:bg-brand-navy-50"
+                      className="inline-flex items-center gap-1 rounded-lg border border-brand-navy-200 px-3 py-1.5 text-xs font-semibold text-brand-navy-700 transition hover:border-brand-blue hover:bg-brand-navy-50"
                     >
                       Filtrele
                       <ArrowUpRight className="h-3 w-3" aria-hidden />
@@ -141,7 +141,7 @@ export default function HizmetlerPage({ searchParams }: PageProps) {
                           href={`/hizmetler/${service.slug}/`}
                           className="group inline-flex items-start gap-2 text-[13.5px] text-brand-ink-soft transition-colors hover:text-brand-navy-900"
                         >
-                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-cyan" aria-hidden />
+                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-blue" aria-hidden />
                           {service.title}
                         </Link>
                       </li>
@@ -168,7 +168,7 @@ export default function HizmetlerPage({ searchParams }: PageProps) {
               <li key={city.slug}>
                 <Link
                   href={`/sehir/${city.slug}/`}
-                  className="inline-flex items-center gap-2 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-4 py-2 text-sm font-medium text-brand-ink-soft transition hover:border-brand-cyan/50 hover:bg-brand-navy-50 hover:text-brand-navy-900"
+                  className="inline-flex items-center gap-2 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-4 py-2 text-sm font-medium text-brand-ink-soft transition hover:border-brand-blue/50 hover:bg-brand-navy-50 hover:text-brand-navy-900"
                 >
                   {city.name}
                   <ArrowUpRight className="h-3 w-3" aria-hidden />

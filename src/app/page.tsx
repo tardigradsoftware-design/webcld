@@ -222,7 +222,7 @@ export default function HomePage() {
             />
             <Link
               href="/hizmetler/"
-              className="inline-flex items-center gap-2 rounded-xl border border-brand-navy-200 px-5 py-3 text-sm font-semibold text-brand-navy-800 transition hover:border-brand-cyan hover:bg-brand-navy-50"
+              className="inline-flex items-center gap-2 rounded-xl border border-brand-navy-200 px-5 py-3 text-sm font-semibold text-brand-navy-800 transition hover:border-brand-blue hover:bg-brand-navy-50"
             >
               Hizmetler sayfası
               <ArrowUpRight className="h-4 w-4" aria-hidden />
@@ -241,7 +241,7 @@ export default function HomePage() {
                 <div key={group.key} className="rounded-xl border border-brand-navy-100 bg-brand-paper-soft p-5">
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="flex items-center gap-2 text-base font-semibold text-brand-ink">
-                      <Layers className="h-4 w-4 text-brand-cyan" aria-hidden />
+                      <Layers className="h-4 w-4 text-brand-blue" aria-hidden />
                       {group.label}
                     </h3>
                     <span className="font-mono text-xs text-brand-navy-500">
@@ -255,7 +255,7 @@ export default function HomePage() {
                           href={`/hizmetler/${service.slug}/`}
                           className="group inline-flex items-center gap-1.5 text-[13.5px] text-brand-ink-soft/85 transition-colors hover:text-brand-navy-800"
                         >
-                          <span className="h-1 w-1 rounded-full bg-brand-cyan transition-transform group-hover:scale-150" aria-hidden />
+                          <span className="h-1 w-1 rounded-full bg-brand-blue transition-transform group-hover:scale-150" aria-hidden />
                           {service.shortTitle}
                         </Link>
                       </li>
@@ -301,7 +301,7 @@ export default function HomePage() {
               />
               <div className="mt-7 rounded-xl border border-brand-navy-100 bg-brand-paper-soft p-5">
                 <p className="flex items-start gap-2.5 text-sm leading-relaxed text-brand-ink-soft/85">
-                  <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-cyan" aria-hidden />
+                  <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" aria-hidden />
                   Ortalama proje süresi: landing page 5-10 gün, kurumsal site 2-4 hafta, e-ticaret 4-8
                   hafta, özel yazılım 6-16 hafta.
                 </p>
@@ -370,7 +370,7 @@ export default function HomePage() {
           <div className="mt-8 rounded-2xl border border-brand-navy-100 bg-white p-6 shadow-card lg:p-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <h3 className="flex items-center gap-2 text-lg font-semibold text-brand-ink">
-                <Workflow className="h-5 w-5 text-brand-cyan" aria-hidden />
+                <Workflow className="h-5 w-5 text-brand-blue" aria-hidden />
                 Hizmet + şehir sayfaları
               </h3>
               <Link
@@ -391,9 +391,9 @@ export default function HomePage() {
                 <li key={service.slug}>
                   <Link
                     href={`/hizmet/${service.slug}/istanbul/`}
-                    className="inline-flex items-center gap-2 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-4 py-2 text-[13px] font-medium text-brand-ink-soft transition hover:border-brand-cyan/50 hover:bg-brand-navy-50 hover:text-brand-navy-900"
+                    className="inline-flex items-center gap-2 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-4 py-2 text-[13px] font-medium text-brand-ink-soft transition hover:border-brand-blue/50 hover:bg-brand-navy-50 hover:text-brand-navy-900"
                   >
-                    <LucideIcon name={service.icon} fallback="Sparkles" className="h-3.5 w-3.5 text-brand-cyan" aria-hidden />
+                    <LucideIcon name={service.icon} fallback="Sparkles" className="h-3.5 w-3.5 text-brand-blue" aria-hidden />
                     {service.shortTitle} İstanbul
                   </Link>
                 </li>
@@ -417,7 +417,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <div className="rounded-xl border border-brand-navy-100 bg-brand-paper-soft p-5">
-              <ShieldCheck className="h-5 w-5 text-brand-green" aria-hidden />
+              <ShieldCheck className="h-5 w-5 text-brand-blue" aria-hidden />
               <h3 className="mt-3 text-base font-semibold text-brand-ink">Güvenlik varsayılan</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/75">
                 HTTPS, güvenlik başlıkları, rol bazlı erişim (RLS), rate limiting ve spam koruması her

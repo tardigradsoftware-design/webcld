@@ -34,7 +34,7 @@ export function CityLinks({
             dark ? 'text-white' : 'text-brand-ink',
           )}
         >
-          <MapPin className={cn('h-5 w-5', dark ? 'text-cyan-300' : 'text-brand-cyan')} aria-hidden />
+          <MapPin className={cn('h-5 w-5', dark ? 'text-blue-300' : 'text-brand-blue')} aria-hidden />
           {title}
         </h2>
         {showAllLink ? (
@@ -42,7 +42,7 @@ export function CityLinks({
             href="/sehir/"
             className={cn(
               'inline-flex items-center gap-1 text-sm font-semibold transition-colors',
-              dark ? 'text-cyan-300 hover:text-cyan-200' : 'text-brand-navy-600 hover:text-brand-navy-900',
+              dark ? 'text-blue-300 hover:text-blue-200' : 'text-brand-navy-600 hover:text-brand-navy-900',
             )}
           >
             81 ilin tamamı
@@ -61,8 +61,8 @@ export function CityLinks({
                 className={cn(
                   'group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all',
                   dark
-                    ? 'border-white/12 bg-white/[0.04] text-white/75 hover:border-cyan-400/50 hover:bg-white/[0.09] hover:text-white'
-                    : 'border-brand-navy-100 bg-white text-brand-ink-soft hover:border-brand-cyan/50 hover:bg-brand-navy-50 hover:text-brand-navy-900',
+                    ? 'border-white/12 bg-white/[0.04] text-white/75 hover:border-blue-400/50 hover:bg-white/[0.09] hover:text-white'
+                    : 'border-brand-navy-100 bg-white text-brand-ink-soft hover:border-brand-blue/50 hover:bg-brand-navy-50 hover:text-brand-navy-900',
                 )}
               >
                 {service ? `${service.shortTitle} ${city.name}` : city.name}

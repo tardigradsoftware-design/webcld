@@ -30,7 +30,7 @@ export function WhoIsItFor({ items, variant = 'light', className }: WhoIsItForPr
           )}
         >
           <Check
-            className={cn('h-4 w-4', dark ? 'text-emerald-300' : 'text-brand-green')}
+            className={cn('h-4 w-4', dark ? 'text-sky-300' : 'text-brand-blue')}
             aria-hidden
           />
           {item}

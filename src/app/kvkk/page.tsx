@@ -262,7 +262,7 @@ export default function KvkkPage() {
             </div>
 
             <div className="mt-4 rounded-2xl border border-brand-navy-100 bg-white p-5 shadow-card">
-              <ShieldCheck className="h-5 w-5 text-brand-green" aria-hidden />
+              <ShieldCheck className="h-5 w-5 text-brand-blue" aria-hidden />
               <h2 className="mt-3 text-sm font-semibold text-brand-ink">Talebinizi iletin</h2>
               <p className="mt-1.5 text-[13px] leading-relaxed text-brand-ink-soft/70">
                 Verilerinize erişim, düzeltme veya silme taleplerinizi e-posta ile iletebilirsiniz.
@@ -311,7 +311,7 @@ export default function KvkkPage() {
                     {section.list.map((item) => (
                       <li
                         key={item}
-                        className="relative pl-5 text-[15px] leading-[1.75] text-brand-ink-soft/85 before:absolute before:left-0 before:top-[0.62em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-brand-cyan"
+                        className="relative pl-5 text-[15px] leading-[1.75] text-brand-ink-soft/85 before:absolute before:left-0 before:top-[0.62em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-brand-blue"
                       >
                         {item}
                       </li>
@@ -383,7 +383,7 @@ export default function KvkkPage() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="group flex items-center justify-between gap-2 rounded-lg border border-brand-navy-100 bg-white px-4 py-2.5 text-[13.5px] text-brand-ink-soft transition hover:border-brand-cyan/50 hover:text-brand-navy-900"
+                        className="group flex items-center justify-between gap-2 rounded-lg border border-brand-navy-100 bg-white px-4 py-2.5 text-[13.5px] text-brand-ink-soft transition hover:border-brand-blue/50 hover:text-brand-navy-900"
                       >
                         {link.label}
                         <ArrowUpRight className="h-3.5 w-3.5 text-brand-navy-300" aria-hidden />

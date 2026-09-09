@@ -36,15 +36,15 @@ export function ServiceCard({
       className={cn(
         'group relative flex h-full flex-col overflow-hidden rounded-xl border p-5 transition-all duration-300',
         dark
-          ? 'border-white/10 bg-white/[0.035] hover:-translate-y-1 hover:border-cyan-400/45 hover:bg-white/[0.07]'
-          : 'border-brand-navy-100 bg-white hover:-translate-y-1 hover:border-brand-cyan/45 hover:shadow-card-hover',
+          ? 'border-white/10 bg-white/[0.035] hover:-translate-y-1 hover:border-blue-400/45 hover:bg-white/[0.07]'
+          : 'border-brand-navy-100 bg-white hover:-translate-y-1 hover:border-brand-blue/45 hover:shadow-card-hover',
         className,
       )}
     >
       <span
         className={cn(
           'pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full blur-2xl transition-opacity duration-500',
-          dark ? 'bg-cyan-400/15 opacity-0 group-hover:opacity-100' : 'bg-brand-cyan/12 opacity-0 group-hover:opacity-100',
+          dark ? 'bg-blue-400/15 opacity-0 group-hover:opacity-100' : 'bg-brand-blue/12 opacity-0 group-hover:opacity-100',
         )}
         aria-hidden
       />
@@ -80,8 +80,8 @@ export function ServiceCard({
           className={cn(
             'inline-flex h-11 w-11 items-center justify-center rounded-lg border shadow-sm transition-colors',
             dark
-              ? 'border-cyan-400/25 bg-cyan-400/10 text-cyan-300'
-              : 'border-brand-navy-100 bg-brand-navy-50 text-brand-navy-600 group-hover:border-brand-cyan/40 group-hover:text-brand-navy-800',
+              ? 'border-blue-400/25 bg-blue-400/10 text-blue-300'
+              : 'border-brand-navy-100 bg-brand-navy-50 text-brand-navy-600 group-hover:border-brand-blue/40 group-hover:text-brand-navy-800',
           )}
         >
           <LucideIcon name={service.icon} fallback="Sparkles" className="h-5 w-5" aria-hidden />
@@ -90,7 +90,7 @@ export function ServiceCard({
           className={cn(
             'h-4 w-4 shrink-0 transition-all duration-300',
             dark
-              ? 'text-white/25 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-cyan-300'
+              ? 'text-white/25 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-blue-300'
               : 'text-brand-navy-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-navy-600',
           )}
           aria-hidden
@@ -127,7 +127,7 @@ export function ServiceCard({
         <span
           className={cn(
             'text-xs font-semibold transition-colors',
-            dark ? 'text-cyan-300/80 group-hover:text-cyan-300' : 'text-brand-navy-500 group-hover:text-brand-navy-800',
+            dark ? 'text-blue-300/80 group-hover:text-blue-300' : 'text-brand-navy-500 group-hover:text-brand-navy-800',
           )}
         >
           İncele

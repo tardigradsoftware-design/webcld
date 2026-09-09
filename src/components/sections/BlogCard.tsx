@@ -22,8 +22,8 @@ export function BlogCard({ post, variant = 'light', className }: BlogCardProps) 
       className={cn(
         'group flex h-full flex-col overflow-hidden rounded-xl border transition-all duration-300',
         dark
-          ? 'border-white/10 bg-white/[0.035] hover:-translate-y-1 hover:border-cyan-400/45 hover:bg-white/[0.07]'
-          : 'border-brand-navy-100 bg-white hover:-translate-y-1 hover:border-brand-cyan/45 hover:shadow-card-hover',
+          ? 'border-white/10 bg-white/[0.035] hover:-translate-y-1 hover:border-blue-400/45 hover:bg-white/[0.07]'
+          : 'border-brand-navy-100 bg-white hover:-translate-y-1 hover:border-brand-blue/45 hover:shadow-card-hover',
         className,
       )}
     >
@@ -40,7 +40,7 @@ export function BlogCard({ post, variant = 'light', className }: BlogCardProps) 
           className="absolute inset-0 bg-gradient-to-t from-brand-navy-950/75 via-brand-navy-950/10 to-transparent"
           aria-hidden
         />
-        <span className="absolute bottom-2.5 left-4 rounded-full bg-brand-navy-950/70 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] text-cyan-100 backdrop-blur-sm">
+        <span className="absolute bottom-2.5 left-4 rounded-full bg-brand-navy-950/70 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] text-blue-100 backdrop-blur-sm">
           {post.category}
         </span>
       </div>
@@ -82,7 +82,7 @@ export function BlogCard({ post, variant = 'light', className }: BlogCardProps) 
         <span
           className={cn(
             'mt-4 inline-flex items-center gap-1.5 text-xs font-semibold',
-            dark ? 'text-cyan-300' : 'text-brand-navy-600',
+            dark ? 'text-blue-300' : 'text-brand-navy-600',
           )}
         >
           Yazıyı oku

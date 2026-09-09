@@ -225,7 +225,7 @@ export default function LocalServicePage({ params }: PageProps) {
               <dl className="mt-4 space-y-3 text-sm">
                 <div className="flex items-center justify-between gap-4">
                   <dt className="flex items-center gap-2 text-brand-ink-soft/70">
-                    <Users className="h-4 w-4 text-brand-cyan" aria-hidden />
+                    <Users className="h-4 w-4 text-brand-blue" aria-hidden />
                     Nüfus
                   </dt>
                   <dd className="font-mono font-semibold text-brand-ink">
@@ -234,14 +234,14 @@ export default function LocalServicePage({ params }: PageProps) {
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <dt className="flex items-center gap-2 text-brand-ink-soft/70">
-                    <Building2 className="h-4 w-4 text-brand-cyan" aria-hidden />
+                    <Building2 className="h-4 w-4 text-brand-blue" aria-hidden />
                     Bölge
                   </dt>
                   <dd className="font-medium text-brand-ink">{city.region}</dd>
                 </div>
                 <div className="flex items-start justify-between gap-4">
                   <dt className="flex items-center gap-2 text-brand-ink-soft/70">
-                    <MapPin className="h-4 w-4 text-brand-cyan" aria-hidden />
+                    <MapPin className="h-4 w-4 text-brand-blue" aria-hidden />
                     Hizmet alanı
                   </dt>
                   <dd className="text-right font-medium text-brand-ink">
@@ -250,7 +250,7 @@ export default function LocalServicePage({ params }: PageProps) {
                 </div>
                 <div className="flex items-start justify-between gap-4">
                   <dt className="flex items-center gap-2 text-brand-ink-soft/70">
-                    <Clock className="h-4 w-4 text-brand-cyan" aria-hidden />
+                    <Clock className="h-4 w-4 text-brand-blue" aria-hidden />
                     Geri dönüş
                   </dt>
                   <dd className="font-medium text-brand-ink">{CONTACT.responseTime}</dd>
@@ -319,7 +319,7 @@ export default function LocalServicePage({ params }: PageProps) {
             <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {city.industries.slice(0, 6).map((industry) => (
                 <li key={industry} className="flex items-start gap-2 text-[13.5px] text-brand-ink-soft/80">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-cyan" aria-hidden />
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" aria-hidden />
                   {industry}
                 </li>
               ))}
@@ -355,9 +355,9 @@ export default function LocalServicePage({ params }: PageProps) {
             {service.scope.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 rounded-xl border border-brand-navy-100 bg-white p-4 transition-colors hover:border-brand-cyan/40"
+                className="flex items-start gap-3 rounded-xl border border-brand-navy-100 bg-white p-4 transition-colors hover:border-brand-blue/40"
               >
-                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-green/12 text-brand-green">
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue">
                   <Check className="h-3.5 w-3.5" aria-hidden />
                 </span>
                 <span className="text-[14.5px] leading-relaxed text-brand-ink-soft/90">{item}</span>
@@ -457,9 +457,9 @@ export default function LocalServicePage({ params }: PageProps) {
                 <Link
                   key={citySlug}
                   href={`/sehir/${citySlug}/`}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 px-3.5 py-1.5 text-[13px] text-brand-ink-soft/80 transition hover:border-brand-cyan/40 hover:text-brand-navy-900"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 px-3.5 py-1.5 text-[13px] text-brand-ink-soft/80 transition hover:border-brand-blue/40 hover:text-brand-navy-900"
                 >
-                  <MapPin className="h-3 w-3 text-brand-cyan" aria-hidden />
+                  <MapPin className="h-3 w-3 text-brand-blue" aria-hidden />
                   {item.name} dijital hizmetler
                 </Link>
               )

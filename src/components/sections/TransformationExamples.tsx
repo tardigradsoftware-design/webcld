@@ -21,7 +21,7 @@ export function TransformationExamples({ className }: { className?: string }) {
           className="card-navy group relative overflow-hidden p-6"
         >
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-400/12 text-cyan-300">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400/12 text-blue-300">
               <LucideIcon name={example.icon} fallback="Sparkles" className="h-5 w-5" aria-hidden />
             </span>
             <h3 className="text-lg font-semibold text-white">{example.title}</h3>
@@ -31,11 +31,11 @@ export function TransformationExamples({ className }: { className?: string }) {
             <span className="rounded-lg border border-white/12 bg-white/[0.05] px-3 py-1.5 text-sm text-white/60 line-through decoration-white/30">
               {example.before}
             </span>
-            <ArrowRight className="h-4 w-4 text-cyan-300 transition-transform group-hover:translate-x-1" aria-hidden />
+            <ArrowRight className="h-4 w-4 text-blue-300 transition-transform group-hover:translate-x-1" aria-hidden />
             <span className="rounded-lg bg-cta-gradient px-3 py-1.5 text-sm font-semibold text-white">
               {example.after}
             </span>
-            <span className="ml-auto rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 font-mono text-xs text-emerald-300">
+            <span className="ml-auto rounded-full border border-sky-400/25 bg-sky-400/10 px-3 py-1 font-mono text-xs text-sky-300">
               {example.gain}
             </span>
           </div>

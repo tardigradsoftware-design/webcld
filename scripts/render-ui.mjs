@@ -24,7 +24,7 @@ const chip = (x, y, label, { bg, fg, s = 10.8, w = 700, pad = 9, h = 21 } = {}) 
   return { svg: rw(x, y, cw, h, { rx: 99, f: bg }) + txt(x + cw / 2, y + h - 6.5, label, { s, w, c: fg, a: 'middle' }), w: cw }
 }
 const ST = {
-  g: ['#10b981', '#059669'], b: ['#2563eb', '#2563eb'], c: ['#06b6d4', '#0891b2'],
+  g: ['#1d4ed8', '#1e40af'], b: ['#2563eb', '#2563eb'], c: ['#3b82f6', '#0891b2'],
   a: ['#f59e0b', '#b45309'], r: ['#ef4444', '#dc2626'], n: ['#94a3b8', '#475569'],
 }
 const stChip = (x, y, label, tone) => {
@@ -47,7 +47,7 @@ const table = (x, y, cols, rows, rowH = 40) => {
     let rx = x
     r.forEach((cell, ci) => {
       if (cell && cell.st) svg += stChip(rx, ry + 9, cell.st, cell.tone).svg
-      else if (cell && cell.d) svg += txt(rx, ry + 23, cell.d, { s: 12, w: 650, c: cell.c ?? '#059669' })
+      else if (cell && cell.d) svg += txt(rx, ry + 23, cell.d, { s: 12, w: 650, c: cell.c ?? '#1e40af' })
       else svg += txt(rx, ry + 23, cell, { s: 12.3, w: ci === 0 ? 600 : 500, c: ci === 0 ? '#1e293b' : '#475569' })
       rx += cols[ci].w
     })
@@ -71,7 +71,7 @@ const inp = (x, y, w, h, ph) => rw(x, y, w, h, { rx: 8, f: '#ffffff', st: '#e2e8
 const lbl = (x, y, t) => txt(x, y, t, { s: 11.5, w: 600, c: '#334155' })
 const btn = (x, y, w, t, f = '#2563eb') => rw(x, y, w, 34, { rx: 8, f }) + txt(x + w / 2, y + 21.5, t, { s: 12.3, w: 650, c: '#ffffff', a: 'middle' })
 const ghost = (x, y, w, t) => rw(x, y, w, 34, { rx: 8, f: '#ffffff', st: '#cbd5e1' }) + txt(x + w / 2, y + 21.5, t, { s: 12.3, w: 650, c: '#334155', a: 'middle' })
-const check = (x, y, c = '#10b981') => circ(x, y, 7, c, { op: 0.15 }) + `<path d="M${x - 3} ${y} l2.2 2.4 4-4.4" fill="none" stroke="${c}" stroke-width="1.7" stroke-linecap="round"/>`
+const check = (x, y, c = '#1d4ed8') => circ(x, y, 7, c, { op: 0.15 }) + `<path d="M${x - 3} ${y} l2.2 2.4 4-4.4" fill="none" stroke="${c}" stroke-width="1.7" stroke-linecap="round"/>`
 
 function appChrome(title) {
   let s = rw(0, 0, W, H, { f: '#f1f5f9' }) + rw(0, 0, W, 56, { f: '#ffffff' }) + ln(0, 56, W, 56, '#e2e8f0')
@@ -111,11 +111,11 @@ const TPL = {
     s += txt(60, 278, 'Türkiye genelinde 81 ile uzaktan hizmet · İstanbul Maltepe merkez', { s: 13, w: 500, c: '#64748b' })
     s += btn(60, 312, 190, 'Projenizi Konuşalım') + ghost(262, 312, 170, 'Hizmetleri İnceleyin')
     s += rw(900, 150, 640, 330, { rx: 16, f: '#0b1f4b' })
-    s += rw(930, 180, 380, 26, { rx: 6, f: '#ffffff', op: 0.16 }) + rw(930, 220, 300, 12, { rx: 6, f: '#22d3ee', op: 0.7 })
-    s += rw(930, 250, 580, 110, { rx: 10, f: '#ffffff', op: 0.08 }) + rw(930, 376, 280, 74, { rx: 10, f: '#2563eb', op: 0.55 }) + rw(1226, 376, 284, 74, { rx: 10, f: '#06b6d4', op: 0.4 })
+    s += rw(930, 180, 380, 26, { rx: 6, f: '#ffffff', op: 0.16 }) + rw(930, 220, 300, 12, { rx: 6, f: '#60a5fa', op: 0.7 })
+    s += rw(930, 250, 580, 110, { rx: 10, f: '#ffffff', op: 0.08 }) + rw(930, 376, 280, 74, { rx: 10, f: '#2563eb', op: 0.55 }) + rw(1226, 376, 284, 74, { rx: 10, f: '#3b82f6', op: 0.4 })
     ;[0, 1, 2].forEach((i) => {
       const cx = 60 + i * 500
-      s += card(cx, 520, 468, 150) + circ(cx + 34, 556, 16, ['#2563eb', '#06b6d4', '#10b981'][i], { op: 0.14 }) + circ(cx + 34, 556, 6, ['#2563eb', '#06b6d4', '#10b981'][i])
+      s += card(cx, 520, 468, 150) + circ(cx + 34, 556, 16, ['#2563eb', '#3b82f6', '#1d4ed8'][i], { op: 0.14 }) + circ(cx + 34, 556, 6, ['#2563eb', '#3b82f6', '#1d4ed8'][i])
       s += txt(cx + 62, 552, ['Kurumsal Tasarım', 'Hızlı ve Güvenli', 'SEO Uyumlu'][i], { s: 14, w: 700 })
       s += txt(cx + 62, 574, ['Markanıza özel arayüz ve içerik mimarisi', 'Core Web Vitals dostu teknik kurulum', 'Arama motorlarına hazır schema altyapısı'][i], { s: 12, w: 500, c: '#64748b' })
       s += rw(cx + 24, 606, 420, 40, { rx: 8, f: '#f8fafc' })
@@ -137,7 +137,7 @@ const TPL = {
     s += inp(W - 380, 98, 240, 32, 'Ürün ara…') + circ(W - 116, 114, 8, 'none', { st: '#334155', sw: 1.7 }) + circ(W - 70, 114, 8, 'none', { st: '#334155', sw: 1.7 }) + circ(W - 66, 108, 7, '#2563eb') + txt(W - 66, 111.5, '3', { s: 9, w: 700, c: '#fff', a: 'middle' })
     s += rw(60, 150, 1480, 190, { rx: 14, f: '#0e2a63' })
     s += txt(100, 232, 'Yeni Sezon Koleksiyonu', { s: 30, w: 800, c: '#ffffff' }) + txt(100, 262, 'Sonbahar parçalarında %20’ye varan indirim', { s: 13.5, w: 500, c: '#bcd0f7' })
-    s += btn(100, 284, 150, 'Alışverişe Başla', '#22d3ee')
+    s += btn(100, 284, 150, 'Alışverişe Başla', '#60a5fa')
     s += rw(1150, 170, 360, 150, { rx: 10, f: '#ffffff', op: 0.1 })
     const products = [['Seramik Kupa', '₺249'], ['Yün Kaşkol', '₺549'], ['Keten Gömlek', '₺1.290'], ['Deri Cüzdan', '₺890'], ['Cam Vazo', '₺420'], ['Ahşap Mumluk', '₺310'], ['Pamuklu Tişört', '₺640'], ['Bakır Cezve', '₺780']]
     products.forEach((p, i) => {
@@ -153,7 +153,7 @@ const TPL = {
   },
   crm: (T) => {
     let s = appChrome(T.title) + head(42, 84, T.title, T.sub, '+ Yeni Fırsat')
-    const cols = [['Yeni Lead', 6, '#94a3b8'], ['Görüşme', 4, '#2563eb'], ['Teklif', 3, '#f59e0b'], ['Kazanıldı', 2, '#10b981']]
+    const cols = [['Yeni Lead', 6, '#94a3b8'], ['Görüşme', 4, '#2563eb'], ['Teklif', 3, '#f59e0b'], ['Kazanıldı', 2, '#1d4ed8']]
     const deals = [
       ['Demirtaş Lojistik', '₺184.000', 'MA'], ['Kuzey Gıda', '₺49.000', 'EK'], ['Vera Tekstil', '₺28.500', 'MA'],
       ['Arda Yapı', '₺96.000', 'TS'], ['Lida Kozmetik', '₺18.200', 'EK'], ['Nortel Medya', '₺64.400', 'TS'],
@@ -171,9 +171,9 @@ const TPL = {
         const cy = 184 + k * 158
         s += card(cx, cy, 362, 142)
         s += txt(cx + 16, cy + 28, d[0], { s: 13.5, w: 700 }) + txt(cx + 16, cy + 52, d[1], { s: 15, w: 800, c: '#0b1f4b' })
-        s += circ(cx + 26, cy + 112, 12, ['#6366f1', '#0ea5e9', '#10b981'][di % 3]) + txt(cx + 26, cy + 116, d[2], { s: 9, w: 700, c: '#fff', a: 'middle' })
+        s += circ(cx + 26, cy + 112, 12, ['#6366f1', '#0ea5e9', '#1d4ed8'][di % 3]) + txt(cx + 26, cy + 116, d[2], { s: 9, w: 700, c: '#fff', a: 'middle' })
         s += txt(cx + 46, cy + 116, ['Satış · M. Aksoy', 'Satış · E. Kaya', 'Satış · T. Sarp'][di % 3], { s: 11, w: 500, c: '#64748b' })
-        const tg = chip(cx + 250, cy + 100, ['Sıcak', 'Orta', 'Yeni'][di % 3], { bg: ['#10b981', '#f59e0b', '#2563eb'][di % 3], fg: '#fff', s: 10, pad: 8, h: 19 })
+        const tg = chip(cx + 250, cy + 100, ['Sıcak', 'Orta', 'Yeni'][di % 3], { bg: ['#1d4ed8', '#f59e0b', '#2563eb'][di % 3], fg: '#fff', s: 10, pad: 8, h: 19 })
         s += tg.svg
       }
     })
@@ -181,7 +181,7 @@ const TPL = {
   },
   panel: (T) => {
     let s = appChrome(T.title) + head(42, 84, T.title, T.sub, '+ Kullanıcı Davet Et')
-    ;[['TOPLAM KULLANICI', '148', '▲ 6', '#059669', 'bu ay'], ['AKTİF ROL', '12', '—', '#64748b', 'tanımlı'], ['SON 24 SA', '96 giriş', '▲ %4', '#059669', 'normal']].forEach((k, i) => (s += kpi(42 + i * 300, 148, 288, k[0], k[1], k[2], k[3], k[4])))
+    ;[['TOPLAM KULLANICI', '148', '▲ 6', '#1e40af', 'bu ay'], ['AKTİF ROL', '12', '—', '#64748b', 'tanımlı'], ['SON 24 SA', '96 giriş', '▲ %4', '#1e40af', 'normal']].forEach((k, i) => (s += kpi(42 + i * 300, 148, 288, k[0], k[1], k[2], k[3], k[4])))
     s += card(960, 148, 598, 92) + txt(976, 176, 'Roller', { s: 12, w: 700 })
     ;[['Yönetici', 8], ['Editör', 26], ['Destek', 41], ['İzleyici', 73]].forEach((r, i) => {
       const c = chip(976 + i * 145, 192, `${r[0]} · ${r[1]}`, { bg: '#f1f5f9', fg: '#475569' })
@@ -207,13 +207,13 @@ const TPL = {
   },
   dashboard: (T) => {
     let s = appChrome(T.title) + head(42, 84, T.title, T.sub, 'Rapor İndir')
-    ;[['GÜNLÜK CİRO', '₺96.480', '▲ %11,0', '#059669', 'düne göre'], ['SİPARİŞ', '42', '▲ %8,2', '#059669', 'bugün'], ['DÖNÜŞÜM', '%3,4', '▲ 0,3 p', '#059669', '30 gün'], ['DESTEK TALEBİ', '17', '▼ 4', '#059669', 'açık']].forEach((k, i) => (s += kpi(42 + i * 382, 148, 370, k[0], k[1], k[2], k[3], k[4])))
+    ;[['GÜNLÜK CİRO', '₺96.480', '▲ %11,0', '#1e40af', 'düne göre'], ['SİPARİŞ', '42', '▲ %8,2', '#1e40af', 'bugün'], ['DÖNÜŞÜM', '%3,4', '▲ 0,3 p', '#1e40af', '30 gün'], ['DESTEK TALEBİ', '17', '▼ 4', '#1e40af', 'açık']].forEach((k, i) => (s += kpi(42 + i * 382, 148, 370, k[0], k[1], k[2], k[3], k[4])))
     s += card(42, 264, 980, 330)
     s += txt(58, 294, 'Gelir ve oturum eğilimi', { s: 13, w: 700 }) + txt(58, 312, 'Son 12 hafta · haftalık toplam', { s: 11, w: 500, c: '#64748b' })
     s += area(58, 336, 930, 210, [210, 232, 226, 258, 252, 288, 280, 316, 310, 344, 362, 386], '#2563eb', 'g1', ['H1', 'H3', 'H5', 'H7', 'H9', 'H12'])
     s += card(1040, 264, 518, 330)
     s += txt(1056, 294, 'Kanal dağılımı', { s: 13, w: 700 })
-    ;[['Web', 56, '#2563eb'], ['Mobil', 29, '#06b6d4'], ['Pazaryeri', 15, '#94a3b8']].forEach((r, i) => {
+    ;[['Web', 56, '#2563eb'], ['Mobil', 29, '#3b82f6'], ['Pazaryeri', 15, '#94a3b8']].forEach((r, i) => {
       const ry = 330 + i * 62
       s += txt(1056, ry + 12, r[0], { s: 12, w: 600 }) + txt(1542, ry + 12, `%${r[1]}`, { s: 12, w: 700, a: 'end' })
       s += rw(1056, ry + 22, 486, 10, { rx: 5, f: '#eef2f7' }) + rw(1056, ry + 22, 486 * r[1] / 56, 10, { rx: 5, f: r[2] })
@@ -257,7 +257,7 @@ const TPL = {
     ], 46)
     s += card(1180, 204, 378, 620)
     s += txt(1196, 236, 'Depo doluluk oranı', { s: 13, w: 700 })
-    ;[['Merkez', 78, '#2563eb'], ['Depo 2', 54, '#06b6d4'], ['Sevkiyat alanı', 32, '#10b981']].forEach((r, i) => {
+    ;[['Merkez', 78, '#2563eb'], ['Depo 2', 54, '#3b82f6'], ['Sevkiyat alanı', 32, '#1d4ed8']].forEach((r, i) => {
       const ry = 268 + i * 74
       s += txt(1196, ry + 12, r[0], { s: 12.3, w: 600 }) + txt(1542, ry + 12, `%${r[1]}`, { s: 12.3, w: 700, a: 'end' })
       s += rw(1196, ry + 22, 346, 12, { rx: 6, f: '#eef2f7' }) + rw(1196, ry + 22, 346 * r[1] / 100, 12, { rx: 6, f: r[2] })
@@ -286,7 +286,7 @@ const TPL = {
     s += txt(58, 650, 'Alan performansı', { s: 12.5, w: 700 })
     ;[['Ad Soyad', 98], ['E-posta', 96], ['Talep Türü', 87], ['Mesaj', 64]].forEach((r, i) => {
       const ry = 672 + i * 40
-      s += txt(58, ry + 12, r[0], { s: 12, w: 550 }) + rw(220, ry + 4, 380, 9, { rx: 4, f: '#eef2f7' }) + rw(220, ry + 4, 380 * r[1] / 100, 9, { rx: 4, f: r[1] > 90 ? '#10b981' : '#f59e0b' }) + txt(640, ry + 13, `%${r[1]}`, { s: 11.5, w: 650, c: '#475569' })
+      s += txt(58, ry + 12, r[0], { s: 12, w: 550 }) + rw(220, ry + 4, 380, 9, { rx: 4, f: '#eef2f7' }) + rw(220, ry + 4, 380 * r[1] / 100, 9, { rx: 4, f: r[1] > 90 ? '#1d4ed8' : '#f59e0b' }) + txt(640, ry + 13, `%${r[1]}`, { s: 11.5, w: 650, c: '#475569' })
     })
     s += card(706, 148, 852, 700)
     s += txt(722, 180, 'Son gönderimler', { s: 13.5, w: 700 }) + txt(722, 200, 'Ortalama yanıt süresi: 42 dk', { s: 11.3, w: 500, c: '#64748b' })
@@ -318,7 +318,7 @@ const TPL = {
       s += ln(gx, gy + ri * chh, gx + 6 * cw, gy + ri * chh, '#f1f5f9')
     })
     days.forEach((d, ci) => (s += ln(gx + ci * cw, gy, gx + ci * cw, gy + 8 * chh, '#f1f5f9')))
-    const slots = [[0, 1, 'Z. Koral', '#2563eb'], [0, 4, 'M. Elgin', '#06b6d4'], [1, 2, 'A. Dereci', '#10b981'], [2, 0, 'B. Uncu', '#2563eb'], [2, 5, 'İ. Sancer', '#f59e0b'], [3, 3, 'S. Aksoy', '#06b6d4'], [4, 1, 'K. Balta', '#10b981'], [4, 6, 'D. Tuncel', '#2563eb'], [5, 2, 'O. Ercan', '#6366f1']]
+    const slots = [[0, 1, 'Z. Koral', '#2563eb'], [0, 4, 'M. Elgin', '#3b82f6'], [1, 2, 'A. Dereci', '#1d4ed8'], [2, 0, 'B. Uncu', '#2563eb'], [2, 5, 'İ. Sancer', '#f59e0b'], [3, 3, 'S. Aksoy', '#3b82f6'], [4, 1, 'K. Balta', '#1d4ed8'], [4, 6, 'D. Tuncel', '#2563eb'], [5, 2, 'O. Ercan', '#6366f1']]
     slots.forEach(([ci, ri, name, c]) => {
       s += rw(gx + ci * cw + 6, gy + ri * chh + 6, cw - 12, chh - 12, { rx: 8, f: c, op: 0.12 }) + rw(gx + ci * cw + 6, gy + ri * chh + 6, 3, chh - 12, { f: c })
       s += txt(gx + ci * cw + 16, gy + ri * chh + 30, name, { s: 11.8, w: 650, c: '#1e293b' }) + txt(gx + ci * cw + 16, gy + ri * chh + 48, `${hours[ri]} – ${hours[ri + 1] ?? '17:00'}`, { s: 10.5, w: 500, c: '#64748b' })
@@ -380,7 +380,7 @@ const TPL = {
     let s = appChrome(T.title) + head(42, 84, T.title, T.sub, '+ Görev')
     s += rw(42, 148, 250, 34, { rx: 8, f: '#ffffff', st: '#e2e8f0' }) + txt(54, 169, 'Sprint 14 · 6 gün kaldı', { s: 12.3, w: 600, c: '#334155' }) + `<path d="M272 163 l5 5 5-5" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round"/>`
     s += txt(310, 169, 'Kapsam: 42 puan · Tamamlanan: 26 puan (%62)', { s: 12, w: 550, c: '#64748b' })
-    const cols = [['Backlog', '#94a3b8'], ['Bu Sprint', '#2563eb'], ['Testte', '#f59e0b'], ['Tamamlandı', '#10b981']]
+    const cols = [['Backlog', '#94a3b8'], ['Bu Sprint', '#2563eb'], ['Testte', '#f59e0b'], ['Tamamlandı', '#1d4ed8']]
     const tasks = [
       ['Ödeme sağlayıcı webhook yeniden deneme kuyruğu', 'API', 5],
       ['Yönetim paneli rol matrisi ekranı', 'UI', 3],
@@ -412,7 +412,7 @@ const TPL = {
         const tg = chip(cx + 16, cy + 66, t[1], { bg: '#f1f5f9', fg: '#475569', s: 10, pad: 8, h: 19 })
         s += tg.svg
         s += txt(cx + 16 + tg.w + 10, cy + 80, `${t[2]} puan`, { s: 10.6, w: 550, c: '#64748b' })
-        s += circ(cx + 330, cy + 104, 12, ['#6366f1', '#0ea5e9', '#10b981', '#f59e0b'][ti % 4]) + txt(cx + 330, cy + 108, ['MA', 'EK', 'TS', 'SD'][ti % 4], { s: 9, w: 700, c: '#fff', a: 'middle' })
+        s += circ(cx + 330, cy + 104, 12, ['#6366f1', '#0ea5e9', '#1d4ed8', '#f59e0b'][ti % 4]) + txt(cx + 330, cy + 108, ['MA', 'EK', 'TS', 'SD'][ti % 4], { s: 9, w: 700, c: '#fff', a: 'middle' })
         if (ci === 3) s += check(cx + 300, cy + 30)
       }
     })
@@ -448,14 +448,14 @@ const TPL = {
   seo: (T) => {
     let s = appChrome(T.title) + head(42, 84, T.title, T.sub, 'Denetim Başlat')
     s += card(42, 148, 460, 240)
-    s += `<circle cx="150" cy="268" r="62" fill="none" stroke="#e6ebf2" stroke-width="12"/><circle cx="150" cy="268" r="62" fill="none" stroke="#10b981" stroke-width="12" stroke-linecap="round" stroke-dasharray="334 389" transform="rotate(-90 150 268)"/>` + txt(150, 280, '86', { s: 30, w: 800, a: 'middle' })
+    s += `<circle cx="150" cy="268" r="62" fill="none" stroke="#e6ebf2" stroke-width="12"/><circle cx="150" cy="268" r="62" fill="none" stroke="#1d4ed8" stroke-width="12" stroke-linecap="round" stroke-dasharray="334 389" transform="rotate(-90 150 268)"/>` + txt(150, 280, '86', { s: 30, w: 800, a: 'middle' })
     s += txt(250, 210, 'Sağlık puanı: İyi', { s: 15, w: 750 }) + txt(250, 232, '207 sayfa tarandı · 3 uyarı', { s: 11.8, w: 500, c: '#64748b' })
     ;[['LCP', '1,8 sn'], ['CLS', '0,02'], ['INP', '140 ms']].forEach((v, i) => {
       const vx = 250 + i * 84
       s += rw(vx, 254, 76, 46, { rx: 8, f: '#f8fafc', st: '#eef2f7' }) + txt(vx + 8, 272, v[0], { s: 9.6, w: 700, c: '#64748b' }) + txt(vx + 8, 290, v[1], { s: 12.5, w: 750 })
     })
     s += txt(250, 340, 'Son denetim: 28 Ağu 2026 04:12', { s: 10.8, w: 500, c: '#94a3b8' })
-    ;[['TIKLAMA (90G)', '12,4B', '▲ %18,6'], ['GÖSTERİM', '486B', '▲ %9,3'], ['ORT. KONUM', '4,2', '▲ 1,1']].forEach((k, i) => (s += kpi(520 + i * 350, 148, 338, k[0], k[1], k[2], '#059669', 'önceki döneme göre')))
+    ;[['TIKLAMA (90G)', '12,4B', '▲ %18,6'], ['GÖSTERİM', '486B', '▲ %9,3'], ['ORT. KONUM', '4,2', '▲ 1,1']].forEach((k, i) => (s += kpi(520 + i * 350, 148, 338, k[0], k[1], k[2], '#1e40af', 'önceki döneme göre')))
     s += card(42, 408, 940, 540)
     s += txt(58, 440, 'Tıklama eğilimi — 90 gün', { s: 13, w: 700 }) + txt(58, 458, 'Organik arama · Search Console', { s: 11, w: 500, c: '#64748b' })
     s += area(58, 486, 890, 380, [120, 126, 134, 128, 146, 140, 158, 152, 170, 166, 186, 182, 200, 208, 222], '#2563eb', 'g2', ['01 Haz', '30 Haz', '29 Tem', '27 Ağu'])
@@ -515,7 +515,7 @@ const TPL = {
     })
     s += card(42, 690, 1000, 258)
     s += txt(58, 722, 'Webhook teslimatları — 24 saat', { s: 13, w: 700 })
-    s += area(58, 748, 940, 160, [40, 42, 41, 45, 44, 48, 47, 52, 50, 55, 54, 58], '#10b981', 'g3', ['00:00', '06:00', '12:00', '18:00'])
+    s += area(58, 748, 940, 160, [40, 42, 41, 45, 44, 48, 47, 52, 50, 55, 54, 58], '#1d4ed8', 'g3', ['00:00', '06:00', '12:00', '18:00'])
     return s
   },
   chatbot: (T) => {
@@ -523,9 +523,9 @@ const TPL = {
     s += rw(0, 0, 0, 0, {})
     s += card(300, 150, 1000, 760)
     s += rw(300, 150, 1000, 64, { rx: 12, f: '#0b1f4b' }) + rw(300, 198, 1000, 16, { f: '#0b1f4b' })
-    s += circ(336, 182, 16, '#22d3ee') + circ(331, 178, 2.4, '#0b1f4b') + circ(341, 178, 2.4, '#0b1f4b') + `<path d="M330 186 q6 5 12 0" stroke="#0b1f4b" stroke-width="1.8" fill="none" stroke-linecap="round"/>`
+    s += circ(336, 182, 16, '#60a5fa') + circ(331, 178, 2.4, '#0b1f4b') + circ(341, 178, 2.4, '#0b1f4b') + `<path d="M330 186 q6 5 12 0" stroke="#0b1f4b" stroke-width="1.8" fill="none" stroke-linecap="round"/>`
     s += txt(364, 178, 'Satış Asistanı', { s: 14, w: 700, c: '#ffffff' }) + txt(364, 196, 'Ortalama yanıt: 1,2 sn · çevrimiçi', { s: 10.8, w: 500, c: '#9fb3d9' })
-    const c1 = chip(1150, 170, '7/24 aktif', { bg: '#10b981', fg: '#fff', s: 10.2 }); s += c1.svg
+    const c1 = chip(1150, 170, '7/24 aktif', { bg: '#1d4ed8', fg: '#fff', s: 10.2 }); s += c1.svg
     const bubbles = [
       ['b', 'Merhaba! Ben Tardigrad satış asistanıyım. Size nasıl yardımcı olabilirim?'],
       ['u', 'E-ticaret sitesi için teklif almak istiyorum.'],
@@ -569,7 +569,7 @@ const TPL = {
     s += txt(58, 620, 'En sorulan konular', { s: 12, w: 700 })
     ;[['Fiyat', 82], ['Kurulum süresi', 64], ['Entegrasyon', 51], ['Destek', 38]].forEach((r, i) => {
       const ry = 640 + i * 46
-      s += txt(58, ry + 12, r[0], { s: 11.6, w: 550 }) + rw(150, ry + 4, 112, 9, { rx: 4, f: '#eef2f7' }) + rw(150, ry + 4, 112 * r[1] / 100, 9, { rx: 4, f: '#06b6d4' })
+      s += txt(58, ry + 12, r[0], { s: 11.6, w: 550 }) + rw(150, ry + 4, 112, 9, { rx: 4, f: '#eef2f7' }) + rw(150, ry + 4, 112 * r[1] / 100, 9, { rx: 4, f: '#3b82f6' })
     })
     return s
   },
@@ -577,7 +577,7 @@ const TPL = {
     let s = appChrome(T.title) + head(42, 84, T.title, T.sub, 'Bakım Planla')
     s += rw(42, 148, 1516, 64, { rx: 12, f: '#ecfdf5', st: '#a7f3d0' })
     s += check(74, 180) + txt(94, 186, 'Tüm sistemler çalışıyor · son 90 gün kesinti: 12 dk', { s: 13.5, w: 700, c: '#065f46' })
-    const c = chip(1380, 166, 'Canlı izleme', { bg: '#10b981', fg: '#fff', s: 10.5 }); s += c.svg
+    const c = chip(1380, 166, 'Canlı izleme', { bg: '#1d4ed8', fg: '#fff', s: 10.5 }); s += c.svg
     const services = [
       ['API Uygulaması', 'api.tardigradsoftware.com', 99.99, 'g'],
       ['Web Siteleri (Vercel)', '38 üretim dağıtımı', 99.98, 'g'],
@@ -593,7 +593,7 @@ const TPL = {
       s += txt(62, ry + 32, r[0], { s: 13.5, w: 700 }) + txt(62, ry + 52, r[1], { s: 11, w: 500, c: '#64748b' })
       for (let b = 0; b < 45; b++) {
         const bad = r[3] === 'a' && (b === 31 || b === 32)
-        s += rw(560 + b * 17, ry + 26, 12, 26, { rx: 2, f: bad ? '#f59e0b' : '#10b981', op: bad ? 0.9 : 0.75 })
+        s += rw(560 + b * 17, ry + 26, 12, 26, { rx: 2, f: bad ? '#f59e0b' : '#1d4ed8', op: bad ? 0.9 : 0.75 })
       }
       s += txt(1360, ry + 44, `%${r[2].toLocaleString('tr-TR')}`, { s: 13, w: 700, c: '#334155', a: 'end' })
       s += stChip(1392, ry + 28, r[3] === 'g' ? 'Çalışıyor' : 'İzlemede', r[3]).svg
@@ -617,14 +617,14 @@ const TPL = {
     s += node(90, 210, 300, 'Tetikleyici: Yeni Sipariş', 'webhook · siparis.olusturuldu', '#2563eb')
     s += node(90, 380, 300, 'Tetikleyici: Form Gönderimi', 'form.teklif · v3 şema', '#2563eb')
     s += node(470, 295, 300, 'Koşul: Tutar > ₺5.000', 'evet / hayır dallanması', '#f59e0b')
-    s += node(850, 190, 240, 'Eylem: E-posta Gönder', 'Resend şablonu: VIP', '#10b981')
-    s += node(850, 330, 240, 'Eylem: WhatsApp Bildirimi', 'Cloud API · satış grubu', '#10b981')
-    s += node(850, 470, 240, 'Eylem: Stok Düş', 'depo.servisi · atomik', '#06b6d4')
+    s += node(850, 190, 240, 'Eylem: E-posta Gönder', 'Resend şablonu: VIP', '#1d4ed8')
+    s += node(850, 330, 240, 'Eylem: WhatsApp Bildirimi', 'Cloud API · satış grubu', '#1d4ed8')
+    s += node(850, 470, 240, 'Eylem: Stok Düş', 'depo.servisi · atomik', '#3b82f6')
     s += node(470, 560, 300, 'Eylem: Görev Oluştur', 'is-takip · öncelik: yüksek', '#6366f1')
     s += node(850, 640, 240, 'Eylem: Raporla', 'pano.metrik · günlük', '#64748b')
     s += arrow(390, 247, 470, 320) + arrow(390, 417, 470, 345) + arrow(770, 315, 850, 227) + arrow(770, 332, 850, 367) + arrow(770, 349, 850, 507)
     s += arrow(620, 634, 620, 560 + 74) + arrow(770, 597, 850, 677)
-    s += txt(430, 280, 'evet', { s: 10.5, w: 650, c: '#059669' }) + txt(430, 392, 'hayır', { s: 10.5, w: 650, c: '#b45309' })
+    s += txt(430, 280, 'evet', { s: 10.5, w: 650, c: '#1e40af' }) + txt(430, 392, 'hayır', { s: 10.5, w: 650, c: '#b45309' })
     s += card(1140, 148, 418, 800)
     s += txt(1156, 180, 'Çalıştırma geçmişi', { s: 13, w: 700 }) + txt(1156, 200, 'Son 24 saat · 1.284 çalıştırma', { s: 11, w: 500, c: '#64748b' })
     ;[
@@ -702,7 +702,7 @@ for (const [t, slugs] of Object.entries(MAP)) {
   for (const slug of slugs) {
     const title = titles[slug] ?? slug
     const body = TPL[t]({ title, sub: SUB[t] })
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><defs>${grad('g1', '#2563eb')}${grad('g2', '#2563eb')}${grad('g3', '#10b981')}</defs>${body}</svg>`
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><defs>${grad('g1', '#2563eb')}${grad('g2', '#2563eb')}${grad('g3', '#1d4ed8')}</defs>${body}</svg>`
     const png = new Resvg(svg, { font: { fontFiles, loadSystemFonts: false, defaultFamily: 'Inter' }, fitTo: { mode: 'width', value: W } }).render().asPng()
     await sharp(Buffer.from(png)).jpeg({ quality: 86, mozjpeg: true }).toFile(`public/images/screens/${slug}.jpg`)
     count++

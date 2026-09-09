@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
       variant: {
@@ -13,9 +13,9 @@ const buttonVariants = cva(
           'bg-cta-gradient text-white shadow-glow-blue hover:brightness-110 hover:shadow-glow active:scale-[0.98]',
         navy: 'bg-brand-navy-900 text-white hover:bg-brand-navy-800 active:scale-[0.98]',
         outline:
-          'border border-brand-navy-200 bg-white text-brand-navy-900 hover:border-brand-cyan hover:text-brand-navy-700 hover:bg-brand-navy-50',
+          'border border-brand-navy-200 bg-white text-brand-navy-900 hover:border-brand-blue hover:text-brand-navy-700 hover:bg-brand-navy-50',
         'outline-light':
-          'border border-white/25 bg-white/5 text-white backdrop-blur hover:border-brand-cyan-light/70 hover:bg-white/10',
+          'border border-white/25 bg-white/5 text-white backdrop-blur hover:border-brand-blue-light/70 hover:bg-white/10',
         ghost: 'text-brand-navy-800 hover:bg-brand-navy-50 hover:text-brand-navy-900',
         'ghost-light': 'text-white/80 hover:bg-white/10 hover:text-white',
         link: 'text-brand-navy-700 underline-offset-4 hover:underline',

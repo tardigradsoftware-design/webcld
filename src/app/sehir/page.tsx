@@ -142,7 +142,7 @@ export default function SehirIndexPage() {
                         <li key={city.slug}>
                           <Link
                             href={`/hizmet/${service.slug}/${city.slug}/`}
-                            className="inline-flex items-center gap-1 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-3 py-1.5 text-[12.5px] font-medium text-brand-ink-soft transition hover:border-brand-cyan/50 hover:bg-brand-navy-50 hover:text-brand-navy-900"
+                            className="inline-flex items-center gap-1 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-3 py-1.5 text-[12.5px] font-medium text-brand-ink-soft transition hover:border-brand-blue/50 hover:bg-brand-navy-50 hover:text-brand-navy-900"
                           >
                             {city.name}
                           </Link>

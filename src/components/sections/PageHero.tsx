@@ -40,7 +40,7 @@ export function PageHero({
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-24 top-16 h-[360px] w-[360px] rounded-full bg-cyan-500/18 blur-[120px]"
+        className="pointer-events-none absolute -right-24 top-16 h-[360px] w-[360px] rounded-full bg-blue-500/18 blur-[120px]"
         aria-hidden
       />
 
@@ -65,7 +65,7 @@ export function PageHero({
                 {meta.map((item) => (
                   <div key={item.label}>
                     <dt className="text-[11px] uppercase tracking-[0.16em] text-white/45">{item.label}</dt>
-                    <dd className="mt-1 font-mono text-sm font-semibold text-cyan-300">{item.value}</dd>
+                    <dd className="mt-1 font-mono text-sm font-semibold text-blue-300">{item.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -82,9 +82,9 @@ export function PageHero({
                 </Link>
                 <a
                   href={`mailto:${CONTACT.email}?subject=${encodeURIComponent('Ücretsiz Ön Analiz Talebi')}`}
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:bg-white/[0.09]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
                 >
-                  <Mail className="h-4 w-4 text-cyan-300" aria-hidden />
+                  <Mail className="h-4 w-4 text-blue-300" aria-hidden />
                   {CTA.secondary}
                 </a>
               </div>

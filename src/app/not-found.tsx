@@ -40,13 +40,13 @@ export default function NotFound() {
         <div className="absolute inset-0 bg-[linear-gradient(165deg,#08112B_0%,#0F1B3D_50%,#0B1730_100%)]" />
         <div className="absolute inset-0 bg-grid-navy opacity-40" />
         <div className="absolute -top-28 left-1/4 h-96 w-96 rounded-full bg-blue-600/22 blur-[130px]" />
-        <div className="absolute bottom-0 right-10 h-80 w-80 rounded-full bg-cyan-500/16 blur-[120px]" />
+        <div className="absolute bottom-0 right-10 h-80 w-80 rounded-full bg-blue-500/16 blur-[120px]" />
       </div>
 
       <div className="container relative py-24 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
           <div>
-            <p className="font-mono text-sm font-semibold tracking-[0.22em] text-cyan-300">
+            <p className="font-mono text-sm font-semibold tracking-[0.22em] text-blue-300">
               HATA 404
             </p>
             <h1 className="mt-4 text-[clamp(2.2rem,6vw,4rem)] font-extrabold leading-[1.05] tracking-tight">
@@ -63,7 +63,7 @@ export default function NotFound() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3.5 text-[15px] font-semibold text-brand-navy-950 shadow-glow transition hover:brightness-110"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-blue px-6 py-3.5 text-[15px] font-semibold text-white shadow-glow transition hover:brightness-110"
               >
                 Ana sayfaya dön
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -84,7 +84,7 @@ export default function NotFound() {
 
             <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-white/50">
-                <Compass className="h-4 w-4 text-cyan-300" aria-hidden />
+                <Compass className="h-4 w-4 text-blue-300" aria-hidden />
                 En çok aranan hizmetler
               </h2>
               <ul className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
@@ -94,16 +94,16 @@ export default function NotFound() {
                       href={`/hizmetler/${service.slug}/`}
                       className="group inline-flex items-center gap-2 text-[14px] text-white/70 transition hover:text-white"
                     >
-                      <span className="h-1 w-1 rounded-full bg-cyan-300 transition-transform group-hover:scale-150" aria-hidden />
+                      <span className="h-1 w-1 rounded-full bg-blue-300 transition-transform group-hover:scale-150" aria-hidden />
                       {service.title}
-                      <ArrowUpRight className="h-3 w-3 text-white/25 transition group-hover:text-cyan-200" aria-hidden />
+                      <ArrowUpRight className="h-3 w-3 text-white/25 transition group-hover:text-blue-200" aria-hidden />
                     </Link>
                   </li>
                 ))}
               </ul>
               <Link
                 href="/hizmetler/"
-                className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-cyan-200 transition hover:text-cyan-100"
+                className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-blue-200 transition hover:text-blue-100"
               >
                 {services.length} hizmetin tamamı
                 <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
@@ -114,7 +114,7 @@ export default function NotFound() {
           <aside className="space-y-4">
             <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-white/50">
-                <Search className="h-4 w-4 text-cyan-300" aria-hidden />
+                <Search className="h-4 w-4 text-blue-300" aria-hidden />
                 Ne arıyordunuz?
               </h2>
               <ul className="mt-4 space-y-2 text-[14px] text-white/70">
@@ -128,7 +128,7 @@ export default function NotFound() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="flex items-center justify-between gap-3 rounded-lg border border-white/8 bg-white/[0.03] px-4 py-2.5 transition hover:border-cyan-400/40 hover:bg-white/[0.07] hover:text-white"
+                      className="flex items-center justify-between gap-3 rounded-lg border border-white/8 bg-white/[0.03] px-4 py-2.5 transition hover:border-blue-400/40 hover:bg-white/[0.07] hover:text-white"
                     >
                       <span>{item.label}</span>
                       <ArrowUpRight className="h-3.5 w-3.5 text-white/30" aria-hidden />
@@ -140,7 +140,7 @@ export default function NotFound() {
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-white/50">
-                <MapPin className="h-4 w-4 text-cyan-300" aria-hidden />
+                <MapPin className="h-4 w-4 text-blue-300" aria-hidden />
                 Şehir sayfaları
               </h2>
               <ul className="mt-4 flex flex-wrap gap-2">
@@ -148,7 +148,7 @@ export default function NotFound() {
                   <li key={city.slug}>
                     <Link
                       href={`/sehir/${city.slug}/`}
-                      className="inline-flex items-center rounded-full border border-white/12 bg-white/[0.04] px-3.5 py-1.5 text-[13px] text-white/70 transition hover:border-cyan-400/50 hover:text-white"
+                      className="inline-flex items-center rounded-full border border-white/12 bg-white/[0.04] px-3.5 py-1.5 text-[13px] text-white/70 transition hover:border-blue-400/50 hover:text-white"
                     >
                       {city.name}
                     </Link>
@@ -157,7 +157,7 @@ export default function NotFound() {
               </ul>
               <Link
                 href="/sehir/"
-                className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-cyan-200 transition hover:text-cyan-100"
+                className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-blue-200 transition hover:text-blue-100"
               >
                 81 ilin tamamı
                 <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
@@ -167,7 +167,7 @@ export default function NotFound() {
             {posts.length ? (
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
                 <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-white/50">
-                  <Newspaper className="h-4 w-4 text-cyan-300" aria-hidden />
+                  <Newspaper className="h-4 w-4 text-blue-300" aria-hidden />
                   Son blog yazıları
                 </h2>
                 <ul className="mt-4 space-y-3">
@@ -175,7 +175,7 @@ export default function NotFound() {
                     <li key={post.slug}>
                       <Link
                         href={`/blog/${post.slug}/`}
-                        className="group block rounded-lg border border-white/8 bg-white/[0.03] px-4 py-3 transition hover:border-cyan-400/40 hover:bg-white/[0.07]"
+                        className="group block rounded-lg border border-white/8 bg-white/[0.03] px-4 py-3 transition hover:border-blue-400/40 hover:bg-white/[0.07]"
                       >
                         <span className="block text-[13.5px] font-medium leading-snug text-white/85 group-hover:text-white">
                           {post.title}
@@ -190,8 +190,8 @@ export default function NotFound() {
               </div>
             ) : null}
 
-            <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/[0.08] p-6">
-              <Sparkles className="h-5 w-5 text-cyan-200" aria-hidden />
+            <div className="rounded-2xl border border-blue-400/20 bg-blue-400/[0.08] p-6">
+              <Sparkles className="h-5 w-5 text-blue-200" aria-hidden />
               <h2 className="mt-3 text-base font-semibold text-white">
                 Aradığınızı bulamadınız mı?
               </h2>
@@ -200,7 +200,7 @@ export default function NotFound() {
               </p>
               <Link
                 href="/iletisim/#iletisim-formu"
-                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-green px-5 py-2.5 text-sm font-semibold text-brand-navy-950 transition hover:brightness-110"
+                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-blue px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-110"
               >
                 {CTA.secondary}
                 <ArrowRight className="h-4 w-4" aria-hidden />

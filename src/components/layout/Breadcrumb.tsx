@@ -34,7 +34,7 @@ export function Breadcrumb({ items, variant = 'light', className, withSchema = t
               <li key={`${item.url}-${index}`} className="flex items-center gap-1.5">
                 {index === 0 ? (
                   <Home
-                    className={cn('h-3.5 w-3.5', variant === 'light' ? 'text-brand-navy-400' : 'text-cyan-300')}
+                    className={cn('h-3.5 w-3.5', variant === 'light' ? 'text-brand-navy-400' : 'text-blue-300')}
                     aria-hidden
                   />
                 ) : null}
@@ -55,7 +55,7 @@ export function Breadcrumb({ items, variant = 'light', className, withSchema = t
                       'transition-colors',
                       variant === 'light'
                         ? 'text-brand-ink-soft/70 hover:text-brand-navy-600'
-                        : 'text-white/60 hover:text-cyan-300',
+                        : 'text-white/60 hover:text-blue-300',
                     )}
                   >
                     {item.name}

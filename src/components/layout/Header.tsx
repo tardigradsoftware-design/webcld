@@ -70,7 +70,7 @@ export function Header() {
                     href={item.href}
                     className={cn(
                       'inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
-                      isActive(item.href) ? 'text-cyan-300' : 'text-white/75 hover:text-white',
+                      isActive(item.href) ? 'text-blue-300' : 'text-white/75 hover:text-white',
                     )}
                   >
                     {item.label}
@@ -103,7 +103,7 @@ export function Header() {
                                   {category.description}
                                 </span>
                               </span>
-                              <span className="shrink-0 rounded-full border border-white/12 bg-white/5 px-2.5 py-1 font-mono text-xs text-cyan-300">
+                              <span className="shrink-0 rounded-full border border-white/12 bg-white/5 px-2.5 py-1 font-mono text-xs text-blue-300">
                                 {category.count}
                               </span>
                             </Link>
@@ -130,7 +130,7 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
-                  isActive(item.href) ? 'text-cyan-300' : 'text-white/75 hover:text-white',
+                  isActive(item.href) ? 'text-blue-300' : 'text-white/75 hover:text-white',
                 )}
               >
                 {item.label}
@@ -145,7 +145,7 @@ export function Header() {
               href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
               className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white/75 transition hover:text-white"
             >
-              <Phone className="h-4 w-4 text-cyan-300" aria-hidden />
+              <Phone className="h-4 w-4 text-blue-300" aria-hidden />
               {CONTACT.phone}
             </a>
           ) : null}
@@ -238,7 +238,7 @@ export function Header() {
                   href={item.href}
                   className={cn(
                     'mt-1 block rounded-xl px-4 py-3 text-base font-semibold transition hover:bg-white/[0.06]',
-                    isActive(item.href) ? 'text-cyan-300' : 'text-white',
+                    isActive(item.href) ? 'text-blue-300' : 'text-white',
                   )}
                 >
                   {item.label}

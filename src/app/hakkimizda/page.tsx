@@ -194,7 +194,7 @@ export default function AboutPage() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 px-3 py-1.5 text-[12.5px] text-brand-ink-soft transition hover:border-brand-cyan hover:text-brand-navy-900"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 px-3 py-1.5 text-[12.5px] text-brand-ink-soft transition hover:border-brand-blue hover:text-brand-navy-900"
                     >
                       <LucideIcon name={social.icon} fallback="Link" className="h-3.5 w-3.5" aria-hidden />
                       {social.label}
@@ -259,7 +259,7 @@ export default function AboutPage() {
                           href={`/hizmetler/${slug}/`}
                           className="group inline-flex items-center gap-2 text-[13.5px] text-brand-ink-soft transition-colors hover:text-brand-navy-900"
                         >
-                          <span className="h-1 w-1 rounded-full bg-brand-cyan" aria-hidden />
+                          <span className="h-1 w-1 rounded-full bg-brand-blue" aria-hidden />
                           {service.shortTitle}
                           <ArrowUpRight className="h-3 w-3 text-brand-navy-300 opacity-0 transition group-hover:opacity-100" aria-hidden />
                         </Link>

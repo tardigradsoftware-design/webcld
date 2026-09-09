@@ -62,14 +62,14 @@ export function Stats({ variant = 'light', className }: StatsProps) {
               className={cn(
                 'rounded-2xl border p-6 transition-colors',
                 dark
-                  ? 'border-white/10 bg-white/[0.04] hover:border-cyan-400/40'
-                  : 'border-brand-navy-100 bg-brand-paper-soft hover:border-brand-cyan/40 hover:bg-white',
+                  ? 'border-white/10 bg-white/[0.04] hover:border-blue-400/40'
+                  : 'border-brand-navy-100 bg-brand-paper-soft hover:border-brand-blue/40 hover:bg-white',
               )}
             >
               <div
                 className={cn(
                   'font-mono text-4xl font-bold lg:text-5xl',
-                  dark ? 'text-cyan-300' : 'text-brand-navy-700',
+                  dark ? 'text-blue-300' : 'text-brand-navy-700',
                 )}
               >
                 <Counter value={stat.value} suffix={stat.suffix} />

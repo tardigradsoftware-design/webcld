@@ -61,7 +61,7 @@ export default function BlogIndexPage({ searchParams }: PageProps) {
             className={cn(
               'rounded-full border px-4 py-2 text-[13px] font-semibold transition',
               !activeCategory
-                ? 'border-cyan-400/60 bg-cyan-400/15 text-white'
+                ? 'border-blue-400/60 bg-blue-400/15 text-white'
                 : 'border-white/12 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
             )}
           >
@@ -76,7 +76,7 @@ export default function BlogIndexPage({ searchParams }: PageProps) {
                 className={cn(
                   'rounded-full border px-4 py-2 text-[13px] font-semibold transition',
                   activeCategory === category
-                    ? 'border-cyan-400/60 bg-cyan-400/15 text-white'
+                    ? 'border-blue-400/60 bg-blue-400/15 text-white'
                     : 'border-white/12 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
                 )}
               >
@@ -112,7 +112,7 @@ export default function BlogIndexPage({ searchParams }: PageProps) {
                     aria-hidden
                   />
                   <div className="relative flex h-full flex-col justify-end p-7 text-white">
-                    <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.12] px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-cyan-100 backdrop-blur-sm">
+                    <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.12] px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-blue-100 backdrop-blur-sm">
                       <Layers className="h-3 w-3" aria-hidden />
                       Öne çıkan
                     </span>
@@ -184,7 +184,7 @@ export default function BlogIndexPage({ searchParams }: PageProps) {
                     href={`/hizmetler/${service.slug}/`}
                     className="group inline-flex items-center gap-1.5 text-[13.5px] text-brand-ink-soft transition-colors hover:text-brand-navy-900"
                   >
-                    <span className="h-1 w-1 rounded-full bg-brand-cyan" aria-hidden />
+                    <span className="h-1 w-1 rounded-full bg-brand-blue" aria-hidden />
                     {service.shortTitle}
                   </Link>
                 </li>
@@ -210,7 +210,7 @@ export default function BlogIndexPage({ searchParams }: PageProps) {
                 <li key={city.slug}>
                   <Link
                     href={`/sehir/${city.slug}/`}
-                    className="inline-flex items-center rounded-full border border-brand-navy-100 bg-brand-paper-soft px-3.5 py-1.5 text-[13px] text-brand-ink-soft transition hover:border-brand-cyan/50 hover:text-brand-navy-900"
+                    className="inline-flex items-center rounded-full border border-brand-navy-100 bg-brand-paper-soft px-3.5 py-1.5 text-[13px] text-brand-ink-soft transition hover:border-brand-blue/50 hover:text-brand-navy-900"
                   >
                     {city.name}
                   </Link>

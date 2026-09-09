@@ -190,7 +190,7 @@ export default function CityPage({ params }: PageProps) {
             {/* İç link ağı: şehir + hizmet kombinasyonları */}
             <div className="mt-8 rounded-2xl border border-brand-navy-100 bg-brand-paper-soft p-5">
               <h3 className="flex items-center gap-2 text-base font-semibold text-brand-ink">
-                <MapPin className="h-4 w-4 text-brand-cyan" aria-hidden />
+                <MapPin className="h-4 w-4 text-brand-blue" aria-hidden />
                 {city.name} için öne çıkan hizmetler
               </h3>
               <ul className="mt-3.5 flex flex-wrap gap-2">
@@ -198,7 +198,7 @@ export default function CityPage({ params }: PageProps) {
                   <li key={service.slug}>
                     <Link
                       href={`/hizmet/${service.slug}/${city.slug}/`}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-200 bg-white px-3.5 py-2 text-[13px] font-medium text-brand-ink-soft transition hover:border-brand-cyan hover:text-brand-navy-900"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-200 bg-white px-3.5 py-2 text-[13px] font-medium text-brand-ink-soft transition hover:border-brand-blue hover:text-brand-navy-900"
                     >
                       {service.shortTitle} {city.name}
                       <ArrowUpRight className="h-3 w-3" aria-hidden />
@@ -218,7 +218,7 @@ export default function CityPage({ params }: PageProps) {
               <dl className="mt-4 space-y-3 text-sm">
                 <div className="flex items-center justify-between gap-4">
                   <dt className="flex items-center gap-2 text-brand-ink-soft/70">
-                    <Users className="h-4 w-4 text-brand-cyan" aria-hidden />
+                    <Users className="h-4 w-4 text-brand-blue" aria-hidden />
                     Nüfus
                   </dt>
                   <dd className="font-mono font-semibold text-brand-ink">
@@ -227,14 +227,14 @@ export default function CityPage({ params }: PageProps) {
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <dt className="flex items-center gap-2 text-brand-ink-soft/70">
-                    <Building2 className="h-4 w-4 text-brand-cyan" aria-hidden />
+                    <Building2 className="h-4 w-4 text-brand-blue" aria-hidden />
                     Bölge
                   </dt>
                   <dd className="font-medium text-brand-ink">{city.region}</dd>
                 </div>
                 <div className="flex items-start justify-between gap-4">
                   <dt className="flex items-center gap-2 text-brand-ink-soft/70">
-                    <MapPin className="h-4 w-4 text-brand-cyan" aria-hidden />
+                    <MapPin className="h-4 w-4 text-brand-blue" aria-hidden />
                     İlçe sayısı
                   </dt>
                   <dd className="font-mono font-semibold text-brand-ink">{city.districts.length}</dd>
@@ -249,7 +249,7 @@ export default function CityPage({ params }: PageProps) {
               <ul className="mt-3.5 space-y-2">
                 {industries.map((industry) => (
                   <li key={industry} className="flex items-start gap-2.5 text-sm text-brand-ink-soft/85">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-green" aria-hidden />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" aria-hidden />
                     {industry}
                   </li>
                 ))}
@@ -273,7 +273,7 @@ export default function CityPage({ params }: PageProps) {
               </p>
               <Link
                 href="#iletisim-formu"
-                className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-brand-green px-5 py-2.5 text-sm font-semibold text-brand-navy-950 transition hover:brightness-110"
+                className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-brand-blue px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-110"
               >
                 Formu doldurun
                 <ArrowUpRight className="h-4 w-4" aria-hidden />
@@ -387,7 +387,7 @@ export default function CityPage({ params }: PageProps) {
               `${city.region} bölgesindeki benzer ölçekli projelerden edinilmiş deneyim`,
             ].map((item) => (
               <li key={item} className="flex items-start gap-2.5 rounded-xl border border-brand-navy-100 bg-white p-4">
-                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-green/12 text-brand-green">
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue">
                   <Check className="h-3.5 w-3.5" aria-hidden />
                 </span>
                 <span className="text-sm leading-relaxed text-brand-ink-soft/85">{item}</span>
@@ -423,9 +423,9 @@ export default function CityPage({ params }: PageProps) {
               <li key={item.slug}>
                 <Link
                   href={`/sehir/${item.slug}/`}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 bg-white px-4 py-2 text-sm text-brand-ink-soft transition hover:border-brand-cyan/50 hover:text-brand-navy-900"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 bg-white px-4 py-2 text-sm text-brand-ink-soft transition hover:border-brand-blue/50 hover:text-brand-navy-900"
                 >
-                  <MapPin className="h-3.5 w-3.5 text-brand-cyan" aria-hidden />
+                  <MapPin className="h-3.5 w-3.5 text-brand-blue" aria-hidden />
                   {item.name}
                 </Link>
               </li>

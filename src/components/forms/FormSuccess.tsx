@@ -20,11 +20,11 @@ export function FormSuccess({ reference, onReset }: FormSuccessProps) {
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-2xl border border-emerald-400/25 bg-white/[0.05] p-6 text-white backdrop-blur md:p-8"
+      className="rounded-2xl border border-sky-400/25 bg-white/[0.05] p-6 text-white backdrop-blur md:p-8"
       role="status"
       aria-live="polite"
     >
-      <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400/15 text-emerald-300">
+      <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-400/15 text-sky-300">
         <CheckCircle2 className="h-7 w-7" aria-hidden />
       </span>
 
@@ -36,19 +36,19 @@ export function FormSuccess({ reference, onReset }: FormSuccessProps) {
       </p>
 
       {reference ? (
-        <p className="mt-4 inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 font-mono text-xs text-cyan-300">
+        <p className="mt-4 inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 font-mono text-xs text-blue-300">
           Talep referansı: {reference}
         </p>
       ) : null}
 
       <ul className="mt-6 space-y-2.5 text-sm text-white/70">
         <li className="flex items-start gap-2.5">
-          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" aria-hidden />
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-sky-300" aria-hidden />
           E-posta adresinize otomatik bir onay mesajı gönderildi (gelen kutusunda göremezseniz spam
           klasörünü kontrol edin).
         </li>
         <li className="flex items-start gap-2.5">
-          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" aria-hidden />
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-sky-300" aria-hidden />
           Görüşmeye hazırlıklı gelmemiz için mevcut sitenizin adresini ve hedefinizi yazmanız yeterli.
         </li>
       </ul>
@@ -59,7 +59,7 @@ export function FormSuccess({ reference, onReset }: FormSuccessProps) {
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-400"
+            className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-400"
           >
             <MessageCircle className="h-4 w-4" aria-hidden />
             WhatsApp ile devam et
@@ -67,14 +67,14 @@ export function FormSuccess({ reference, onReset }: FormSuccessProps) {
         ) : null}
         <a
           href={`mailto:${CONTACT.email}`}
-          className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:bg-white/[0.09]"
+          className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
         >
-          <Mail className="h-4 w-4 text-cyan-300" aria-hidden />
+          <Mail className="h-4 w-4 text-blue-300" aria-hidden />
           {CONTACT.email}
         </a>
         <Link
           href="/hizmetler/"
-          className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:bg-white/[0.09]"
+          className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
         >
           Hizmetleri inceleyin
         </Link>

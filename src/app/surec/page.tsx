@@ -290,15 +290,15 @@ export default function ProcessPage() {
               <li key={service.slug}>
                 <Link
                   href={`/hizmetler/${service.slug}/`}
-                  className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 transition hover:border-cyan-400/40 hover:bg-white/[0.08]"
+                  className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 transition hover:border-blue-400/40 hover:bg-white/[0.08]"
                 >
-                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-cyan-200">
+                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-blue-200">
                     <LucideIcon name={service.icon} fallback="Sparkles" className="h-4 w-4" aria-hidden />
                   </span>
                   <span className="flex-1 text-[13.5px] font-medium text-white/80 group-hover:text-white">
                     {service.shortTitle}
                   </span>
-                  <ArrowUpRight className="h-3.5 w-3.5 text-white/35 transition group-hover:text-cyan-200" aria-hidden />
+                  <ArrowUpRight className="h-3.5 w-3.5 text-white/35 transition group-hover:text-blue-200" aria-hidden />
                 </Link>
               </li>
             ))}
@@ -306,7 +306,7 @@ export default function ProcessPage() {
           <p className="mt-6">
             <Link
               href="/hizmetler/"
-              className="inline-flex items-center gap-2 rounded-xl bg-brand-green px-5 py-3 text-sm font-semibold text-brand-navy-950 transition hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-xl bg-brand-blue px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110"
             >
               {services.length} hizmetin tamamı
               <ArrowUpRight className="h-4 w-4" aria-hidden />

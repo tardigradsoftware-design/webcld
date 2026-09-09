@@ -84,7 +84,7 @@ export function CookieConsent() {
         >
           <div className="overflow-hidden rounded-2xl border border-white/12 bg-brand-navy-950/95 text-white shadow-navy backdrop-blur-xl">
             <div className="flex items-start gap-3 p-5">
-              <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-cyan/15 text-cyan-300">
+              <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-blue/15 text-blue-300">
                 <Cookie className="h-5 w-5" aria-hidden />
               </span>
               <div className="flex-1">
@@ -92,7 +92,7 @@ export function CookieConsent() {
                 <p className="mt-1.5 text-[13px] leading-relaxed text-white/70">
                   Siteyi ölçmek ve iyileştirmek için anonim analiz çerezleri kullanıyoruz. Zorunlu
                   çerezler sitenin çalışması için gereklidir. Detaylar{' '}
-                  <Link href="/kvkk/" className="font-medium text-cyan-300 underline-offset-2 hover:underline">
+                  <Link href="/kvkk/" className="font-medium text-blue-300 underline-offset-2 hover:underline">
                     KVKK Aydınlatma Metni
                   </Link>
                   ’nde.

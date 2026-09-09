@@ -116,7 +116,7 @@ export default function ContactPage() {
             </div>
 
             <div className="card-light p-6">
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-green/12 text-brand-green">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-blue/10 text-brand-blue">
                 <MessageCircle className="h-5 w-5" aria-hidden />
               </span>
               <h3 className="mt-4 text-base font-semibold text-brand-ink">WhatsApp</h3>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                 {CONTACT.address.region} / Türkiye
               </address>
               <p className="mt-3 inline-flex items-start gap-1.5 text-[13px] text-brand-ink-soft/65">
-                <Clock className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-cyan" aria-hidden />
+                <Clock className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-blue" aria-hidden />
                 Pazartesi–Cuma 09:00–18:30
               </p>
             </div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
             </ul>
 
             <div className="mt-6 flex items-start gap-3 rounded-xl border border-brand-navy-100 bg-white p-4">
-              <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" aria-hidden />
+              <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" aria-hidden />
               <p className="text-[13px] leading-relaxed text-brand-ink-soft/75">
                 Bilgileriniz yalnızca teklif ve iletişim amacıyla işlenir, üçüncü taraflarla
                 paylaşılmaz. Form; spam koruması, hız sınırı ve KVKK onayı ile çalışır.{' '}
@@ -267,7 +267,7 @@ export default function ContactPage() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-4 py-2 text-[13px] font-medium text-brand-ink-soft transition hover:border-brand-cyan hover:text-brand-navy-900"
+                    className="inline-flex items-center gap-2 rounded-full border border-brand-navy-100 bg-brand-paper-soft px-4 py-2 text-[13px] font-medium text-brand-ink-soft transition hover:border-brand-blue hover:text-brand-navy-900"
                   >
                     <LucideIcon name={social.icon} fallback="Link" className="h-3.5 w-3.5" aria-hidden />
                     {social.label}
@@ -294,10 +294,10 @@ export default function ContactPage() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group flex items-center justify-between gap-2 rounded-lg border border-brand-navy-100 px-4 py-2.5 text-[13.5px] text-brand-ink-soft transition hover:border-brand-cyan/50 hover:text-brand-navy-900"
+                    className="group flex items-center justify-between gap-2 rounded-lg border border-brand-navy-100 px-4 py-2.5 text-[13.5px] text-brand-ink-soft transition hover:border-brand-blue/50 hover:text-brand-navy-900"
                   >
                     {link.label}
-                    <ArrowUpRight className="h-3.5 w-3.5 text-brand-navy-300 transition group-hover:text-brand-cyan" aria-hidden />
+                    <ArrowUpRight className="h-3.5 w-3.5 text-brand-navy-300 transition group-hover:text-brand-blue" aria-hidden />
                   </Link>
                 </li>
               ))}

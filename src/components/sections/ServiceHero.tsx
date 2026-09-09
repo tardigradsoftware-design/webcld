@@ -30,7 +30,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-32 top-24 h-[400px] w-[400px] rounded-full bg-cyan-500/18 blur-[130px]"
+        className="pointer-events-none absolute -right-32 top-24 h-[400px] w-[400px] rounded-full bg-blue-500/18 blur-[130px]"
         aria-hidden
       />
 
@@ -45,7 +45,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
                 {category?.label ?? service.category}
               </span>
               {cityName ? (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-300">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/25 bg-sky-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-300">
                   {cityName} · Lokal Hizmet
                 </span>
               ) : null}
@@ -58,7 +58,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
               {h1}
             </h1>
 
-            <p className="mt-4 text-lg font-medium text-cyan-200/90 md:text-xl">{service.heroTagline}</p>
+            <p className="mt-4 text-lg font-medium text-blue-200/90 md:text-xl">{service.heroTagline}</p>
 
             <p className="mt-5 max-w-2xl text-[15.5px] leading-relaxed text-white/70 md:text-base">
               {service.summary} {cityName ? `${cityName} ve çevresindeki işletmeler için` : 'Türkiye genelinde'}{' '}
@@ -67,15 +67,15 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
 
             <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70">
               <li className="inline-flex items-center gap-2">
-                <Clock className="h-4 w-4 text-emerald-300" aria-hidden />
+                <Clock className="h-4 w-4 text-sky-300" aria-hidden />
                 {CONTACT_RESPONSE}
               </li>
               <li className="inline-flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4 text-emerald-300" aria-hidden />
+                <ShieldCheck className="h-4 w-4 text-sky-300" aria-hidden />
                 KVKK uyumlu süreç
               </li>
               <li className="inline-flex items-center gap-2">
-                <Check className="h-4 w-4 text-emerald-300" aria-hidden />
+                <Check className="h-4 w-4 text-sky-300" aria-hidden />
                 30 gün hata düzeltme garantisi
               </li>
             </ul>
@@ -90,7 +90,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
               </Link>
               <Link
                 href="/surec/"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:bg-white/[0.09]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
               >
                 9 adımlı sürecimiz
               </Link>
@@ -106,7 +106,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
                     <li key={anchor.href}>
                       <a
                         href={anchor.href}
-                        className="text-white/65 underline-offset-4 transition hover:text-cyan-300 hover:underline"
+                        className="text-white/65 underline-offset-4 transition hover:text-blue-300 hover:underline"
                       >
                         {anchor.label}
                       </a>

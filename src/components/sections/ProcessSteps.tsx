@@ -36,7 +36,7 @@ export function ProcessSteps({ steps, variant = 'light', layout = 'timeline', cl
               <span
                 className={cn(
                   'inline-flex h-10 w-10 items-center justify-center rounded-lg font-mono text-sm font-bold',
-                  dark ? 'bg-cyan-400/12 text-cyan-300' : 'bg-brand-navy-900 text-white',
+                  dark ? 'bg-blue-400/12 text-blue-300' : 'bg-brand-navy-900 text-white',
                 )}
               >
                 {String(step.step).padStart(2, '0')}
@@ -82,7 +82,7 @@ export function ProcessSteps({ steps, variant = 'light', layout = 'timeline', cl
             className={cn(
               'relative z-10 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-mono text-sm font-bold shadow-card',
               dark
-                ? 'border border-cyan-400/30 bg-brand-navy-900 text-cyan-300'
+                ? 'border border-blue-400/30 bg-brand-navy-900 text-blue-300'
                 : 'border border-brand-navy-100 bg-white text-brand-navy-700',
             )}
           >
@@ -96,7 +96,7 @@ export function ProcessSteps({ steps, variant = 'light', layout = 'timeline', cl
               <LucideIcon
                 name={step.icon}
                 fallback="Sparkles"
-                className={cn('h-4 w-4', dark ? 'text-cyan-300/70' : 'text-brand-cyan')}
+                className={cn('h-4 w-4', dark ? 'text-blue-300/70' : 'text-brand-blue')}
                 aria-hidden
               />
             </div>

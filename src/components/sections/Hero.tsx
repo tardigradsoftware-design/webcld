@@ -35,11 +35,11 @@ export function Hero() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-32 top-10 h-[520px] w-[520px] rounded-full bg-cyan-500/20 blur-[140px]"
+        className="pointer-events-none absolute -right-32 top-10 h-[520px] w-[520px] rounded-full bg-blue-500/20 blur-[140px]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute bottom-0 left-1/2 h-[380px] w-[900px] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-[130px]"
+        className="pointer-events-none absolute bottom-0 left-1/2 h-[380px] w-[900px] -translate-x-1/2 rounded-full bg-sky-500/10 blur-[130px]"
         aria-hidden
       />
       <NetworkBackdrop />
@@ -49,8 +49,8 @@ export function Hero() {
           <motion.div variants={item}>
             <span className="eyebrow-light">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-sky-400" />
               </span>
               İstanbul Maltepe · Türkiye geneli
             </span>
@@ -76,7 +76,7 @@ export function Hero() {
           <motion.ul variants={item} className="mt-7 flex flex-wrap gap-x-6 gap-y-2.5">
             {HIGHLIGHTS.map((text) => (
               <li key={text} className="flex items-center gap-2 text-sm text-white/75">
-                <Check className="h-4 w-4 text-emerald-400" aria-hidden />
+                <Check className="h-4 w-4 text-sky-400" aria-hidden />
                 {text}
               </li>
             ))}
@@ -94,13 +94,13 @@ export function Hero() {
             <Link
               href="/hizmetler/"
               onClick={() => trackCtaClick(CTA.services, '/')}
-              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-6 py-3.5 text-base font-semibold text-white backdrop-blur transition hover:border-cyan-400/60 hover:bg-white/[0.09]"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-6 py-3.5 text-base font-semibold text-white backdrop-blur transition hover:border-blue-400/60 hover:bg-white/[0.09]"
             >
               {CTA.services}
             </Link>
             <a
               href="#donusum-filmi"
-              className="inline-flex items-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200"
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold text-blue-300 transition hover:text-blue-200"
             >
               <PlayCircle className="h-5 w-5" aria-hidden />
               Dönüşüm filmini izle
@@ -113,7 +113,7 @@ export function Hero() {
           >
             {SITE_STATS.map((stat) => (
               <div key={stat.label} className="bg-brand-navy-950/85 px-4 py-5 backdrop-blur">
-                <div className="font-mono text-2xl font-bold text-cyan-300 md:text-3xl">
+                <div className="font-mono text-2xl font-bold text-blue-300 md:text-3xl">
                   {stat.value}
                   {stat.suffix}
                 </div>
@@ -126,7 +126,7 @@ export function Hero() {
 
           <motion.div variants={item} className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/45">
             <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck className="h-4 w-4 text-emerald-400/80" aria-hidden />
+              <ShieldCheck className="h-4 w-4 text-sky-400/80" aria-hidden />
               KVKK uyumlu süreçler
             </span>
             <span>{CONTACT.responseTime}</span>
@@ -178,7 +178,7 @@ function NetworkBackdrop() {
             cx={x}
             cy={y}
             r={index % 4 === 0 ? 4 : 2.4}
-            fill={index % 3 === 0 ? '#22D3EE' : index % 3 === 1 ? '#6090FA' : '#34D399'}
+            fill={index % 3 === 0 ? '#60A5FA' : index % 3 === 1 ? '#6090FA' : '#3B82F6'}
             opacity={index % 4 === 0 ? 0.95 : 0.6}
             className={cn(index % 5 === 0 && 'animate-pulse')}
           />

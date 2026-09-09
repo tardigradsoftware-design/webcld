@@ -47,7 +47,7 @@ export function CTA({
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-24 bottom-0 h-[380px] w-[380px] rounded-full bg-cyan-500/20 blur-[130px]"
+        className="pointer-events-none absolute -right-24 bottom-0 h-[380px] w-[380px] rounded-full bg-blue-500/20 blur-[130px]"
         aria-hidden
       />
 
@@ -70,20 +70,20 @@ export function CTA({
 
             <ul className="mt-7 space-y-3 text-sm text-white/75">
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-400/15 text-sky-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
                 </span>
                 Ücretsiz ön analiz ve yazılı teklif — taahhüt yok
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-400/15 text-sky-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
                 </span>
                 {CONTACT.responseTime}
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-400/15 text-sky-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
                 </span>
                 Türkiye’nin 81 iline uzaktan hizmet — İstanbul Maltepe merkez
               </li>
@@ -104,17 +104,17 @@ export function CTA({
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsappClick(cityContext ?? '/')}
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-emerald-400/50 hover:bg-white/[0.09]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-sky-400/50 hover:bg-white/[0.09]"
                 >
-                  <MessageCircle className="h-4 w-4 text-emerald-300" aria-hidden />
+                  <MessageCircle className="h-4 w-4 text-sky-300" aria-hidden />
                   WhatsApp
                 </a>
               ) : null}
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:bg-white/[0.09]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
               >
-                <Mail className="h-4 w-4 text-cyan-300" aria-hidden />
+                <Mail className="h-4 w-4 text-blue-300" aria-hidden />
                 {CONTACT.email}
               </a>
             </div>

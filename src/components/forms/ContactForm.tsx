@@ -38,7 +38,7 @@ const SERVICE_OPTIONS = FORM_SERVICE_OPTIONS.map((value) => ({ value, label: val
 const CITY_OPTIONS = cities.map((city) => ({ value: city.name, label: city.name }))
 
 const inputDark =
-  'border-white/12 bg-white/[0.045] text-white placeholder:text-white/35 focus-visible:border-cyan-400/70 focus-visible:bg-white/[0.07] focus-visible:ring-cyan-400/25'
+  'border-white/12 bg-white/[0.045] text-white placeholder:text-white/35 focus-visible:border-blue-400/70 focus-visible:bg-white/[0.07] focus-visible:ring-blue-400/25'
 const labelDark = 'text-white/70'
 const inputLight = 'border-brand-navy-200 bg-white text-brand-ink'
 const labelLight = 'text-brand-ink-soft'
@@ -297,7 +297,7 @@ export function ContactForm({
         <input
           type="checkbox"
           className={cn(
-            'mt-0.5 h-4.5 w-4.5 shrink-0 rounded border-2 accent-cyan-500',
+            'mt-0.5 h-4.5 w-4.5 shrink-0 rounded border-2 accent-blue-500',
             dark ? 'border-white/25 bg-white/5' : 'border-brand-navy-200 bg-white',
           )}
           aria-invalid={Boolean(errors.kvkkAccepted)}
@@ -308,7 +308,7 @@ export function ContactForm({
             href="/kvkk/"
             target="_blank"
             rel="noreferrer"
-            className={cn('font-semibold underline-offset-2 hover:underline', dark ? 'text-cyan-300' : 'text-brand-navy-700')}
+            className={cn('font-semibold underline-offset-2 hover:underline', dark ? 'text-blue-300' : 'text-brand-navy-700')}
           >
             KVKK Aydınlatma Metni
           </a>
@@ -352,7 +352,7 @@ export function ContactForm({
       </button>
 
       <p className={cn('mt-3 text-center text-[12px]', dark ? 'text-white/40' : 'text-brand-ink-soft/55')}>
-        <CheckCircle2 className="mr-1 inline h-3.5 w-3.5 align-[-2px] text-emerald-400" aria-hidden />
+        <CheckCircle2 className="mr-1 inline h-3.5 w-3.5 align-[-2px] text-sky-400" aria-hidden />
         Bilgileriniz yalnızca talebinize dönüş yapmak için kullanılır, üçüncü taraflarla paylaşılmaz.
       </p>
     </form>

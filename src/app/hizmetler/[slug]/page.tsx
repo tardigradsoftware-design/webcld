@@ -208,9 +208,9 @@ export default function ServicePage({ params }: PageProps) {
             {service.scope.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 rounded-xl border border-brand-navy-100 bg-white p-4 transition-colors hover:border-brand-cyan/40"
+                className="flex items-start gap-3 rounded-xl border border-brand-navy-100 bg-white p-4 transition-colors hover:border-brand-blue/40"
               >
-                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-green/12 text-brand-green">
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue">
                   <Check className="h-3.5 w-3.5" aria-hidden />
                 </span>
                 <span className="text-[14.5px] leading-relaxed text-brand-ink-soft/90">{item}</span>
@@ -258,7 +258,7 @@ export default function ServicePage({ params }: PageProps) {
               />
               <Link
                 href="/surec/"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 transition hover:text-blue-200"
               >
                 9 adımlı sürecin tamamı
                 <ArrowUpRight className="h-4 w-4" aria-hidden />
@@ -349,7 +349,7 @@ export default function ServicePage({ params }: PageProps) {
                       href={`/hizmetler/${item.slug}/`}
                       className="group inline-flex items-center gap-1.5 text-[13.5px] text-brand-ink-soft transition-colors hover:text-brand-navy-900"
                     >
-                      <span className="h-1 w-1 rounded-full bg-brand-cyan" aria-hidden />
+                      <span className="h-1 w-1 rounded-full bg-brand-blue" aria-hidden />
                       {item.shortTitle}
                     </Link>
                   </li>
@@ -376,9 +376,9 @@ export default function ServicePage({ params }: PageProps) {
                 <Link
                   key={city.slug}
                   href={`/sehir/${city.slug}/`}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 px-3.5 py-1.5 text-[13px] text-brand-ink-soft/80 transition hover:border-brand-cyan/40 hover:text-brand-navy-900"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-100 px-3.5 py-1.5 text-[13px] text-brand-ink-soft/80 transition hover:border-brand-blue/40 hover:text-brand-navy-900"
                 >
-                  <MapPin className="h-3 w-3 text-brand-cyan" aria-hidden />
+                  <MapPin className="h-3 w-3 text-brand-blue" aria-hidden />
                   {city.name}
                 </Link>
               ))}

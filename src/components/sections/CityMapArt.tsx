@@ -63,8 +63,8 @@ export function CityMapArt({ city, className }: CityMapArtProps) {
       >
         <defs>
           <radialGradient id="city-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#22D3EE" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#22D3EE" stopOpacity="0" />
+            <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="#60A5FA" stopOpacity="0" />
           </radialGradient>
           <pattern id="map-grid" width="32" height="32" patternUnits="userSpaceOnUse">
             <path d="M32 0H0v32" fill="none" stroke="rgba(96,144,250,0.12)" strokeWidth="1" />
@@ -75,7 +75,7 @@ export function CityMapArt({ city, className }: CityMapArtProps) {
         <rect width="800" height="400" fill="url(#map-grid)" />
 
         <path d={OUTLINE_PATH} fill="rgba(37,99,235,0.14)" stroke="#6090FA" strokeWidth="1.8" strokeLinejoin="round" />
-        <path d={OUTLINE_PATH} fill="none" stroke="#22D3EE" strokeWidth="0.8" opacity="0.4" />
+        <path d={OUTLINE_PATH} fill="none" stroke="#60A5FA" strokeWidth="0.8" opacity="0.4" />
 
         {others.map((other) => {
           const point = project(other.geo!.lng, other.geo!.lat)
@@ -97,16 +97,16 @@ export function CityMapArt({ city, className }: CityMapArtProps) {
         })}
 
         <circle cx={center.x} cy={center.y} r="86" fill="url(#city-glow)" />
-        <circle cx={center.x} cy={center.y} r="26" fill="none" stroke="#22D3EE" strokeWidth="1.4" opacity="0.55" />
-        <circle cx={center.x} cy={center.y} r="16" fill="none" stroke="#22D3EE" strokeWidth="1.6" opacity="0.8" />
-        <circle cx={center.x} cy={center.y} r="7" fill="#22D3EE" />
+        <circle cx={center.x} cy={center.y} r="26" fill="none" stroke="#60A5FA" strokeWidth="1.4" opacity="0.55" />
+        <circle cx={center.x} cy={center.y} r="16" fill="none" stroke="#60A5FA" strokeWidth="1.6" opacity="0.8" />
+        <circle cx={center.x} cy={center.y} r="7" fill="#60A5FA" />
 
         <g transform={`translate(${Math.min(Math.max(center.x + 24, 120), 640)}, ${center.y - 14})`}>
-          <rect x="0" y="0" width="176" height="34" rx="9" fill="rgba(8,17,43,0.88)" stroke="#22D3EE" strokeOpacity="0.45" />
+          <rect x="0" y="0" width="176" height="34" rx="9" fill="rgba(8,17,43,0.88)" stroke="#60A5FA" strokeOpacity="0.45" />
           <text x="14" y="22" fill="#F9FAFB" fontSize="14.5" fontWeight="700" fontFamily="Inter, sans-serif">
             {city.name}
           </text>
-          <text x="122" y="22" fill="#22D3EE" fontSize="11" fontFamily="monospace">
+          <text x="122" y="22" fill="#60A5FA" fontSize="11" fontFamily="monospace">
             {city.region.slice(0, 3).toLocaleUpperCase('tr-TR')}
           </text>
         </g>
@@ -114,7 +114,7 @@ export function CityMapArt({ city, className }: CityMapArtProps) {
         <text x="46" y="356" fill="#DBEAFE" opacity="0.5" fontSize="12" fontFamily="monospace" letterSpacing="2">
           TURKIYE · 81 IL KAPSAMA
         </text>
-        <text x="46" y="376" fill="#22D3EE" fontSize="12.5" fontFamily="monospace" letterSpacing="1.6">
+        <text x="46" y="376" fill="#60A5FA" fontSize="12.5" fontFamily="monospace" letterSpacing="1.6">
           {city.name.toLocaleUpperCase('tr-TR')} · TARDIGRAD SOFTWARE
         </text>
       </svg>

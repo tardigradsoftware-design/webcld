@@ -96,7 +96,7 @@ export default function BlogPostPage({ params }: PageProps) {
           <div className="absolute inset-0 bg-[linear-gradient(160deg,#08112B_0%,#0F1B3D_55%,#0B1730_100%)]" />
           <div className="absolute inset-0 bg-grid-navy opacity-40" />
           <div className="absolute -top-28 left-1/4 h-80 w-80 rounded-full bg-blue-600/22 blur-[120px]" />
-          <div className="absolute -bottom-24 right-10 h-72 w-72 rounded-full bg-cyan-500/16 blur-[110px]" />
+          <div className="absolute -bottom-24 right-10 h-72 w-72 rounded-full bg-blue-500/16 blur-[110px]" />
         </div>
 
         <div className="container relative">
@@ -122,15 +122,15 @@ export default function BlogPostPage({ params }: PageProps) {
 
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-[13px] text-white/60">
             <span className="inline-flex items-center gap-1.5">
-              <PenLine className="h-3.5 w-3.5 text-cyan-300" aria-hidden />
+              <PenLine className="h-3.5 w-3.5 text-blue-300" aria-hidden />
               {post.author}
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <CalendarDays className="h-3.5 w-3.5 text-cyan-300" aria-hidden />
+              <CalendarDays className="h-3.5 w-3.5 text-blue-300" aria-hidden />
               <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Clock className="h-3.5 w-3.5 text-cyan-300" aria-hidden />
+              <Clock className="h-3.5 w-3.5 text-blue-300" aria-hidden />
               {post.readingTime} dk okuma · {wordCount.toLocaleString('tr-TR')} kelime
             </span>
             {post.updatedAt !== post.publishedAt ? (
@@ -146,7 +146,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 key={tag}
                 className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-[12px] font-medium text-white/75"
               >
-                <Tag className="h-3 w-3 text-cyan-300" aria-hidden />
+                <Tag className="h-3 w-3 text-blue-300" aria-hidden />
                 {tag}
               </li>
             ))}
@@ -228,9 +228,9 @@ export default function BlogPostPage({ params }: PageProps) {
                     <li key={city.slug}>
                       <Link
                         href={`/sehir/${city.slug}/`}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-200 bg-white px-3 py-1.5 text-[12.5px] text-brand-ink-soft transition hover:border-brand-cyan hover:text-brand-navy-900"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-brand-navy-200 bg-white px-3 py-1.5 text-[12.5px] text-brand-ink-soft transition hover:border-brand-blue hover:text-brand-navy-900"
                       >
-                        <MapPin className="h-3 w-3 text-brand-cyan" aria-hidden />
+                        <MapPin className="h-3 w-3 text-brand-blue" aria-hidden />
                         {city.name}
                       </Link>
                     </li>
@@ -247,7 +247,7 @@ export default function BlogPostPage({ params }: PageProps) {
               </p>
               <Link
                 href="#iletisim-formu"
-                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-green px-5 py-3 text-sm font-semibold text-brand-navy-950 transition hover:brightness-110"
+                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-blue px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110"
               >
                 Ücretsiz Ön Analiz
                 <ArrowRight className="h-4 w-4" aria-hidden />

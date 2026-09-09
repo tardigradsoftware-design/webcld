@@ -22,8 +22,8 @@ interface LogoProps {
 }
 
 function LogoMark({ variant = 'light', className }: { variant?: 'light' | 'dark'; className?: string }) {
-  const stroke = variant === 'light' ? '#22D3EE' : '#1D4ED8'
-  const strokeAlt = variant === 'light' ? '#34D399' : '#10B981'
+  const stroke = variant === 'light' ? '#60A5FA' : '#1D4ED8'
+  const strokeAlt = variant === 'light' ? '#3B82F6' : '#1E40AF'
   return (
     <span
       className={cn('relative inline-flex h-9 w-9 items-center justify-center', className)}
@@ -53,7 +53,7 @@ export function Logo({ variant = 'light', className, markOnly = false, href = '/
           <span
             className={cn(
               'font-mono text-[17px] font-bold tracking-tight transition-colors',
-              variant === 'light' ? 'text-white group-hover:text-cyan-300' : 'text-brand-navy-900 group-hover:text-brand-navy-600',
+              variant === 'light' ? 'text-white group-hover:text-blue-300' : 'text-brand-navy-900 group-hover:text-brand-navy-600',
             )}
           >
             Tardigrad

@@ -28,7 +28,7 @@ export function CityComboHero({ service, city, breadcrumbs, anchors, comboCount 
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(160deg,#08112B_0%,#0F1B3D_52%,#0B1730_100%)]" />
         <div className="absolute inset-0 bg-grid-navy opacity-[0.18]" />
-        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-brand-cyan/18 blur-3xl" />
+        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-brand-blue/18 blur-3xl" />
         <div className="absolute top-1/3 -right-20 h-80 w-80 rounded-full bg-brand-blue/22 blur-3xl" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-brand-navy-950/80" />
       </div>
@@ -40,12 +40,12 @@ export function CityComboHero({ service, city, breadcrumbs, anchors, comboCount 
           <div>
             <div className="flex flex-wrap items-center gap-2.5">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1.5 text-[12.5px] font-semibold text-white/85 backdrop-blur">
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-md bg-brand-cyan/20 text-cyan-200">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-md bg-brand-blue/20 text-blue-200">
                   <LucideIcon name={service.icon} fallback="Sparkles" className="h-3 w-3" aria-hidden />
                 </span>
                 {service.title}
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/12 px-3.5 py-1.5 text-[12.5px] font-semibold text-cyan-100">
+              <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-400/12 px-3.5 py-1.5 text-[12.5px] font-semibold text-blue-100">
                 <MapPin className="h-3.5 w-3.5" aria-hidden />
                 {city.name}
               </span>
@@ -71,7 +71,7 @@ export function CityComboHero({ service, city, breadcrumbs, anchors, comboCount 
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="#iletisim-formu"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3.5 text-[15px] font-semibold text-brand-navy-950 shadow-glow transition hover:brightness-110"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-blue px-6 py-3.5 text-[15px] font-semibold text-white shadow-glow transition hover:brightness-110"
               >
                 {city.name} için Ücretsiz Ön Analiz
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -101,7 +101,7 @@ export function CityComboHero({ service, city, breadcrumbs, anchors, comboCount 
                   <a
                     key={anchor.href}
                     href={anchor.href}
-                    className="text-[13px] font-medium text-white/55 underline-offset-4 transition hover:text-cyan-200 hover:underline"
+                    className="text-[13px] font-medium text-white/55 underline-offset-4 transition hover:text-blue-200 hover:underline"
                   >
                     {anchor.label}
                   </a>
@@ -136,7 +136,7 @@ export function CityComboHero({ service, city, breadcrumbs, anchors, comboCount 
           <aside className="relative">
             <ServiceVisual service={service} cityName={city.name} priority />
             <div className="mt-4 flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4">
-              <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" aria-hidden />
+              <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-blue-300" aria-hidden />
               <p className="text-[13px] leading-relaxed text-white/65">
                 {city.name} öne çıkan sektörler: {city.industries.slice(0, 5).join(', ')}. Bu
                 sektörlerdeki projelerde kapsamı sektör dinamiklerine göre özelleştiriyoruz.

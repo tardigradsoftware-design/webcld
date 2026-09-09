@@ -5,7 +5,7 @@ import tailwindcssAnimate from 'tailwindcss-animate'
 /**
  * Tardigrad Software — Design Tokens
  * Tema: lacivert (navy) + mavi (blue) + beyaz (white)
- * Vurgu: cyan / emerald (teknoloji hissi)
+ * Vurgu: lacivert / mavi tonları
  */
 const config: Config = {
   darkMode: ['class'],
@@ -48,11 +48,11 @@ const config: Config = {
             soft: '#DBEAFE',
           },
 
-          // Cyan + yeşil vurgular (teknoloji / AI)
-          cyan: '#06B6D4',
-          'cyan-light': '#22D3EE',
-          green: '#10B981',
-          'green-light': '#34D399',
+          // Mavi vurgular (teknoloji / AI)
+          cyan: '#2563EB',
+          'cyan-light': '#60A5FA',
+          green: '#1E40AF',
+          'green-light': '#3B82F6',
           purple: '#8B5CF6',
 
           // Metin
@@ -123,7 +123,7 @@ const config: Config = {
         h3: ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.25' }],
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(6, 182, 212, 0.25), 0 18px 60px -20px rgba(6, 182, 212, 0.45)',
+        glow: '0 0 0 1px rgba(37, 99, 235, 0.25), 0 18px 60px -20px rgba(37, 99, 235, 0.45)',
         'glow-blue': '0 0 0 1px rgba(37, 99, 235, 0.22), 0 20px 60px -24px rgba(37, 99, 235, 0.55)',
         card: '0 1px 2px rgba(11, 27, 58, 0.06), 0 12px 32px -16px rgba(11, 27, 58, 0.28)',
         'card-hover': '0 2px 4px rgba(11, 27, 58, 0.08), 0 28px 60px -24px rgba(29, 78, 216, 0.45)',
@@ -131,7 +131,7 @@ const config: Config = {
       },
       backgroundImage: {
         'hero-navy': 'linear-gradient(135deg, #08112B 0%, #0F1B3D 45%, #0A0F1E 100%)',
-        'cta-gradient': 'linear-gradient(90deg, #06B6D4 0%, #2563EB 55%, #10B981 100%)',
+        'cta-gradient': 'linear-gradient(100deg, #0B1730 0%, #1D4ED8 55%, #3B82F6 100%)',
         'grid-navy':
           'linear-gradient(rgba(59, 130, 246, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.07) 1px, transparent 1px)',
         'grid-light':

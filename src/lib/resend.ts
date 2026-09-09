@@ -37,7 +37,7 @@ function layout(title: string, body: string): string {
           <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid #DBE6FE;">
             <tr>
               <td style="background:#0F1B3D;padding:22px 28px;">
-                <span style="color:#22D3EE;font-family:monospace;font-size:15px;letter-spacing:1px;">${escapeHtml(SITE.name)}</span>
+                <span style="color:#60A5FA;font-family:monospace;font-size:15px;letter-spacing:1px;">${escapeHtml(SITE.name)}</span>
               </td>
             </tr>
             <tr>

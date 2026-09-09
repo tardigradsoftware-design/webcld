@@ -35,7 +35,7 @@ const INLINE_PATTERN =
 function LinkNode({ href, children }: { href: string; children: ReactNode }) {
   const external = href.startsWith('http')
   const className =
-    'font-medium text-brand-navy-700 underline decoration-brand-cyan/60 underline-offset-4 hover:text-brand-navy-900'
+    'font-medium text-brand-navy-700 underline decoration-brand-blue/60 underline-offset-4 hover:text-brand-navy-900'
   return external ? (
     <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
       {children}

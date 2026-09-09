@@ -34,7 +34,7 @@ export function FloatingActions() {
             exit={{ opacity: 0, scale: 0.85 }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Sayfanın başına dön"
-            className="pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-navy-200 bg-white text-brand-navy-700 shadow-card transition hover:border-brand-cyan hover:text-brand-navy-900"
+            className="pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-navy-200 bg-white text-brand-navy-700 shadow-card transition hover:border-brand-blue hover:text-brand-navy-900"
           >
             <ArrowUp className="h-4 w-4" aria-hidden />
           </motion.button>
@@ -48,9 +48,9 @@ export function FloatingActions() {
           rel="noopener noreferrer"
           onClick={() => trackWhatsappClick(pathname)}
           aria-label="WhatsApp ile yazın"
-          className="pointer-events-auto relative inline-flex h-13 w-13 items-center justify-center rounded-full bg-emerald-500 p-3.5 text-white shadow-glow transition hover:bg-emerald-400"
+          className="pointer-events-auto relative inline-flex h-13 w-13 items-center justify-center rounded-full bg-sky-500 p-3.5 text-white shadow-glow transition hover:bg-sky-400"
         >
-          <span className="absolute inset-0 rounded-full bg-emerald-400/50 animate-pulse-ring" aria-hidden />
+          <span className="absolute inset-0 rounded-full bg-sky-400/50 animate-pulse-ring" aria-hidden />
           <MessageCircle className="relative h-6 w-6" aria-hidden />
         </a>
       ) : (

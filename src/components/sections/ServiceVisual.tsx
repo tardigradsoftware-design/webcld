@@ -20,13 +20,13 @@ interface ServiceVisualProps {
 }
 
 const GRADIENTS: Record<ServiceCategory, [string, string]> = {
-  web: ['#1D4ED8', '#06B6D4'],
+  web: ['#1D4ED8', '#2563EB'],
   yazilim: ['#0F1B3D', '#3B82F6'],
-  saas: ['#7C3AED', '#06B6D4'],
-  seo: ['#0891B2', '#10B981'],
-  otomasyon: ['#1E40AF', '#34D399'],
+  saas: ['#7C3AED', '#2563EB'],
+  seo: ['#0891B2', '#1E40AF'],
+  otomasyon: ['#1E40AF', '#3B82F6'],
   altyapi: ['#0B1736', '#6090FA'],
-  ai: ['#8B5CF6', '#22D3EE'],
+  ai: ['#8B5CF6', '#60A5FA'],
 }
 
 export function ServiceVisual({ service, cityName, className, priority = false, compact = false }: ServiceVisualProps) {
@@ -87,7 +87,7 @@ export function ServiceVisual({ service, cityName, className, priority = false, 
         <text x="46" y={compact ? 384 : 366} fill="#F9FAFB" fontSize="23" fontWeight="700" fontFamily="Inter, sans-serif">
           {cityName ? `${service.shortTitle} · ${cityName}` : service.title}
         </text>
-        <text x="46" y={compact ? 404 : 392} fill="#22D3EE" fontSize="12.5" fontFamily="monospace" letterSpacing="2.4">
+        <text x="46" y={compact ? 404 : 392} fill="#60A5FA" fontSize="12.5" fontFamily="monospace" letterSpacing="2.4">
           TARDIGRAD SOFTWARE
         </text>
       </svg>
@@ -99,7 +99,7 @@ export function ServiceVisual({ service, cityName, className, priority = false, 
 /** Kategoriye özgü orta motif */
 function Motif({ category }: { category: ServiceCategory }) {
   const stroke = '#7DD3FC'
-  const accent = '#34D399'
+  const accent = '#3B82F6'
 
   switch (category) {
     case 'web':

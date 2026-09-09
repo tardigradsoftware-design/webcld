@@ -27,7 +27,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         <select
           ref={ref}
           className={cn(
-            'h-11 w-full appearance-none rounded-lg border border-brand-navy-200 bg-white px-3.5 pr-10 text-[15px] text-brand-ink shadow-sm transition-colors focus-visible:border-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan/25 disabled:cursor-not-allowed disabled:opacity-60',
+            'h-11 w-full appearance-none rounded-lg border border-brand-navy-200 bg-white px-3.5 pr-10 text-[15px] text-brand-ink shadow-sm transition-colors focus-visible:border-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/25 disabled:cursor-not-allowed disabled:opacity-60',
             className,
           )}
           onChange={(event) => {

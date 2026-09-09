@@ -294,7 +294,7 @@ function buildAllStages(): Point[][] {
   })
 }
 
-const PALETTE = ['#22D3EE', '#3B82F6', '#10B981', '#DBEAFE', '#6090FA']
+const PALETTE = ['#60A5FA', '#3B82F6', '#1E40AF', '#DBEAFE', '#6090FA']
 
 interface Particle {
   id: number
@@ -394,7 +394,7 @@ export function TransformationStory() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="text-right">
-                  <div className="font-mono text-3xl font-bold text-cyan-300 md:text-4xl">
+                  <div className="font-mono text-3xl font-bold text-blue-300 md:text-4xl">
                     <motion.span>{progressPercent}</motion.span>
                   </div>
                   <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-white/45">
@@ -415,7 +415,7 @@ export function TransformationStory() {
               >
                 <defs>
                   <linearGradient id="ts-line" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#22D3EE" />
+                    <stop offset="0%" stopColor="#60A5FA" />
                     <stop offset="100%" stopColor="#3B82F6" />
                   </linearGradient>
                 </defs>
@@ -448,11 +448,11 @@ export function TransformationStory() {
                           className={cn(activeStage === index ? 'block' : 'hidden')}
                         >
                           <div className="flex items-center gap-3">
-                            <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 text-cyan-300">
+                            <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 text-blue-300">
                               <LucideIcon name={stage.icon} fallback="Sparkles" className="h-5 w-5" />
                             </span>
                             <div>
-                              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan-300/80">
+                              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-300/80">
                                 Adım {String(index + 1).padStart(2, '0')} / 0{STAGE_COUNT} ·{' '}
                                 {stage.subtitle}
                               </div>
@@ -477,7 +477,7 @@ export function TransformationStory() {
                           </span>
                           <Link
                             href="/surec/"
-                            className="text-[11px] font-semibold text-cyan-300 hover:text-cyan-200"
+                            className="text-[11px] font-semibold text-blue-300 hover:text-blue-200"
                           >
                             Detay →
                           </Link>
@@ -485,7 +485,7 @@ export function TransformationStory() {
                         <ol className="relative space-y-2 pl-5">
                           <span className="absolute left-[7px] top-1 h-[calc(100%-8px)] w-px bg-white/12" aria-hidden />
                           <motion.span
-                            className="absolute left-[7px] top-1 w-px origin-top bg-cyan-400"
+                            className="absolute left-[7px] top-1 w-px origin-top bg-blue-400"
                             style={{ height: 'calc(100% - 8px)', scaleY: railScale }}
                             aria-hidden
                           />
@@ -494,7 +494,7 @@ export function TransformationStory() {
                               <span
                                 className={cn(
                                   'absolute -left-5 top-1.5 h-[7px] w-[7px] rounded-full transition-colors',
-                                  activeStage >= index ? 'bg-cyan-400' : 'bg-white/25',
+                                  activeStage >= index ? 'bg-blue-400' : 'bg-white/25',
                                 )}
                                 aria-hidden
                               />
@@ -646,7 +646,7 @@ function ConnectorLines({
         ))}
       </motion.g>
       <motion.g opacity={growthOpacity}>
-        <path d={growthPath} stroke="#10B981" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+        <path d={growthPath} stroke="#1E40AF" strokeWidth="2.5" fill="none" strokeLinecap="round" />
       </motion.g>
     </g>
   )
@@ -665,11 +665,11 @@ function ReducedVersion() {
           {TRANSFORMATION_STAGES.map((stage, index) => (
             <li key={stage.id} className="card-navy p-5">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 text-cyan-300">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 text-blue-300">
                   <LucideIcon name={stage.icon} fallback="Sparkles" className="h-5 w-5" />
                 </span>
                 <div>
-                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan-300/80">
+                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-blue-300/80">
                     Adım {String(index + 1).padStart(2, '0')}
                   </div>
                   <h3 className="text-lg font-semibold text-white">{stage.title}</h3>

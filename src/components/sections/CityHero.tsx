@@ -23,7 +23,7 @@ export function CityHero({ city, services, breadcrumbs }: CityHeroProps) {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-28 top-20 h-[380px] w-[380px] rounded-full bg-cyan-500/18 blur-[125px]"
+        className="pointer-events-none absolute -right-28 top-20 h-[380px] w-[380px] rounded-full bg-blue-500/18 blur-[125px]"
         aria-hidden
       />
 
@@ -54,7 +54,7 @@ export function CityHero({ city, services, breadcrumbs }: CityHeroProps) {
                   <Users className="h-3.5 w-3.5" aria-hidden />
                   Nüfus
                 </dt>
-                <dd className="mt-1.5 font-mono text-base font-bold text-cyan-300">
+                <dd className="mt-1.5 font-mono text-base font-bold text-blue-300">
                   {formatNumber(city.population)}
                 </dd>
               </div>
@@ -63,13 +63,13 @@ export function CityHero({ city, services, breadcrumbs }: CityHeroProps) {
                   <Building2 className="h-3.5 w-3.5" aria-hidden />
                   İlçe
                 </dt>
-                <dd className="mt-1.5 font-mono text-base font-bold text-cyan-300">
+                <dd className="mt-1.5 font-mono text-base font-bold text-blue-300">
                   {city.districts.length}+
                 </dd>
               </div>
               <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
                 <dt className="text-[11px] uppercase tracking-[0.14em] text-white/45">Hizmet alanı</dt>
-                <dd className="mt-1.5 font-mono text-base font-bold text-cyan-300">43 / 81 il</dd>
+                <dd className="mt-1.5 font-mono text-base font-bold text-blue-300">43 / 81 il</dd>
               </div>
             </dl>
 
@@ -83,7 +83,7 @@ export function CityHero({ city, services, breadcrumbs }: CityHeroProps) {
               </Link>
               <a
                 href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(`${city.name} — Ücretsiz Ön Analiz`)}`}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:bg-white/[0.09]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
               >
                 {CTA.secondary}
               </a>
