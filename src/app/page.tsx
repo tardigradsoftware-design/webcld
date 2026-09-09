@@ -48,21 +48,17 @@ import { LucideIcon } from '@/components/common/LucideIcon'
 import { Photo } from '@/components/common/Photo'
 import { CATEGORY_SCREEN, screen } from '@/lib/photos'
 import { Reveal } from '@/components/common/Reveal'
-import { ParallaxOrbs } from '@/components/common/ParallaxOrbs'
-import { ParticleField } from '@/components/common/ParticleField'
-import { Tilt } from '@/components/common/Tilt'
 import { OutlineMarquee } from '@/components/sections/OutlineMarquee'
-import { ReferenceLogos } from '@/components/sections/ReferenceLogos'
-import { Testimonials } from '@/components/sections/Testimonials'
+import { EngineeringGuarantees } from '@/components/sections/EngineeringGuarantees'
 import { Pricing } from '@/components/sections/Pricing'
 import { TrustStrip } from '@/components/sections/TrustStrip'
 import { FounderNote } from '@/components/sections/FounderNote'
 import { TechMarquee } from '@/components/sections/TechMarquee'
 
 export const metadata = buildMetadata({
-  title: `${SITE.name} — Kurumsal Web Sitesi, Yazılım, SEO ve Dijital Dönüşüm`,
+  title: `${SITE.name} — Kurumsal Web Sitesi, Özel Yazılım ve Dijital Altyapı`,
   description:
-    'Türkiye geneli kurumsal web sitesi, özel yazılım, SaaS, SEO ve dijital dönüşüm hizmetleri. 43 hizmet alanı, 81 il kapsama, ücretsiz ön analiz.',
+    'Türkiye geneli kurumsal web sitesi, özel yazılım, SaaS, SEO ve dijital dönüşüm çözümleri. 43 hizmet alanı, 81 il kapsama, %100 kod sahipliği.',
   path: '/',
   keywords: [
     'kurumsal web sitesi',
@@ -82,18 +78,12 @@ export const metadata = buildMetadata({
 
 const counts = getCategoryCounts()
 
-/** Vaka çalışması kartlarının fotoğrafları */
+/** Örnek ürün ekranı görselleri */
 const MOSAIC_SCREENS = [
   screen('crm', 'CRM satış hunisi ve fırsat yönetimi ekranı'),
   screen('stok-yonetimi', 'Depo, stok ve tedarikçi otomasyonu ekranı'),
   screen('ai-chatbot', 'Yapay zekâ destekli satış asistanı sohbet ekranı'),
   screen('api-entegrasyonu', 'Ödeme, kargo, e-posta ve CRM entegrasyon logları ekranı'),
-]
-
-const REFERENCE_SCREENS = [
-  screen('stok-yonetimi', 'Stok, sipariş ve tedarikçi takip ekranı'),
-  screen('crm', 'CRM satış hunisi ve lead takip ekranı'),
-  screen('teknik-seo', 'Teknik SEO denetimi ve görünürlük rapor ekranı'),
 ]
 
 export default function HomePage() {
@@ -119,7 +109,7 @@ export default function HomePage() {
         ]}
       />
 
-      {/* 1 — Hero */}
+      {/* 1 — Hero (Mühendislik & Canlı Sistem Görseli) */}
       <Hero />
 
       {/* 2 — Güven / rakamlar */}
@@ -128,116 +118,104 @@ export default function HomePage() {
       {/* 2.5 — Teknoloji şeridi */}
       <TechMarquee />
 
-      {/* Fotoğraf mozaigi — sahadan kareler */}
-      <section aria-label="Tardigrad Software hizmet alanları" className="section-light relative overflow-hidden py-16 lg:py-24">
-        <ParallaxOrbs />
+      {/* Fotoğraf mozaigi — ürün ekranlarından kareler */}
+      <section aria-label="Tardigrad Software ürün arayüzleri" className="section-light relative overflow-hidden py-16 lg:py-24">
         <div className="container">
           <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-navy-500">
-            Hizmet alanlarımız
+            Ürün Arayüzlerimizden Kareler
           </p>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <Reveal delay={Number(0) * 0.08} className="h-full">
-          <Tilt className="h-full rounded-xl">
-          <Photo
-            src={MOSAIC_SCREENS[0].src}
-            alt={MOSAIC_SCREENS[0].alt}
-            caption="Müşteri ilişkileri ve satış hunisi yönetimi"
-            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-          </Tilt>
-          </Reveal>
-          <Reveal delay={Number(1) * 0.08} className="h-full">
-          <Tilt className="h-full rounded-xl">
-          <Photo
-            src={MOSAIC_SCREENS[1].src}
-            alt={MOSAIC_SCREENS[1].alt}
-            caption="Depo, stok ve tedarikçi otomasyonu"
-            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-          </Tilt>
-          </Reveal>
-          <Reveal delay={Number(2) * 0.08} className="h-full">
-          <Tilt className="h-full rounded-xl">
-          <Photo
-            src={MOSAIC_SCREENS[2].src}
-            alt={MOSAIC_SCREENS[2].alt}
-            caption="Yapay zekâ destekli sohbet ve içerik araçları"
-            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-          </Tilt>
-          </Reveal>
-          <Reveal delay={Number(3) * 0.08} className="h-full">
-          <Tilt className="h-full rounded-xl">
-          <Photo
-            src={MOSAIC_SCREENS[3].src}
-            alt={MOSAIC_SCREENS[3].alt}
-            caption="Ödeme, kargo, e-posta ve CRM entegrasyonları"
-            className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-          </Tilt>
-          </Reveal>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Reveal delay={0} className="h-full">
+              <Photo
+                src={MOSAIC_SCREENS[0].src}
+                alt={MOSAIC_SCREENS[0].alt}
+                caption="Müşteri ilişkileri ve satış hunisi yönetimi"
+                className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </Reveal>
+            <Reveal delay={0.08} className="h-full">
+              <Photo
+                src={MOSAIC_SCREENS[1].src}
+                alt={MOSAIC_SCREENS[1].alt}
+                caption="Depo, stok ve tedarikçi otomasyonu"
+                className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </Reveal>
+            <Reveal delay={0.16} className="h-full">
+              <Photo
+                src={MOSAIC_SCREENS[2].src}
+                alt={MOSAIC_SCREENS[2].alt}
+                caption="Yapay zekâ destekli sohbet ve içerik araçları"
+                className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </Reveal>
+            <Reveal delay={0.24} className="h-full">
+              <Photo
+                src={MOSAIC_SCREENS[3].src}
+                alt={MOSAIC_SCREENS[3].alt}
+                caption="Ödeme, kargo, e-posta ve CRM entegrasyonları"
+                className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* 3 — Hizmet kategorileri */}
-      <ReferenceLogos />
-
       <section className="section-soft py-16 lg:py-24" aria-labelledby="kategoriler-baslik">
         <div className="container">
           <SectionHeading
-            eyebrow="Hizmet kategorileri"
+            eyebrow="HİZMET KATEGORİLERİ"
             id="kategoriler-baslik"
             title={
               <>
                 Bir işletmenin dijitalde ihtiyacı olan{' '}
-                <span className="text-gradient">her şey tek ekipte</span>
+                <span className="text-gradient">tüm alanlar tek çatıda</span>
               </>
             }
-            description="Web sitesinden özel yazılıma, SEO’dan yapay zekâya kadar 43 hizmet alanı. Tek bir ihtiyaca odaklanabilir ya da uçtan uca dijital dönüşüm alabilirsiniz."
+            description="Web sitesinden özel yazılıma, SEO’dan yapay zekâya kadar 43 hizmet alanı. Tek bir ihtiyaca odaklanabilir ya da uçtan uca dijital altyapı kurulumu alabilirsiniz."
           />
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {SERVICE_CATEGORIES.map((category, index) => (
               <Reveal key={category.key} delay={index * 0.07} className="h-full">
-              <Link
-                href={`/hizmetler/?kategori=${category.key}`}
-                className="card-light group flex flex-col p-6"
-              >
-                <Photo
-                  src={screen(CATEGORY_SCREEN[category.key], `${category.label} örnek ürün ekranı`).src}
-                  alt={screen(CATEGORY_SCREEN[category.key], `${category.label} örnek ürün ekranı`).alt}
-                  className="-m-6 mb-5 h-32 rounded-t-xl"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                  imgClassName="transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="flex items-start justify-between gap-3">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-navy-900 text-white transition-transform duration-300 group-hover:scale-105">
-                    <LucideIcon name={category.icon} fallback="Sparkles" className="h-6 w-6" aria-hidden />
+                <Link
+                  href={`/hizmetler/?kategori=${category.key}`}
+                  className="card-light group flex flex-col p-6 h-full"
+                >
+                  <Photo
+                    src={screen(CATEGORY_SCREEN[category.key], `${category.label} örnek ürün ekranı`).src}
+                    alt={screen(CATEGORY_SCREEN[category.key], `${category.label} örnek ürün ekranı`).alt}
+                    className="-m-6 mb-5 h-32 rounded-t-xl"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    imgClassName="transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-navy-900 text-white transition-transform duration-300 group-hover:scale-105">
+                      <LucideIcon name={category.icon} fallback="Sparkles" className="h-5 w-5" aria-hidden />
+                    </span>
+                    <span className="rounded-full bg-brand-navy-50 px-2.5 py-1 font-mono text-xs font-semibold text-brand-navy-700">
+                      {counts[category.key] ?? 0} hizmet
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-brand-ink">
+                    <span aria-hidden className="mr-2">
+                      {category.emoji}
+                    </span>
+                    {category.label}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-brand-ink-soft/80">
+                    {category.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-navy-600 transition-colors group-hover:text-brand-navy-900">
+                    Tümünü gör
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
                   </span>
-                  <span className="rounded-full bg-brand-navy-50 px-2.5 py-1 font-mono text-xs font-semibold text-brand-navy-700">
-                    {counts[category.key] ?? 0} hizmet
-                  </span>
-                </div>
-                <h3 className="mt-5 text-lg font-semibold text-brand-ink">
-                  <span aria-hidden className="mr-2">
-                    {category.emoji}
-                  </span>
-                  {category.label}
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-brand-ink-soft/75">
-                  {category.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-navy-600 transition-colors group-hover:text-brand-navy-900">
-                  Tümünü gör
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
-                </span>
-                <span className="sr-only">Kategori sırası: {index + 1}</span>
-              </Link>
+                </Link>
               </Reveal>
             ))}
           </div>
@@ -249,7 +227,7 @@ export default function HomePage() {
         <div className="container">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
-              eyebrow="43 hizmet alanı"
+              eyebrow="43 HİZMET ALANI"
               id="tum-hizmetler-baslik"
               title="İhtiyacınız olan hizmeti seçin"
               description="Her hizmet sayfası; kapsamı, süreci, faydaları ve sık sorulan soruları ile birlikte ayrıntılı olarak hazırlandı."
@@ -258,7 +236,7 @@ export default function HomePage() {
               href="/hizmetler/"
               className="inline-flex items-center gap-2 rounded-xl border border-brand-navy-200 px-5 py-3 text-sm font-semibold text-brand-navy-800 transition hover:border-brand-blue hover:bg-brand-navy-50"
             >
-              Hizmetler sayfası
+              Hizmetler Sayfası
               <ArrowUpRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
@@ -302,14 +280,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5 — Dijital dönüşüm örnekleri */}
+      {/* 5 — Mühendislik Taahhütleri (Dürüst ve Teknik Standartlar) */}
+      <EngineeringGuarantees />
+
+      {/* 6 — Dijital dönüşüm örnekleri (Öncesi / Sonrası) */}
       <section className="section-navy relative overflow-hidden py-20 lg:py-28" aria-labelledby="donusum-ornekleri-baslik">
-        <ParallaxOrbs variant="dark" />
-        <ParticleField count={44} />
         <div className="container">
           <SectionHeading
             variant="dark"
-            eyebrow="Dijital dönüşüm örnekleri"
+            eyebrow="Süreç Dönüşümü"
             id="donusum-ornekleri-baslik"
             title={
               <>
@@ -324,13 +303,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6 — 9 adımlı proje süreci */}
+      {/* 7 — 9 adımlı proje süreci */}
       <section className="section-light py-16 lg:py-24" aria-labelledby="surec-baslik">
         <div className="container">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
             <div>
               <SectionHeading
-                eyebrow="Nasıl çalışıyoruz?"
+                eyebrow="NASIL ÇALIŞIYORUZ?"
                 id="surec-baslik"
                 title="9 adımlı şeffaf proje süreci"
                 description="Analizden raporlamaya kadar her adımı önceden bilir, her sprint sonunda çalışan bir çıktı görürsünüz. Süreç sürpriz içermez."
@@ -362,15 +341,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6b — Kaydırmalı dijital dönüşüm filmi */}
+      {/* 8 — Kaydırmalı dijital dönüşüm filmi */}
       <TransformationStory />
 
-      {/* 7 — SEO & lokal kapsama */}
+      {/* 9 — SEO & lokal kapsama */}
       <section className="section-soft relative overflow-hidden py-20 lg:py-28" aria-labelledby="lokal-baslik">
-        <ParallaxOrbs />
         <div className="container">
           <SectionHeading
-            eyebrow="Lokal SEO kapsaması"
+            eyebrow="LOKAL SEO KAPSAMASI"
             id="lokal-baslik"
             title={
               <>
@@ -440,15 +418,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8 — Teknoloji yığını */}
+      {/* 10 — Teknoloji yığını */}
       <OutlineMarquee />
 
       <section className="section-light py-16 lg:py-20" aria-labelledby="teknoloji-baslik">
         <div className="container">
           <SectionHeading
-            eyebrow="Teknoloji yığını"
+            eyebrow="TEKNOLOJİ YIĞINI"
             id="teknoloji-baslik"
-            title="Modern ve ölçeklenebilir teknolojiler"
+            title="Modern ve ölçeklenebilir altyapı"
             description={`Tip güvenli kod, sunucusuz altyapı ve global CDN ile ${TECH_STACK.length}+ teknolojiyi bir arada kullanıyoruz. Kapalı kutu çözüm yok; kod ve altyapı size teslim edilir.`}
           />
           <div className="mt-9">
@@ -457,7 +435,7 @@ export default function HomePage() {
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <div className="rounded-xl border border-brand-navy-100 bg-brand-paper-soft p-5">
               <ShieldCheck className="h-5 w-5 text-brand-blue" aria-hidden />
-              <h3 className="mt-3 text-base font-semibold text-brand-ink">Güvenlik varsayılan</h3>
+              <h3 className="mt-3 text-base font-semibold text-brand-ink">Güvenlik Varsayılan</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/75">
                 HTTPS, güvenlik başlıkları, rol bazlı erişim (RLS), rate limiting ve spam koruması her
                 projede standarttır.
@@ -465,7 +443,7 @@ export default function HomePage() {
             </div>
             <div className="rounded-xl border border-brand-navy-100 bg-brand-paper-soft p-5">
               <ServerCog className="h-5 w-5 text-brand-navy-600" aria-hidden />
-              <h3 className="mt-3 text-base font-semibold text-brand-ink">Core Web Vitals odaklı</h3>
+              <h3 className="mt-3 text-base font-semibold text-brand-ink">Core Web Vitals Odaklı</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/75">
                 LCP &lt; 2.5s, CLS &lt; 0.1, INP &lt; 200ms hedefleriyle geliştiriyor; yayın sonrası
                 hız raporunu paylaşıyoruz.
@@ -473,7 +451,7 @@ export default function HomePage() {
             </div>
             <div className="rounded-xl border border-brand-navy-100 bg-brand-paper-soft p-5">
               <Sparkles className="h-5 w-5 text-brand-purple" aria-hidden />
-              <h3 className="mt-3 text-base font-semibold text-brand-ink">Sahiplik sizde</h3>
+              <h3 className="mt-3 text-base font-semibold text-brand-ink">Sahiplik Sizde</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/75">
                 Kod deposu, alan adı ve altyapı hesapları sizin adınıza kurulur; proje sonunda kaynak
                 kodlar teslim edilir.
@@ -483,71 +461,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9 — Referanslar / vaka çalışmaları */}
-      <section className="section-soft relative overflow-hidden py-20 lg:py-28" aria-labelledby="referanslar-baslik">
-        <ParallaxOrbs />
-        <div className="container">
-          <SectionHeading
-            eyebrow="Referanslar ve vaka çalışmaları"
-            id="referanslar-baslik"
-            title="Yakında: ölçülebilir sonuçlarıyla vaka çalışmaları"
-            description="Müşteri onayları alındıkça vaka çalışmalarını burada yayımlıyoruz. Bu süreçte, en sık çalıştığımız senaryoları ve ürettikleri sonuçları paylaşıyoruz."
-          />
-          <div className="mt-9 grid gap-4 md:grid-cols-3">
-            {[
-              {
-                title: 'Üretim firması — Excel’den sisteme',
-                text: 'Stok, sipariş ve teklif süreçleri tek panelde toplandı; manuel veri girişi büyük ölçüde ortadan kalktı.',
-                tag: 'Stok + Sipariş + Teklif',
-              },
-              {
-                title: 'Hizmet işletmesi — lead kaybını durdurma',
-                text: 'Web formu ve WhatsApp talepleri CRM’e otomatik düşüyor, takip hatırlatmaları ile kayıp lead oranı azaldı.',
-                tag: 'CRM + Otomasyon',
-              },
-              {
-                title: 'Kurumsal site — görünürlük artışı',
-                text: 'Teknik SEO, yapısal veri ve hizmet sayfası mimarisi ile organik trafik ve form talepleri yükseldi.',
-                tag: 'Web + Teknik SEO',
-              },
-            ].map((item, itemIndex) => (
-              <Reveal key={item.title} delay={itemIndex * 0.09} className="h-full">
-              <div className="card-light h-full p-6">
-                <Photo
-                  src={(REFERENCE_SCREENS[itemIndex] ?? REFERENCE_SCREENS[0]).src}
-                  alt={(REFERENCE_SCREENS[itemIndex] ?? REFERENCE_SCREENS[0]).alt}
-                  className="-m-6 mb-5 h-32 rounded-t-xl"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-navy-50 px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wide text-brand-navy-700">
-                  <Clock className="h-3 w-3" aria-hidden />
-                  {item.tag}
-                </span>
-                <h3 className="mt-4 text-base font-semibold text-brand-ink">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/75">{item.text}</p>
-                <p className="mt-4 text-[12.5px] font-medium text-brand-navy-400">
-                  Detaylı vaka çalışması yakında yayımlanacak.
-                </p>
-              </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 10 — Genel SSS */}
-      <Testimonials />
-
       <FounderNote />
 
       <Pricing />
 
       <TrustStrip />
 
+      {/* 11 — Genel SSS */}
       <section className="section-light py-16 lg:py-24" aria-labelledby="sss-baslik">
         <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <SectionHeading
-            eyebrow="Sık sorulan sorular"
+            eyebrow="SIK SORULAN SORULAR"
             id="sss-baslik"
             title="Merak edilenler"
             description="Hizmet kapsamı, süre, fiyatlandırma, destek ve veri güvenliği hakkında en çok sorulan sorular."
@@ -556,13 +480,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11 — Blog önerileri */}
+      {/* 12 — Blog rehberleri */}
       {recentPosts.length ? (
         <section className="section-soft py-16 lg:py-20" aria-labelledby="blog-baslik">
           <div className="container">
             <div className="flex flex-wrap items-end justify-between gap-5">
               <SectionHeading
-                eyebrow="Blog"
+                eyebrow="BLOG"
                 id="blog-baslik"
                 title="Rehber içerikler"
                 description="Web, yazılım, SEO ve dijital dönüşüm üzerine pratik rehberler."
@@ -584,7 +508,7 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      {/* 12 — CTA + iletişim formu */}
+      {/* 13 — CTA + iletişim formu */}
       <ContactSection
         title="Projenizi Bugün Başlatalım"
         description={`Merhaba, ben Tardigrad Software kurucusu. Her projeye aynı soruyla başlıyoruz: "Bu çalışma işletmenizin hangi problemini çözecek?" 20 dakikalık bir görüşme ile mevcut durumunuzu analiz ediyor, kapsam ve bütçe önerisini yazılı olarak paylaşıyoruz. ${CONTACT.responseTime}.`}

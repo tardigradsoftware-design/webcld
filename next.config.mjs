@@ -1,6 +1,20 @@
 // next.config.mjs
 // Next.js 14, TypeScript config dosyasını desteklemediği için .mjs kullanılır.
 /** @type {import('next').NextConfig} */
+
+const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://va.vercel-scripts.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' data: blob: https://images.unsplash.com https://res.cloudinary.com https://www.google-analytics.com;
+    font-src 'self' data: https://fonts.gstatic.com;
+    connect-src 'self' https://*.supabase.co https://*.upstash.io https://api.resend.com https://www.google-analytics.com https://www.google.com https://va.vercel-scripts.com;
+    frame-src 'self' https://www.google.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+`.replace(/\s{2,}/g, ' ').trim()
+
 const nextConfig = {
   reactStrictMode: true,
 
@@ -44,6 +58,7 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
+          { key: 'Content-Security-Policy', value: cspHeader },
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
