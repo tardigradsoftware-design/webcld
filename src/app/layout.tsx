@@ -13,6 +13,7 @@ import { CONTACT, SITE, SITE_URL } from '@/lib/constants'
 import { organizationSchema, websiteSchema } from '@/lib/schemas'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Header } from '@/components/layout/Header'
+import { AnnouncementBar } from '@/components/common/AnnouncementBar'
 import { Footer } from '@/components/layout/Footer'
 import { CookieConsent } from '@/components/common/CookieConsent'
 import { FloatingActions } from '@/components/common/FloatingActions'
@@ -149,6 +150,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           İçeriğe geç
         </a>
 
+        <AnnouncementBar />
         <Header />
 
         <main id="icerik" className="flex-1">

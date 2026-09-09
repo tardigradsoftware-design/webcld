@@ -52,6 +52,10 @@ import { ParallaxOrbs } from '@/components/common/ParallaxOrbs'
 import { ParticleField } from '@/components/common/ParticleField'
 import { Tilt } from '@/components/common/Tilt'
 import { OutlineMarquee } from '@/components/sections/OutlineMarquee'
+import { ReferenceLogos } from '@/components/sections/ReferenceLogos'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { Pricing } from '@/components/sections/Pricing'
+import { TrustStrip } from '@/components/sections/TrustStrip'
 import { TechMarquee } from '@/components/sections/TechMarquee'
 
 export const metadata = buildMetadata({
@@ -180,6 +184,8 @@ export default function HomePage() {
       </section>
 
       {/* 3 — Hizmet kategorileri */}
+      <ReferenceLogos />
+
       <section className="section-soft py-16 lg:py-24" aria-labelledby="kategoriler-baslik">
         <div className="container">
           <SectionHeading
@@ -529,6 +535,12 @@ export default function HomePage() {
       </section>
 
       {/* 10 — Genel SSS */}
+      <Testimonials />
+
+      <Pricing />
+
+      <TrustStrip />
+
       <section className="section-light py-16 lg:py-24" aria-labelledby="sss-baslik">
         <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <SectionHeading
