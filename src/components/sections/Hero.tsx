@@ -6,6 +6,9 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Check, PlayCircle, ShieldCheck } from 'lucide-react'
 import Image from 'next/image'
 
+import { ParticleField } from '@/components/common/ParticleField'
+import { Magnetic } from '@/components/common/Magnetic'
+
 import { CTA, CONTACT, SITE_STATS } from '@/lib/constants'
 import { trackCtaClick } from '@/lib/gtag'
 import { cn } from '@/lib/utils'
@@ -47,6 +50,7 @@ export function Hero() {
         aria-hidden
       />
       <NetworkBackdrop />
+      <ParticleField className="opacity-80" />
 
       <div className="container relative py-20 lg:grid lg:grid-cols-[minmax(0,1fr)_430px] lg:items-center lg:gap-12 lg:py-28">
         <motion.div variants={container} initial="hidden" animate="show" className="max-w-4xl">
@@ -87,6 +91,7 @@ export function Hero() {
           </motion.ul>
 
           <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-3">
+            <Magnetic>
             <Link
               href={CTA.formAnchor}
               onClick={() => trackCtaClick(CTA.primary, '/')}
@@ -95,6 +100,7 @@ export function Hero() {
               {CTA.primary}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
             </Link>
+            </Magnetic>
             <Link
               href="/hizmetler/"
               onClick={() => trackCtaClick(CTA.services, '/')}

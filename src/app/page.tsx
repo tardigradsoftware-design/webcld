@@ -48,6 +48,10 @@ import { LucideIcon } from '@/components/common/LucideIcon'
 import { Photo } from '@/components/common/Photo'
 import { CATEGORY_SCREEN, screen } from '@/lib/photos'
 import { Reveal } from '@/components/common/Reveal'
+import { ParallaxOrbs } from '@/components/common/ParallaxOrbs'
+import { ParticleField } from '@/components/common/ParticleField'
+import { Tilt } from '@/components/common/Tilt'
+import { OutlineMarquee } from '@/components/sections/OutlineMarquee'
 import { TechMarquee } from '@/components/sections/TechMarquee'
 
 export const metadata = buildMetadata({
@@ -120,13 +124,15 @@ export default function HomePage() {
       <TechMarquee />
 
       {/* Fotoğraf mozaigi — sahadan kareler */}
-      <section aria-label="Tardigrad Software hizmet alanları" className="section-light py-10 lg:py-12">
+      <section aria-label="Tardigrad Software hizmet alanları" className="section-light relative overflow-hidden py-16 lg:py-24">
+        <ParallaxOrbs />
         <div className="container">
           <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-navy-500">
             Hizmet alanlarımız
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Reveal delay={Number(0) * 0.08} className="h-full">
+          <Tilt className="h-full rounded-xl">
           <Photo
             src={MOSAIC_SCREENS[0].src}
             alt={MOSAIC_SCREENS[0].alt}
@@ -134,8 +140,10 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Tilt>
           </Reveal>
           <Reveal delay={Number(1) * 0.08} className="h-full">
+          <Tilt className="h-full rounded-xl">
           <Photo
             src={MOSAIC_SCREENS[1].src}
             alt={MOSAIC_SCREENS[1].alt}
@@ -143,8 +151,10 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Tilt>
           </Reveal>
           <Reveal delay={Number(2) * 0.08} className="h-full">
+          <Tilt className="h-full rounded-xl">
           <Photo
             src={MOSAIC_SCREENS[2].src}
             alt={MOSAIC_SCREENS[2].alt}
@@ -152,8 +162,10 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Tilt>
           </Reveal>
           <Reveal delay={Number(3) * 0.08} className="h-full">
+          <Tilt className="h-full rounded-xl">
           <Photo
             src={MOSAIC_SCREENS[3].src}
             alt={MOSAIC_SCREENS[3].alt}
@@ -161,6 +173,7 @@ export default function HomePage() {
             className="aspect-[4/3] rounded-xl border border-brand-navy-100 shadow-card"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
+          </Tilt>
           </Reveal>
           </div>
         </div>
@@ -283,7 +296,9 @@ export default function HomePage() {
       </section>
 
       {/* 5 — Dijital dönüşüm örnekleri */}
-      <section className="section-navy py-16 lg:py-24" aria-labelledby="donusum-ornekleri-baslik">
+      <section className="section-navy relative overflow-hidden py-20 lg:py-28" aria-labelledby="donusum-ornekleri-baslik">
+        <ParallaxOrbs variant="dark" />
+        <ParticleField count={44} />
         <div className="container">
           <SectionHeading
             variant="dark"
@@ -344,7 +359,8 @@ export default function HomePage() {
       <TransformationStory />
 
       {/* 7 — SEO & lokal kapsama */}
-      <section className="section-soft py-16 lg:py-24" aria-labelledby="lokal-baslik">
+      <section className="section-soft relative overflow-hidden py-20 lg:py-28" aria-labelledby="lokal-baslik">
+        <ParallaxOrbs />
         <div className="container">
           <SectionHeading
             eyebrow="Lokal SEO kapsaması"
@@ -418,6 +434,8 @@ export default function HomePage() {
       </section>
 
       {/* 8 — Teknoloji yığını */}
+      <OutlineMarquee />
+
       <section className="section-light py-16 lg:py-20" aria-labelledby="teknoloji-baslik">
         <div className="container">
           <SectionHeading
@@ -459,7 +477,8 @@ export default function HomePage() {
       </section>
 
       {/* 9 — Referanslar / vaka çalışmaları */}
-      <section className="section-soft py-16 lg:py-20" aria-labelledby="referanslar-baslik">
+      <section className="section-soft relative overflow-hidden py-20 lg:py-28" aria-labelledby="referanslar-baslik">
+        <ParallaxOrbs />
         <div className="container">
           <SectionHeading
             eyebrow="Referanslar ve vaka çalışmaları"

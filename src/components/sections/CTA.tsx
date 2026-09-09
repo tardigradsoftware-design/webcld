@@ -3,6 +3,9 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+
+import { ParticleField } from '@/components/common/ParticleField'
+import { ParallaxOrbs } from '@/components/common/ParallaxOrbs'
 import { ArrowRight, Mail, MessageCircle } from 'lucide-react'
 
 import { CTA as CTA_COPY, CONTACT, whatsappLink } from '@/lib/constants'
@@ -41,6 +44,8 @@ export function CTA({
       className={cn('relative overflow-hidden bg-brand-navy-950 text-white', className)}
       aria-labelledby="cta-baslik"
     >
+      <ParallaxOrbs variant="dark" />
+      <ParticleField count={40} />
       <div className="pointer-events-none absolute inset-0 bg-grid-navy opacity-45" aria-hidden />
       <div
         className="pointer-events-none absolute -left-32 top-0 h-[420px] w-[420px] rounded-full bg-blue-600/25 blur-[130px]"

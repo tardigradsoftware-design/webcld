@@ -1,4 +1,7 @@
 // src/components/sections/SectionHeading.tsx
+'use client'
+
+import { motion } from 'framer-motion'
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -33,26 +36,47 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <span className={cn(variant === 'light' ? 'eyebrow' : 'eyebrow-light')}>{eyebrow}</span>
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className={cn(variant === 'light' ? 'eyebrow' : 'eyebrow-light')}
+        >
+          {eyebrow}
+        </motion.span>
       ) : null}
-      <Tag
-        id={id}
-        className={cn(
-          'mt-4 text-3xl font-semibold leading-tight md:text-4xl',
-          variant === 'light' ? 'text-brand-ink' : 'text-white',
-        )}
-      >
-        {title}
-      </Tag>
+      <div className="overflow-hidden">
+        <motion.div
+          initial={{ y: '110%' }}
+          whileInView={{ y: '0%' }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <Tag
+            id={id}
+            className={cn(
+              'mt-4 text-3xl font-semibold leading-tight md:text-4xl',
+              variant === 'light' ? 'text-brand-ink' : 'text-white',
+            )}
+          >
+            {title}
+          </Tag>
+        </motion.div>
+      </div>
       {description ? (
-        <p
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           className={cn(
             'mt-4 text-base leading-relaxed md:text-lg',
             variant === 'light' ? 'text-brand-ink-soft/80' : 'text-white/70',
           )}
         >
           {description}
-        </p>
+        </motion.p>
       ) : null}
     </div>
   )
