@@ -56,6 +56,7 @@ import { ReferenceLogos } from '@/components/sections/ReferenceLogos'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { Pricing } from '@/components/sections/Pricing'
 import { TrustStrip } from '@/components/sections/TrustStrip'
+import { FounderNote } from '@/components/sections/FounderNote'
 import { TechMarquee } from '@/components/sections/TechMarquee'
 
 export const metadata = buildMetadata({
@@ -189,6 +190,7 @@ export default function HomePage() {
       <section className="section-soft py-16 lg:py-24" aria-labelledby="kategoriler-baslik">
         <div className="container">
           <SectionHeading
+            index="01"
             eyebrow="Hizmet kategorileri"
             id="kategoriler-baslik"
             title={
@@ -248,6 +250,7 @@ export default function HomePage() {
         <div className="container">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
+              index="02"
               eyebrow="43 hizmet alanı"
               id="tum-hizmetler-baslik"
               title="İhtiyacınız olan hizmeti seçin"
@@ -307,12 +310,13 @@ export default function HomePage() {
         <ParticleField count={44} />
         <div className="container">
           <SectionHeading
+            index="03"
             variant="dark"
             eyebrow="Dijital dönüşüm örnekleri"
             id="donusum-ornekleri-baslik"
             title={
               <>
-                Gerçek dönüşümler: <span className="text-gradient-light">öncesi ve sonrası</span>
+                Öncesi: Excel, WhatsApp, defter. Sonrası: <span className="text-gradient-light">tek canlı sistem</span>
               </>
             }
             description="İşletmelerin en sık yaşadığı dört dijital tıkanma ve Tardigrad Software ile geldikleri nokta."
@@ -329,6 +333,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
             <div>
               <SectionHeading
+                index="04"
                 eyebrow="Nasıl çalışıyoruz?"
                 id="surec-baslik"
                 title="9 adımlı şeffaf proje süreci"
@@ -369,6 +374,7 @@ export default function HomePage() {
         <ParallaxOrbs />
         <div className="container">
           <SectionHeading
+            index="05"
             eyebrow="Lokal SEO kapsaması"
             id="lokal-baslik"
             title={
@@ -445,6 +451,7 @@ export default function HomePage() {
       <section className="section-light py-16 lg:py-20" aria-labelledby="teknoloji-baslik">
         <div className="container">
           <SectionHeading
+            index="06"
             eyebrow="Teknoloji yığını"
             id="teknoloji-baslik"
             title="Modern ve ölçeklenebilir teknolojiler"
@@ -487,6 +494,7 @@ export default function HomePage() {
         <ParallaxOrbs />
         <div className="container">
           <SectionHeading
+            index="07"
             eyebrow="Referanslar ve vaka çalışmaları"
             id="referanslar-baslik"
             title="Yakında: ölçülebilir sonuçlarıyla vaka çalışmaları"
@@ -537,6 +545,8 @@ export default function HomePage() {
       {/* 10 — Genel SSS */}
       <Testimonials />
 
+      <FounderNote />
+
       <Pricing />
 
       <TrustStrip />
@@ -544,6 +554,7 @@ export default function HomePage() {
       <section className="section-light py-16 lg:py-24" aria-labelledby="sss-baslik">
         <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <SectionHeading
+            index="10"
             eyebrow="Sık sorulan sorular"
             id="sss-baslik"
             title="Merak edilenler"
@@ -559,6 +570,7 @@ export default function HomePage() {
           <div className="container">
             <div className="flex flex-wrap items-end justify-between gap-5">
               <SectionHeading
+                index="11"
                 eyebrow="Blog"
                 id="blog-baslik"
                 title="Rehber içerikler"

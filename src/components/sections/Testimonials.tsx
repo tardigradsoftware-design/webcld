@@ -37,6 +37,7 @@ export function Testimonials() {
     <section className="section-light relative overflow-hidden py-20 lg:py-28" aria-labelledby="yorumlar-baslik">
       <div className="container">
         <SectionHeading
+          index="08"
           id="yorumlar-baslik"
           eyebrow="Müşteri yorumları"
           title="Birlikte çalıştığımız ekipler ne diyor?"
@@ -52,7 +53,7 @@ export function Testimonials() {
                     <Star key={s} className="h-3.5 w-3.5 fill-blue-400 text-blue-400" aria-hidden />
                   ))}
                 </div>
-                <blockquote className="mt-4 flex-1 text-[14.5px] leading-relaxed text-brand-ink-soft/85">
+                <blockquote className="mt-4 flex-1 font-display text-[15.5px] italic leading-[1.75] text-brand-ink-soft/85">
                   “{t.quote}”
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3 border-t border-brand-navy-100 pt-4">

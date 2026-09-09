@@ -66,19 +66,35 @@ export function Hero() {
 
           <motion.h1
             variants={item}
-            className="mt-6 text-[clamp(2.4rem,6vw,4.6rem)] font-bold leading-[1.04] tracking-tight"
+            className="mt-6 font-display text-[clamp(2.4rem,6vw,4.4rem)] font-semibold leading-[1.06] tracking-[-0.015em]"
           >
-            Türkiye’nin işletmeleri için{' '}
-            <span className="text-gradient-light">uçtan uca dijital çözümler</span>
+            Dağınık süreçleri{' '}
+            <span className="relative inline-block">
+              <span className="text-gradient-light">canlı sistemlere</span>
+              <svg
+                viewBox="0 0 240 10"
+                className="absolute -bottom-2 left-0 h-2.5 w-full text-blue-400/80"
+                fill="none"
+                aria-hidden
+              >
+                <path
+                  d="M3 7C40 3 78 8 118 5c40-3 80 2 119-1"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>{' '}
+            bağlayan kurumsal yazılımlar
           </motion.h1>
 
           <motion.p
             variants={item}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl"
           >
-            Kurumsal web sitesi, özel yazılım ve yönetim panelleri, SaaS ürünleri, SEO ve dijital
-            dönüşüm. Dağınık Excel dosyalarından canlı platformlara — işinizi büyüten sistemleri
-            tek ekip olarak tasarlıyor, geliştiriyor ve yaşatıyoruz.
+            Kurumsal web sitesi, CRM ve stok sistemleri, SaaS platformları ve teknik SEO. Hepsi
+            aynı ekipten, aynı sorumlulukla: ön analiz ücretsiz, teklif yazılı, teslim takvimi
+            sözleşmede yazar.
           </motion.p>
 
           <motion.ul variants={item} className="mt-7 flex flex-wrap gap-x-6 gap-y-2.5">

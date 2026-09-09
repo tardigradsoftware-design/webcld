@@ -201,7 +201,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center">
+        <p className="mt-12 font-mono text-[11px] leading-relaxed text-white/35">
+          Dizgi: Fraunces, Inter &amp; JetBrains Mono · Next.js 14 App Router · 43 hizmet sayfası ve
+          60 şehir kombinasyonu elle yazıldı · sürüm 2026.09
+        </p>
+
+        <div className="mt-6 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center">
           <p>
             © {year} {SITE.legalName}. Tüm hakları saklıdır.
           </p>

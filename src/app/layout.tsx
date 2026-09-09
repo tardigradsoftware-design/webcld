@@ -36,6 +36,24 @@ const inter = localFont({
   preload: true,
 })
 
+const fraunces = localFont({
+  src: [
+    {
+      path: '../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2',
+      style: 'normal',
+    },
+    {
+      path: '../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-ext-wght-normal.woff2',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  weight: '100 900',
+  variable: '--font-fraunces',
+  fallback: ['Fraunces', 'Georgia', 'serif'],
+  preload: false,
+})
+
 const jetbrainsMono = localFont({
   src: [
     {
@@ -137,7 +155,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="tr" className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}>
       <body className="flex min-h-screen flex-col bg-white font-sans">
         <MotionConfig reducedMotion="user">
         <ScrollProgress />
