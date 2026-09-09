@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F1B3D"/>
+      <stop offset="55%" stop-color="#0B1730"/>
+      <stop offset="100%" stop-color="#08112B"/>
+    </linearGradient>
+    <linearGradient id="ts" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="55%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112.64" fill="url(#bg)"/>
+  <rect x="28.16" y="28.16" width="455.68" height="455.68" rx="92.36479999999999" fill="none" stroke="rgba(103,232,249,0.22)" stroke-width="3.072"/>
+  <!-- Tardigrad (su ayısı) soyut siluet: gövde + 4 bacak + anten -->
+  <g transform="translate(97.28 153.6)">
+    <path d="M 153.6 0
+             C 240.64 0 296.96 51.2 296.96 102.4
+             C 296.96 153.6 240.64 204.8 153.6 204.8
+             C 66.56 204.8 0 153.6 0 102.4
+             C 0 51.2 66.56 0 153.6 0 Z"
+          fill="url(#ts)"/>
+    <g stroke="url(#tail)" stroke-width="11.264" stroke-linecap="round" fill="none">
+      <path d="M 56.32 194.56 L 46.08 266.24"/>
+      <path d="M 122.88 204.8 L 117.76 281.6"/>
+      <path d="M 194.56 204.8 L 204.8 281.6"/>
+      <path d="M 256 189.44 L 276.48 261.12"/>
+    </g>
+    <circle cx="240.64" cy="76.8" r="14.336" fill="#08112B"/>
+  </g>
+  <!-- Kod parantezi: yazılım vurgusu -->
+  <g stroke="rgba(255,255,255,0.85)" stroke-width="14.336" stroke-linecap="round" fill="none">
+    <path d="M 102.4 399.36 L 79.36 422.4 L 102.4 445.44"/>
+    <path d="M 409.6 399.36 L 432.64 422.4 L 409.6 445.44"/>
+  </g>
+  <text x="256" y="437.76" text-anchor="middle" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" font-size="51.2" font-weight="800" fill="#FFFFFF" letter-spacing="6.144">TS</text>
+</svg>
