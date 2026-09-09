@@ -322,7 +322,7 @@ export default function CityPage({ params }: PageProps) {
               return (
                 <article key={industry} className="card-light p-6">
                   <h3 className="text-base font-semibold text-brand-ink">{industry}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/78">
+                  <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/80">
                     {suggestion.text}
                   </p>
                   <ul className="mt-4 space-y-1.5">

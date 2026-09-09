@@ -54,7 +54,7 @@ export function ServiceCard({
       <span
         className={cn(
           'pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full blur-2xl transition-opacity duration-500',
-          dark ? 'bg-blue-400/15 opacity-0 group-hover:opacity-100' : 'bg-brand-blue/12 opacity-0 group-hover:opacity-100',
+          dark ? 'bg-blue-400/15 opacity-0 group-hover:opacity-100' : 'bg-brand-blue/10 opacity-0 group-hover:opacity-100',
         )}
         aria-hidden
       />
@@ -79,7 +79,7 @@ export function ServiceCard({
           className={cn(
             'absolute inset-0',
             dark
-              ? 'bg-gradient-to-b from-brand-navy-950/35 via-brand-navy-950/55 to-brand-navy-950/92'
+              ? 'bg-gradient-to-b from-brand-navy-950/35 via-brand-navy-950/55 to-brand-navy-950/95'
               : 'bg-gradient-to-b from-white/10 via-white/55 to-white',
           )}
         />
@@ -129,7 +129,7 @@ export function ServiceCard({
         <span
           className={cn(
             'rounded-full border px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-wider',
-            dark ? 'border-white/12 text-white/55' : 'border-brand-navy-100 text-brand-navy-500',
+            dark ? 'border-white/10 text-white/55' : 'border-brand-navy-100 text-brand-navy-500',
           )}
         >
           {category?.shortLabel ?? service.category}

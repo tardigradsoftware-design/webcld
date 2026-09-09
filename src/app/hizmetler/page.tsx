@@ -60,7 +60,7 @@ export default function HizmetlerPage({ searchParams }: PageProps) {
               'rounded-full border px-4 py-2 text-[13px] font-semibold transition',
               !isValidCategory
                 ? 'border-blue-400/60 bg-blue-400/15 text-white'
-                : 'border-white/12 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
+                : 'border-white/10 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
             )}
           >
             Tümü ({services.length})
@@ -73,7 +73,7 @@ export default function HizmetlerPage({ searchParams }: PageProps) {
                 'rounded-full border px-4 py-2 text-[13px] font-semibold transition',
                 categoryParam === category.key
                   ? 'border-blue-400/60 bg-blue-400/15 text-white'
-                  : 'border-white/12 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
+                  : 'border-white/10 bg-white/[0.04] text-white/70 hover:border-white/30 hover:text-white',
               )}
             >
               {category.emoji} {category.label} ({counts[category.key] ?? 0})

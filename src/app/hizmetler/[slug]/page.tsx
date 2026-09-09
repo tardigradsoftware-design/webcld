@@ -170,7 +170,7 @@ export default function ServicePage({ params }: PageProps) {
                     </span>
                     {item.title}
                   </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/78">
+                  <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/80">
                     {item.description}
                   </p>
                 </div>

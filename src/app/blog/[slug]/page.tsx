@@ -95,8 +95,8 @@ export default function BlogPostPage({ params }: PageProps) {
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(160deg,#08112B_0%,#0F1B3D_55%,#0B1730_100%)]" />
           <div className="absolute inset-0 bg-grid-navy opacity-40" />
-          <div className="absolute -top-28 left-1/4 h-80 w-80 rounded-full bg-blue-600/22 blur-[120px]" />
-          <div className="absolute -bottom-24 right-10 h-72 w-72 rounded-full bg-blue-500/16 blur-[110px]" />
+          <div className="absolute -top-28 left-1/4 h-80 w-80 rounded-full bg-blue-600/20 blur-[120px]" />
+          <div className="absolute -bottom-24 right-10 h-72 w-72 rounded-full bg-blue-500/15 blur-[110px]" />
         </div>
 
         <div className="container relative">
@@ -144,7 +144,7 @@ export default function BlogPostPage({ params }: PageProps) {
             {post.tags.map((tag) => (
               <li
                 key={tag}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-[12px] font-medium text-white/75"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-[12px] font-medium text-white/75"
               >
                 <Tag className="h-3 w-3 text-blue-300" aria-hidden />
                 {tag}

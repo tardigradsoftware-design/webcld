@@ -72,7 +72,7 @@ export function WhyTardigrad({ items = DEFAULT_ITEMS, variant = 'dark', classNam
           <span
             className={cn(
               'inline-flex h-11 w-11 items-center justify-center rounded-lg',
-              dark ? 'bg-blue-400/12 text-blue-300' : 'bg-brand-navy-900 text-white',
+              dark ? 'bg-blue-400/10 text-blue-300' : 'bg-brand-navy-900 text-white',
             )}
           >
             <LucideIcon name={item.icon} fallback="Sparkles" className="h-5 w-5" aria-hidden />
@@ -80,7 +80,7 @@ export function WhyTardigrad({ items = DEFAULT_ITEMS, variant = 'dark', classNam
           <h3 className={cn('mt-4 text-base font-semibold', dark ? 'text-white' : 'text-brand-ink')}>
             {item.title}
           </h3>
-          <p className={cn('mt-2 text-sm leading-relaxed', dark ? 'text-white/62' : 'text-brand-ink-soft/75')}>
+          <p className={cn('mt-2 text-sm leading-relaxed', dark ? 'text-white/60' : 'text-brand-ink-soft/75')}>
             {item.description}
           </p>
         </motion.div>

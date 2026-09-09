@@ -75,7 +75,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/12 bg-white/[0.04] text-white/70 transition hover:border-blue-400/50 hover:bg-white/[0.09] hover:text-blue-300"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white/70 transition hover:border-blue-400/50 hover:bg-white/[0.09] hover:text-blue-300"
                 >
                   <LucideIcon name={social.icon} fallback="Globe" className="h-4 w-4" />
                 </a>

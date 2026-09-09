@@ -483,7 +483,7 @@ export function TransformationStory() {
                           </Link>
                         </div>
                         <ol className="relative space-y-2 pl-5">
-                          <span className="absolute left-[7px] top-1 h-[calc(100%-8px)] w-px bg-white/12" aria-hidden />
+                          <span className="absolute left-[7px] top-1 h-[calc(100%-8px)] w-px bg-white/10" aria-hidden />
                           <motion.span
                             className="absolute left-[7px] top-1 w-px origin-top bg-blue-400"
                             style={{ height: 'calc(100% - 8px)', scaleY: railScale }}

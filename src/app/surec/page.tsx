@@ -267,7 +267,7 @@ export default function ProcessPage() {
                 </span>
                 <div>
                   <h3 className="text-base font-semibold text-brand-ink">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/78">{item.text}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/80">{item.text}</p>
                 </div>
               </div>
             ))}

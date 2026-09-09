@@ -36,7 +36,7 @@ export function ProcessSteps({ steps, variant = 'light', layout = 'timeline', cl
               <span
                 className={cn(
                   'inline-flex h-10 w-10 items-center justify-center rounded-lg font-mono text-sm font-bold',
-                  dark ? 'bg-blue-400/12 text-blue-300' : 'bg-brand-navy-900 text-white',
+                  dark ? 'bg-blue-400/10 text-blue-300' : 'bg-brand-navy-900 text-white',
                 )}
               >
                 {String(step.step).padStart(2, '0')}
@@ -65,7 +65,7 @@ export function ProcessSteps({ steps, variant = 'light', layout = 'timeline', cl
       <span
         className={cn(
           'absolute left-[23px] top-2 hidden h-[calc(100%-16px)] w-px sm:block',
-          dark ? 'bg-white/12' : 'bg-brand-navy-100',
+          dark ? 'bg-white/10' : 'bg-brand-navy-100',
         )}
         aria-hidden
       />

@@ -169,7 +169,7 @@ function FilterButton({
             ? 'border-blue-400/60 bg-blue-400/15 text-blue-200'
             : 'border-brand-navy-900 bg-brand-navy-900 text-white shadow-card'
           : dark
-            ? 'border-white/12 bg-white/[0.03] text-white/65 hover:border-blue-400/40 hover:text-white'
+            ? 'border-white/10 bg-white/[0.03] text-white/65 hover:border-blue-400/40 hover:text-white'
             : 'border-brand-navy-200 bg-white text-brand-ink-soft hover:border-brand-navy-400 hover:text-brand-navy-900',
       )}
     >

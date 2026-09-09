@@ -109,7 +109,7 @@ export function CTA({
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsappClick(cityContext ?? '/')}
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-sky-400/50 hover:bg-white/[0.09]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-sky-400/50 hover:bg-white/[0.09]"
                 >
                   <MessageCircle className="h-4 w-4 text-sky-300" aria-hidden />
                   WhatsApp
@@ -117,7 +117,7 @@ export function CTA({
               ) : null}
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
               >
                 <Mail className="h-4 w-4 text-blue-300" aria-hidden />
                 {CONTACT.email}

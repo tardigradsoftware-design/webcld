@@ -262,7 +262,7 @@ export default function LocalServicePage({ params }: PageProps) {
               <h2 className="text-sm font-semibold uppercase tracking-wide text-brand-navy-400">
                 {city.name}’de hizmet verdiğimiz ilçeler
               </h2>
-              <p className="mt-3 text-[13.5px] leading-relaxed text-brand-ink-soft/78">
+              <p className="mt-3 text-[13.5px] leading-relaxed text-brand-ink-soft/80">
                 {city.districts.join(', ')} ve diğer tüm ilçeler.
               </p>
             </div>
@@ -307,7 +307,7 @@ export default function LocalServicePage({ params }: PageProps) {
                     </span>
                     {item.title}
                   </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/78">{item.description}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-brand-ink-soft/80">{item.description}</p>
                 </div>
               </div>
             ))}

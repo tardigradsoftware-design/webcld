@@ -25,7 +25,7 @@ export function WhoIsItFor({ items, variant = 'light', className }: WhoIsItForPr
           className={cn(
             'inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium',
             dark
-              ? 'border-white/12 bg-white/[0.04] text-white/80'
+              ? 'border-white/10 bg-white/[0.04] text-white/80'
               : 'border-brand-navy-100 bg-brand-paper-soft text-brand-ink-soft',
           )}
         >

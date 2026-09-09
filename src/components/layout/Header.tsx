@@ -48,7 +48,7 @@ export function Header() {
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         scrolled || open
-          ? 'border-b border-white/10 bg-brand-navy-950/92 shadow-navy backdrop-blur-xl'
+          ? 'border-b border-white/10 bg-brand-navy-950/95 shadow-navy backdrop-blur-xl'
           : 'border-b border-transparent bg-brand-navy-950/70 backdrop-blur-md',
       )}
     >
@@ -88,7 +88,7 @@ export function Header() {
                         transition={{ duration: 0.18 }}
                         className="absolute left-1/2 top-full w-[520px] -translate-x-1/2 pt-3"
                       >
-                        <div className="overflow-hidden rounded-2xl border border-white/10 bg-brand-navy-950/97 p-2 shadow-navy backdrop-blur-xl">
+                        <div className="overflow-hidden rounded-2xl border border-white/10 bg-brand-navy-950 p-2 shadow-navy ring-1 ring-white/10">
                           {categoriesWithCounts.map((category) => (
                             <Link
                               key={category.key}
@@ -103,7 +103,7 @@ export function Header() {
                                   {category.description}
                                 </span>
                               </span>
-                              <span className="shrink-0 rounded-full border border-white/12 bg-white/5 px-2.5 py-1 font-mono text-xs text-blue-300">
+                              <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-xs text-blue-300">
                                 {category.count}
                               </span>
                             </Link>

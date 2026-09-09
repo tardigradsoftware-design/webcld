@@ -24,7 +24,7 @@ function Chip({ name, category, dark }: { name: string; category: string; dark: 
       <span
         className={cn(
           'inline-flex h-7 w-7 items-center justify-center rounded-lg font-mono text-[11px] font-bold',
-          dark ? 'bg-blue-400/12 text-blue-300' : 'bg-brand-navy-900 text-white',
+          dark ? 'bg-blue-400/10 text-blue-300' : 'bg-brand-navy-900 text-white',
         )}
         aria-hidden
       >

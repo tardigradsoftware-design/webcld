@@ -38,7 +38,7 @@ const SERVICE_OPTIONS = FORM_SERVICE_OPTIONS.map((value) => ({ value, label: val
 const CITY_OPTIONS = cities.map((city) => ({ value: city.name, label: city.name }))
 
 const inputDark =
-  'border-white/12 bg-white/[0.045] text-white placeholder:text-white/35 focus-visible:border-blue-400/70 focus-visible:bg-white/[0.07] focus-visible:ring-blue-400/25'
+  'border-white/10 bg-white/[0.045] text-white placeholder:text-white/35 focus-visible:border-blue-400/70 focus-visible:bg-white/[0.07] focus-visible:ring-blue-400/25'
 const labelDark = 'text-white/70'
 const inputLight = 'border-brand-navy-200 bg-white text-brand-ink'
 const labelLight = 'text-brand-ink-soft'
@@ -174,7 +174,7 @@ export function ContactForm({
       noValidate
       className={cn(
         'rounded-2xl border p-5 backdrop-blur md:p-7',
-        dark ? 'border-white/12 bg-white/[0.045]' : 'border-brand-navy-100 bg-white shadow-card',
+        dark ? 'border-white/10 bg-white/[0.045]' : 'border-brand-navy-100 bg-white shadow-card',
         className,
       )}
       aria-labelledby="iletisim-formu-baslik"

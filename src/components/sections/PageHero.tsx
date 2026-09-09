@@ -40,7 +40,7 @@ export function PageHero({
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-24 top-16 h-[360px] w-[360px] rounded-full bg-blue-500/18 blur-[120px]"
+        className="pointer-events-none absolute -right-24 top-16 h-[360px] w-[360px] rounded-full bg-blue-500/20 blur-[120px]"
         aria-hidden
       />
 
@@ -58,7 +58,7 @@ export function PageHero({
             <h1 className="mt-4 text-[clamp(2rem,4.6vw,3.5rem)] font-bold leading-[1.08] tracking-tight">
               {h1}
             </h1>
-            {lead ? <p className="mt-5 text-lg leading-relaxed text-white/72 md:text-xl">{lead}</p> : null}
+            {lead ? <p className="mt-5 text-lg leading-relaxed text-white/70 md:text-xl">{lead}</p> : null}
 
             {meta?.length ? (
               <dl className="mt-7 flex flex-wrap gap-x-8 gap-y-3">
@@ -82,7 +82,7 @@ export function PageHero({
                 </Link>
                 <a
                   href={`mailto:${CONTACT.email}?subject=${encodeURIComponent('Ücretsiz Ön Analiz Talebi')}`}
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
                 >
                   <Mail className="h-4 w-4 text-blue-300" aria-hidden />
                   {CTA.secondary}

@@ -302,7 +302,7 @@ export default function KvkkPage() {
                   {section.title}
                 </h2>
                 {section.body.map((paragraph, index) => (
-                  <p key={index} className="mt-3.5 text-[15.5px] leading-[1.8] text-brand-ink-soft/88">
+                  <p key={index} className="mt-3.5 text-[15.5px] leading-[1.8] text-brand-ink-soft/90">
                     {paragraph}
                   </p>
                 ))}
@@ -331,7 +331,7 @@ export default function KvkkPage() {
                 <span className="mr-2.5 font-mono text-base text-brand-navy-300">13.</span>
                 Çerez Politikası Özeti
               </h2>
-              <p className="mt-3.5 text-[15.5px] leading-[1.8] text-brand-ink-soft/88">
+              <p className="mt-3.5 text-[15.5px] leading-[1.8] text-brand-ink-soft/90">
                 Sitemizde yalnızca gerekli olan çerezler varsayılan olarak çalışır. Analitik ve
                 pazarlama amaçlı çerezler, çerez onay bandında açık rıza vermeniz hâlinde
                 etkinleşir; tercihlerinizi dilediğiniz an sayfanın altındaki “Çerez tercihleri”

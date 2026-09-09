@@ -30,7 +30,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-32 top-24 h-[400px] w-[400px] rounded-full bg-blue-500/18 blur-[130px]"
+        className="pointer-events-none absolute -right-32 top-24 h-[400px] w-[400px] rounded-full bg-blue-500/20 blur-[130px]"
         aria-hidden
       />
 
@@ -49,7 +49,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
                   {cityName} · Lokal Hizmet
                 </span>
               ) : null}
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/[0.04] px-3 py-1 font-mono text-[11px] text-white/55">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[11px] text-white/55">
                 Hizmet #{String(service.id).padStart(2, '0')} / 43
               </span>
             </div>
@@ -90,7 +90,7 @@ export function ServiceHero({ service, cityName, breadcrumbs, anchors = [] }: Se
               </Link>
               <Link
                 href="/surec/"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
               >
                 9 adımlı sürecimiz
               </Link>

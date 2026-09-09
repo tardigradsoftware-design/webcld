@@ -29,7 +29,7 @@ export function Benefits({ benefits, variant = 'light', className }: BenefitsPro
             <span
               className={cn(
                 'inline-flex h-10 w-10 items-center justify-center rounded-lg',
-                dark ? 'bg-sky-400/12 text-sky-300' : 'bg-brand-blue/10 text-sky-600',
+                dark ? 'bg-sky-400/10 text-sky-300' : 'bg-brand-blue/10 text-sky-600',
               )}
             >
               <LucideIcon name={benefit.icon} fallback="Sparkles" className="h-5 w-5" aria-hidden />

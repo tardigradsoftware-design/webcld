@@ -228,7 +228,7 @@ export default function AboutPage() {
                   </span>
                   {value.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/78">{value.text}</p>
+                <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/80">{value.text}</p>
               </div>
             ))}
           </div>
@@ -248,7 +248,7 @@ export default function AboutPage() {
             {CAPABILITIES.map((capability) => (
               <div key={capability.title} className="rounded-xl border border-brand-navy-100 bg-brand-paper-soft p-6">
                 <h3 className="text-base font-semibold text-brand-ink">{capability.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/78">{capability.text}</p>
+                <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft/80">{capability.text}</p>
                 <ul className="mt-4 space-y-1.5">
                   {capability.services.map((slug) => {
                     const service = services.find((item) => item.slug === slug)

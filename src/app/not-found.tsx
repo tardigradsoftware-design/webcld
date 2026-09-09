@@ -39,8 +39,8 @@ export default function NotFound() {
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(165deg,#08112B_0%,#0F1B3D_50%,#0B1730_100%)]" />
         <div className="absolute inset-0 bg-grid-navy opacity-40" />
-        <div className="absolute -top-28 left-1/4 h-96 w-96 rounded-full bg-blue-600/22 blur-[130px]" />
-        <div className="absolute bottom-0 right-10 h-80 w-80 rounded-full bg-blue-500/16 blur-[120px]" />
+        <div className="absolute -top-28 left-1/4 h-96 w-96 rounded-full bg-blue-600/20 blur-[130px]" />
+        <div className="absolute bottom-0 right-10 h-80 w-80 rounded-full bg-blue-500/15 blur-[120px]" />
       </div>
 
       <div className="container relative py-24 lg:py-32">
@@ -70,13 +70,13 @@ export default function NotFound() {
               </Link>
               <Link
                 href="/hizmetler/"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/18 bg-white/[0.05] px-6 py-3.5 text-[15px] font-semibold text-white transition hover:border-white/35 hover:bg-white/[0.09]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/[0.05] px-6 py-3.5 text-[15px] font-semibold text-white transition hover:border-white/35 hover:bg-white/[0.09]"
               >
                 {CTA.services}
               </Link>
               <Link
                 href="/iletisim/"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/12 px-6 py-3.5 text-[15px] font-semibold text-white/75 transition hover:border-white/30 hover:text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 px-6 py-3.5 text-[15px] font-semibold text-white/75 transition hover:border-white/30 hover:text-white"
               >
                 Bize ulaşın
               </Link>
@@ -128,7 +128,7 @@ export default function NotFound() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="flex items-center justify-between gap-3 rounded-lg border border-white/8 bg-white/[0.03] px-4 py-2.5 transition hover:border-blue-400/40 hover:bg-white/[0.07] hover:text-white"
+                      className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2.5 transition hover:border-blue-400/40 hover:bg-white/[0.07] hover:text-white"
                     >
                       <span>{item.label}</span>
                       <ArrowUpRight className="h-3.5 w-3.5 text-white/30" aria-hidden />
@@ -148,7 +148,7 @@ export default function NotFound() {
                   <li key={city.slug}>
                     <Link
                       href={`/sehir/${city.slug}/`}
-                      className="inline-flex items-center rounded-full border border-white/12 bg-white/[0.04] px-3.5 py-1.5 text-[13px] text-white/70 transition hover:border-blue-400/50 hover:text-white"
+                      className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-[13px] text-white/70 transition hover:border-blue-400/50 hover:text-white"
                     >
                       {city.name}
                     </Link>
@@ -175,7 +175,7 @@ export default function NotFound() {
                     <li key={post.slug}>
                       <Link
                         href={`/blog/${post.slug}/`}
-                        className="group block rounded-lg border border-white/8 bg-white/[0.03] px-4 py-3 transition hover:border-blue-400/40 hover:bg-white/[0.07]"
+                        className="group block rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 transition hover:border-blue-400/40 hover:bg-white/[0.07]"
                       >
                         <span className="block text-[13.5px] font-medium leading-snug text-white/85 group-hover:text-white">
                           {post.title}

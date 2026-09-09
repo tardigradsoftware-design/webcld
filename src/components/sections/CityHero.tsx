@@ -23,7 +23,7 @@ export function CityHero({ city, services, breadcrumbs }: CityHeroProps) {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-28 top-20 h-[380px] w-[380px] rounded-full bg-blue-500/18 blur-[125px]"
+        className="pointer-events-none absolute -right-28 top-20 h-[380px] w-[380px] rounded-full bg-blue-500/20 blur-[125px]"
         aria-hidden
       />
 
@@ -41,7 +41,7 @@ export function CityHero({ city, services, breadcrumbs }: CityHeroProps) {
               {city.name} Web Sitesi ve Yazılım Geliştirme Hizmetleri
             </h1>
 
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/72 md:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
               {city.name}’daki işletmeler için kurumsal web sitesi, özel yazılım, CRM, SEO ve dijital
               dönüşüm çözümleri. Tardigrad Software olarak {city.name} ve ilçelerinde{' '}
               {services.length}+ hizmet alanında uzaktan çalışıyor, gerekli olduğunda yerinde görüşme
@@ -83,7 +83,7 @@ export function CityHero({ city, services, breadcrumbs }: CityHeroProps) {
               </Link>
               <a
                 href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(`${city.name} — Ücretsiz Ön Analiz`)}`}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/18 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-5 py-3.5 text-sm font-semibold text-white transition hover:border-blue-400/50 hover:bg-white/[0.09]"
               >
                 {CTA.secondary}
               </a>

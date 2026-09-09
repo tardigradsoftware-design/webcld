@@ -82,7 +82,7 @@ export function CookieConsent() {
           role="region"
           aria-label="Çerez tercihleri"
         >
-          <div className="overflow-hidden rounded-2xl border border-white/12 bg-brand-navy-950/95 text-white shadow-navy backdrop-blur-xl">
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-brand-navy-950/95 text-white shadow-navy backdrop-blur-xl">
             <div className="flex items-start gap-3 p-5">
               <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-blue/15 text-blue-300">
                 <Cookie className="h-5 w-5" aria-hidden />
